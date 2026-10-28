@@ -12,6 +12,7 @@ import { Resultados } from './Resultados'
 import { EstoyListo } from './EstoyListo'
 import { Cuaderno } from './Cuaderno'
 import { Admin } from './Admin'
+import { Bienvenida, debeMostrarseBienvenida } from './Bienvenida'
 import { Retos } from './Retos'
 import { Simulacro } from './Simulacro'
 import { registrarPartida, type Novedades } from '../store/progresoDiario'
@@ -38,6 +39,7 @@ export function App() {
   const vencidas = useVencidas()
   const conFallos = useConFallos()
   const [admin, setAdmin] = useState(() => location.hash === '#admin')
+  const [bienvenida, setBienvenida] = useState(debeMostrarseBienvenida)
 
   // Panel de administración: se abre con #admin en la dirección.
   useEffect(() => {
@@ -116,10 +118,11 @@ export function App() {
           <Mapa onJugar={jugarNivel} onJefe={(mundo) => jugar({ tipo: 'jefe', mundo })} />
         </>
       )}
-      {tab === 'retos' && <Retos onJuego={(juego) => jugar({ tipo: 'juego', juego })} onSimulacro={() => jugar({ tipo: 'simulacro' })} />}
+      {tab === 'retos' && <Retos onJuego={(juego) => jugar({ tipo: 'juego', juego })} onSimulacro={() => jugar({ tipo: 'simulacro' })} onInstalar={() => setBienvenida(true)} />}
       {tab === 'listo' && <EstoyListo onAccion={accion} simulacroDisponible={(perfil.stats?.jefes.length ?? 0) >= 1} />}
       {tab === 'errores' && <Cuaderno onJugar={jugar} />}
 
+      {bienvenida && tab && <Bienvenida onCerrar={() => setBienvenida(false)} />}
       {partida}
       {pantalla.tipo === 'resultado' && <Resultados r={pantalla.r} nov={pantalla.nov} onRepetir={() => jugar(pantalla.r.config)} onMapa={volverMapa} />}
 

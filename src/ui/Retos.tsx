@@ -53,7 +53,7 @@ function Progreso({ texto, valor, objetivo, monedas, hecha }: { texto: string; v
   )
 }
 
-export function Retos({ onJuego, onSimulacro }: { onJuego: (j: JuegoId) => void; onSimulacro: () => void }) {
+export function Retos({ onJuego, onSimulacro, onInstalar }: { onJuego: (j: JuegoId) => void; onSimulacro: () => void; onInstalar: () => void }) {
   const perfil = useJuego((s) => s.perfil)
   const simulacros = useJuego((s) => s.simulacros)
   const [vista, setVista] = useState<'retos' | 'garaje' | 'logros'>('retos')
@@ -145,6 +145,8 @@ export function Retos({ onJuego, onSimulacro }: { onJuego: (j: JuegoId) => void;
       </section>
 
       <Juegos onJugar={onJuego} incrustado />
+
+      <button className="boton secundario" onClick={onInstalar}>Cómo instalar la app en tu móvil</button>
 
       <AnimatePresence>
         {apertura && (

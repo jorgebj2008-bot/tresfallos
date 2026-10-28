@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { MUNDOS, type Mundo } from '../content/mundos'
 import { mundoTieneContenido } from '../content/banco'
@@ -51,14 +51,27 @@ export function Mapa({ onJugar, onJefe }: { onJugar: (mundo: MundoId, nivel: num
   // Las escenas no dependen del progreso: se generan una sola vez.
   const escenas = useMemo(() => MUNDOS.map((m, i) => construirEscena(i, m.niveles)), [])
 
+  // Si el nivel actual sale de la pantalla, aparece un botón para volver a tu coche.
+  const [fuera, setFuera] = useState<null | 'arriba' | 'abajo'>(null)
   useEffect(() => {
-    actualRef.current?.scrollIntoView({ block: 'center' })
+    const el = actualRef.current
+    if (!el) return
+    el.scrollIntoView({ block: 'center' })
+    const obs = new IntersectionObserver(([e]) => setFuera(e.isIntersecting ? null : e.boundingClientRect.top < 0 ? 'arriba' : 'abajo'), { rootMargin: '-90px 0px -90px 0px' })
+    obs.observe(el)
+    return () => obs.disconnect()
   }, [])
+  const volver = () => actualRef.current?.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
 
   let actualMarcado = false
 
   return (
     <main className="mapa">
+      {fuera && (
+        <button className="volver-coche" onClick={volver} aria-label="Volver a tu coche">
+          <span aria-hidden="true">{fuera === 'arriba' ? '↑' : '↓'}</span> Tu coche
+        </button>
+      )}
       <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
         <defs>
           <radialGradient id="halo">

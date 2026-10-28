@@ -1,0 +1,436 @@
+[
+  {
+    "id": "SAN-0101",
+    "mundo": "sanciones",
+    "subtema": "tipos",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Cómo se clasifican las infracciones de tráfico?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Leves, graves y muy graves.",
+        "correcta": true,
+        "explicacion": "La gravedad determina la multa y, en su caso, los puntos."
+      },
+      {
+        "texto": "Solo en graves y muy graves.",
+        "correcta": false,
+        "explicacion": "También hay leves.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Por colores.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), arts. 75 a 77",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0102",
+    "mundo": "sanciones",
+    "subtema": "multas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la multa general de una infracción grave?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "200 euros.",
+        "correcta": true,
+        "explicacion": "Las leves llegan hasta 100 € y las muy graves son de 500 €, con excepciones."
+      },
+      {
+        "texto": "100 euros.",
+        "correcta": false,
+        "explicacion": "Es la de las leves.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "500 euros.",
+        "correcta": false,
+        "explicacion": "Es la de las muy graves.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 80",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0103",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pierden por saltarse un semáforo en rojo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "4 puntos.",
+        "correcta": true,
+        "explicacion": "Igual que saltarse un STOP o un ceda el paso."
+      },
+      {
+        "texto": "2 puntos.",
+        "correcta": false,
+        "explicacion": "Te quedas corto.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "6 puntos.",
+        "correcta": false,
+        "explicacion": "Te pasas.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0104",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pierden por no respetar un STOP?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "4 puntos.",
+        "correcta": true,
+        "explicacion": "No detenerse en un STOP es una infracción grave."
+      },
+      {
+        "texto": "No se pierden puntos.",
+        "correcta": false,
+        "explicacion": "Sí se pierden.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "1 punto.",
+        "correcta": false,
+        "explicacion": "Te quedas corto.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0105",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un motorista circula sin casco. ¿Cuántos puntos pierde?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "4 puntos.",
+        "correcta": true,
+        "explicacion": "Desde 2022 son 4, igual que no llevar cinturón o la silla infantil."
+      },
+      {
+        "texto": "2 puntos.",
+        "correcta": false,
+        "explicacion": "Era menos antes de la reforma.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "6 puntos.",
+        "correcta": false,
+        "explicacion": "Te pasas.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0106",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pierden por arrojar a la vía objetos que puedan causar incendios, como una colilla?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "6 puntos.",
+        "correcta": true,
+        "explicacion": "Desde 2022 es una de las infracciones más castigadas."
+      },
+      {
+        "texto": "2 puntos.",
+        "correcta": false,
+        "explicacion": "Te quedas corto.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "Ninguno: solo es multa.",
+        "correcta": false,
+        "explicacion": "También quita puntos.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": true
+  },
+  {
+    "id": "SAN-0107",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pierden por llevar un detector de radares en el coche?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "3 puntos.",
+        "correcta": true,
+        "explicacion": "Los inhibidores de radar, más graves, quitan 6."
+      },
+      {
+        "texto": "6 puntos.",
+        "correcta": false,
+        "explicacion": "6 es para los inhibidores.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "Ninguno.",
+        "correcta": false,
+        "explicacion": "Sí quita puntos.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": true
+  },
+  {
+    "id": "SAN-0108",
+    "mundo": "sanciones",
+    "subtema": "delitos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Conducir sin haber obtenido nunca el permiso es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Un delito.",
+        "correcta": true,
+        "explicacion": "No es una simple multa."
+      },
+      {
+        "texto": "Una infracción leve.",
+        "correcta": false,
+        "explicacion": "Es mucho más grave.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "Legal si no te paran.",
+        "correcta": false,
+        "explicacion": "Es delito igualmente.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "sanciones"
+    ],
+    "fuente": "Código Penal, art. 384",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0109",
+    "mundo": "sanciones",
+    "subtema": "delitos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Conducir con temeridad manifiesta poniendo en peligro la vida de otros es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Un delito.",
+        "correcta": true,
+        "explicacion": "Se castiga en el Código Penal."
+      },
+      {
+        "texto": "Solo una infracción leve.",
+        "correcta": false,
+        "explicacion": "Mucho más grave.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "Legal si no hay accidente.",
+        "correcta": false,
+        "explicacion": "No hace falta que haya accidente.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "sanciones"
+    ],
+    "fuente": "Código Penal, art. 380",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0110",
+    "mundo": "sanciones",
+    "subtema": "titular",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un radar fotografía tu coche, pero lo conducía un amigo. ¿Qué debes hacer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Identificar al conductor ante la DGT.",
+        "correcta": true,
+        "explicacion": "El titular tiene el deber de identificar a quien conducía."
+      },
+      {
+        "texto": "Nada: la multa no es para nadie.",
+        "correcta": false,
+        "explicacion": "Si no identificas al conductor, te sancionan a ti.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Pagar tú y que pierda los puntos tu amigo sin decir nada.",
+        "correcta": false,
+        "explicacion": "Hay que identificarlo.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 11",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0111",
+    "mundo": "sanciones",
+    "subtema": "titular",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si el titular no identifica al conductor cuando se lo piden, comete…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Una infracción muy grave.",
+        "correcta": true,
+        "explicacion": "Por eso es importante identificarlo."
+      },
+      {
+        "texto": "Nada, no es obligatorio.",
+        "correcta": false,
+        "explicacion": "Sí es obligatorio.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Una infracción leve.",
+        "correcta": false,
+        "explicacion": "Es muy grave.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 77",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0112",
+    "mundo": "sanciones",
+    "subtema": "seguro",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Circular sin el seguro obligatorio…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Se sanciona con una multa elevada y la inmovilización del vehículo.",
+        "correcta": true,
+        "explicacion": "Además, si causas daños, tendrías que pagarlos tú."
+      },
+      {
+        "texto": "No se sanciona si tienes el permiso en regla.",
+        "correcta": false,
+        "explicacion": "Son cosas distintas.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo quita puntos.",
+        "correcta": false,
+        "explicacion": "No quita puntos, pero tiene una multa alta.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "sanciones"
+    ],
+    "fuente": "RDL 8/2004 (responsabilidad civil y seguro)",
+    "revisar": true
+  },
+  {
+    "id": "SAN-0113",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es el máximo de puntos que se pueden perder por un exceso de velocidad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "6 puntos.",
+        "correcta": true,
+        "explicacion": "Por encima de cierto exceso, ya es delito."
+      },
+      {
+        "texto": "8 puntos.",
+        "correcta": false,
+        "explicacion": "8 es el tope por varias infracciones a la vez.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "12 puntos.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  }
+]

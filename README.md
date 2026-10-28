@@ -48,5 +48,5 @@ Añade `#admin` al final de la dirección (por ejemplo `http://localhost:5173/#a
 
 ## Estado
 
-- Fase 0 a 5 hechas: mapa con 13 mundos, motor de aprendizaje, 3 minijuegos, 152 preguntas, jefes, Simulacro Oficial, racha, misiones, cofres, garaje y logros.
+- Fase 0 a 5 hechas: mapa con 13 mundos, motor de aprendizaje, 3 minijuegos, 394 preguntas, jefes, Simulacro Oficial, racha, misiones, cofres, garaje y logros.
 - Pendiente: Fase 6 (cuentas y nube), Fase 7 (pagos, PWA y despliegue) y Fase 8 (más minijuegos y 1.500 preguntas).

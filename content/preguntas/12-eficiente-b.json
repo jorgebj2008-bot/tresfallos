@@ -1,0 +1,400 @@
+[
+  {
+    "id": "EFI-0101",
+    "mundo": "eficiente",
+    "subtema": "marchas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En un coche de gasolina, ¿a qué revoluciones conviene cambiar a una marcha más larga?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Entre 2.000 y 2.500 rpm.",
+        "correcta": true,
+        "explicacion": "En los diésel, algo antes: entre 1.500 y 2.000 rpm."
+      },
+      {
+        "texto": "A partir de 4.000 rpm.",
+        "correcta": false,
+        "explicacion": "Gastarías mucho más.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "A menos de 1.000 rpm.",
+        "correcta": false,
+        "explicacion": "El motor iría forzado.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0102",
+    "mundo": "eficiente",
+    "subtema": "velocidad",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Pasar de 100 a 120 km/h en autovía…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Aumenta bastante el consumo.",
+        "correcta": true,
+        "explicacion": "La resistencia del aire crece mucho con la velocidad."
+      },
+      {
+        "texto": "Reduce el consumo.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No cambia el consumo.",
+        "correcta": false,
+        "explicacion": "Sí lo cambia.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0103",
+    "mundo": "eficiente",
+    "subtema": "aire",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En autovía, circular con las ventanillas bajadas…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Aumenta el consumo por la resistencia al aire.",
+        "correcta": true,
+        "explicacion": "A alta velocidad, a veces sale más eficiente un uso moderado del aire acondicionado."
+      },
+      {
+        "texto": "Siempre ahorra respecto al aire acondicionado.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: a alta velocidad no.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "No influye.",
+        "correcta": false,
+        "explicacion": "Sí influye.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0104",
+    "mundo": "eficiente",
+    "subtema": "freno-motor",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Para reducir velocidad de forma eficiente, lo mejor es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Levantar el pie del acelerador con la marcha engranada.",
+        "correcta": true,
+        "explicacion": "El motor no consume combustible y frenas menos."
+      },
+      {
+        "texto": "Poner punto muerto.",
+        "correcta": false,
+        "explicacion": "En punto muerto sí consume y pierdes control.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Frenar fuerte al final.",
+        "correcta": false,
+        "explicacion": "Gasta más y desgasta los frenos.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0105",
+    "mundo": "eficiente",
+    "subtema": "mantenimiento",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un filtro de aire muy sucio…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Aumenta el consumo de combustible.",
+        "correcta": true,
+        "explicacion": "El motor respira peor y rinde menos."
+      },
+      {
+        "texto": "No influye en nada.",
+        "correcta": false,
+        "explicacion": "Sí influye.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Reduce el consumo.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0106",
+    "mundo": "eficiente",
+    "subtema": "testigos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Se enciende un testigo rojo de temperatura del motor. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Parar en cuanto sea seguro y apagar el motor.",
+        "correcta": true,
+        "explicacion": "El motor puede averiarse gravemente."
+      },
+      {
+        "texto": "Seguir y abrir la ventanilla.",
+        "correcta": false,
+        "explicacion": "No soluciona nada.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Acelerar para que se ventile.",
+        "correcta": false,
+        "explicacion": "Lo empeoraría.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: mecánica básica",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0107",
+    "mundo": "eficiente",
+    "subtema": "refrigerante",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuándo se comprueba el nivel del líquido refrigerante?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Con el motor frío.",
+        "correcta": true,
+        "explicacion": "Abrir el depósito en caliente puede causar quemaduras."
+      },
+      {
+        "texto": "Con el motor caliente y en marcha.",
+        "correcta": false,
+        "explicacion": "Es peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo en la ITV.",
+        "correcta": false,
+        "explicacion": "Conviene revisarlo a menudo.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "Temario DGT: mecánica básica",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0108",
+    "mundo": "eficiente",
+    "subtema": "aceite",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Para medir bien el nivel de aceite, el coche debe estar…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En llano y con el motor parado un rato.",
+        "correcta": true,
+        "explicacion": "Así el aceite baja al cárter y la medida es fiable."
+      },
+      {
+        "texto": "En marcha.",
+        "correcta": false,
+        "explicacion": "Daría una lectura falsa.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "En pendiente.",
+        "correcta": false,
+        "explicacion": "Daría una lectura falsa.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: mecánica básica",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0109",
+    "mundo": "eficiente",
+    "subtema": "frenos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un chirrido metálico al frenar suele indicar…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que las pastillas de freno están muy desgastadas.",
+        "correcta": true,
+        "explicacion": "Hay que revisarlas cuanto antes."
+      },
+      {
+        "texto": "Que los frenos funcionan perfectamente.",
+        "correcta": false,
+        "explicacion": "No es buena señal.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Que falta aire en las ruedas.",
+        "correcta": false,
+        "explicacion": "No suele ser eso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: mecánica básica",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0110",
+    "mundo": "eficiente",
+    "subtema": "zbe",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es una zona de bajas emisiones (ZBE)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Una zona de la ciudad con acceso limitado a los vehículos más contaminantes.",
+        "correcta": true,
+        "explicacion": "Las etiquetas ambientales sirven para saber quién puede entrar."
+      },
+      {
+        "texto": "Una zona donde no se puede circular.",
+        "correcta": false,
+        "explicacion": "Se puede circular según la etiqueta del vehículo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Un aparcamiento para eléctricos.",
+        "correcta": false,
+        "explicacion": "No es eso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Ley 7/2021 de Cambio Climático, art. 14",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0111",
+    "mundo": "eficiente",
+    "subtema": "frio",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Por qué contaminan más los trayectos muy cortos?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Porque el motor trabaja en frío casi todo el tiempo.",
+        "correcta": true,
+        "explicacion": "En frío consume y contamina más."
+      },
+      {
+        "texto": "Porque se va más rápido.",
+        "correcta": false,
+        "explicacion": "No es la razón.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No contaminan más.",
+        "correcta": false,
+        "explicacion": "Sí, por cada kilómetro.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0112",
+    "mundo": "eficiente",
+    "subtema": "electrico",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "La frenada regenerativa de un coche eléctrico…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Recupera energía al frenar para recargar la batería.",
+        "correcta": true,
+        "explicacion": "Por eso anticipar las frenadas alarga la autonomía."
+      },
+      {
+        "texto": "Gasta más batería.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo funciona en cuesta arriba.",
+        "correcta": false,
+        "explicacion": "Funciona al decelerar.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  }
+]

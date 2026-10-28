@@ -1,0 +1,664 @@
+[
+  {
+    "id": "SEN-0101",
+    "mundo": "senales",
+    "subtema": "jerarquia",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Unos conos cierran un carril que, según las marcas viales, se puede usar. ¿Qué obedeces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los conos.",
+        "correcta": true,
+        "explicacion": "La señalización circunstancial (conos, balizas) prevalece sobre semáforos, señales y marcas."
+      },
+      {
+        "texto": "Las marcas viales.",
+        "correcta": false,
+        "explicacion": "Las marcas viales son lo último en la jerarquía.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "Lo que te parezca más seguro.",
+        "correcta": false,
+        "explicacion": "Hay un orden fijo.",
+        "error_tipo": "jerarquia_senales"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales"
+    ],
+    "fuente": "RGC art. 133",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0102",
+    "mundo": "senales",
+    "subtema": "obras",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si una señal de obras (fondo amarillo) contradice a una señal fija, ¿cuál manda?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La de obras.",
+        "correcta": true,
+        "explicacion": "La señalización de obras es temporal y prevalece sobre la permanente."
+      },
+      {
+        "texto": "La fija, porque es oficial.",
+        "correcta": false,
+        "explicacion": "Las dos son oficiales; manda la de obras.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "La más antigua.",
+        "correcta": false,
+        "explicacion": "No va por antigüedad.",
+        "error_tipo": "jerarquia_senales"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales"
+    ],
+    "fuente": "RGC art. 133",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0103",
+    "mundo": "senales",
+    "subtema": "marcas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una línea amarilla continua pintada en el bordillo indica…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que está prohibido parar y estacionar.",
+        "correcta": true,
+        "explicacion": "Es una marca de prohibición junto al bordillo."
+      },
+      {
+        "texto": "Que está prohibido estacionar, pero sí parar.",
+        "correcta": false,
+        "explicacion": "Eso es la línea amarilla discontinua.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Que es zona de carga y descarga.",
+        "correcta": false,
+        "explicacion": "Las zonas de carga se señalizan de otra forma.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "RGC art. 171",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0104",
+    "mundo": "senales",
+    "subtema": "marcas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una línea amarilla discontinua en el bordillo indica…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que está prohibido estacionar, pero se puede parar.",
+        "correcta": true,
+        "explicacion": "Diferénciala de la continua, que prohíbe también parar."
+      },
+      {
+        "texto": "Que está prohibido parar y estacionar.",
+        "correcta": false,
+        "explicacion": "Eso es la línea amarilla continua.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Que se puede estacionar un máximo de 2 horas.",
+        "correcta": false,
+        "explicacion": "No indica tiempos.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "RGC art. 171",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0105",
+    "mundo": "senales",
+    "subtema": "marcas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Hay una línea continua junto a una discontinua y tú circulas por el lado de la discontinua. ¿Puedes cruzarlas para adelantar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí, si es seguro: manda la línea que está de tu lado.",
+        "correcta": true,
+        "explicacion": "Quien tiene la continua de su lado no puede cruzarlas."
+      },
+      {
+        "texto": "No, nunca se puede cruzar si hay una continua.",
+        "correcta": false,
+        "explicacion": "Desconfía del «nunca»: depende de qué línea esté de tu lado.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Solo de noche.",
+        "correcta": false,
+        "explicacion": "No depende de la hora.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 167",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0106",
+    "mundo": "senales",
+    "subtema": "marcas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una línea de detención continua (transversal) en un cruce indica…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que debes detenerte, como ante un STOP.",
+        "correcta": true,
+        "explicacion": "La línea continua acompaña al STOP; la discontinua, al ceda el paso."
+      },
+      {
+        "texto": "Que debes ceder el paso sin necesidad de parar.",
+        "correcta": false,
+        "explicacion": "Eso indica la línea discontinua.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Un paso para peatones.",
+        "correcta": false,
+        "explicacion": "El paso para peatones son franjas paralelas.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "RGC art. 168",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0107",
+    "mundo": "senales",
+    "subtema": "semaforos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un semáforo con luz roja intermitente, por ejemplo en un paso a nivel, significa que…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Está prohibido pasar.",
+        "correcta": true,
+        "explicacion": "Se usa en pasos a nivel, puentes móviles o salidas de emergencias."
+      },
+      {
+        "texto": "Puedes pasar con precaución.",
+        "correcta": false,
+        "explicacion": "Eso sería el ámbar intermitente.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "El semáforo está averiado.",
+        "correcta": false,
+        "explicacion": "No: es una señal en funcionamiento.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 146",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0108",
+    "mundo": "senales",
+    "subtema": "semaforos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "El semáforo está en rojo, pero se enciende una flecha verde hacia la derecha. ¿Qué puedes hacer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Girar a la derecha con precaución, cediendo el paso a los peatones.",
+        "correcta": true,
+        "explicacion": "La flecha verde permite solo ese movimiento."
+      },
+      {
+        "texto": "Seguir recto, porque hay luz verde.",
+        "correcta": false,
+        "explicacion": "La flecha solo autoriza su dirección.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Nada hasta que se apague el rojo.",
+        "correcta": false,
+        "explicacion": "La flecha verde sí permite girar a la derecha.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 146",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0109",
+    "mundo": "senales",
+    "subtema": "agentes",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un agente balancea una luz roja hacia ti. ¿Qué significa?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que debes detenerte.",
+        "correcta": true,
+        "explicacion": "El balanceo de una luz roja o amarilla obliga a parar a los usuarios hacia los que se dirige."
+      },
+      {
+        "texto": "Que reduzcas la velocidad.",
+        "correcta": false,
+        "explicacion": "Es una orden de detenerse, no solo de frenar un poco.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "Que pases rápido.",
+        "correcta": false,
+        "explicacion": "Al revés.",
+        "error_tipo": "jerarquia_senales"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales"
+    ],
+    "fuente": "RGC art. 143",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0110",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:circulacion-prohibida",
+    "opciones": [
+      {
+        "texto": "Circulación prohibida en ambos sentidos para todo vehículo.",
+        "correcta": true,
+        "explicacion": "Círculo blanco con borde rojo y sin nada dentro."
+      },
+      {
+        "texto": "Entrada prohibida.",
+        "correcta": false,
+        "explicacion": "La de entrada prohibida es roja con una barra blanca.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Fin de todas las prohibiciones.",
+        "correcta": false,
+        "explicacion": "Esa lleva franjas grises en diagonal.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0111",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:fin-prohibiciones",
+    "opciones": [
+      {
+        "texto": "Fin de todas las prohibiciones señalizadas antes.",
+        "correcta": true,
+        "explicacion": "Franjas grises en diagonal sobre fondo blanco."
+      },
+      {
+        "texto": "Circulación prohibida.",
+        "correcta": false,
+        "explicacion": "Esa es blanca con borde rojo.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido adelantar.",
+        "correcta": false,
+        "explicacion": "Esa muestra dos coches.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0112",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:calzada-prioridad",
+    "opciones": [
+      {
+        "texto": "Calzada con prioridad.",
+        "correcta": true,
+        "explicacion": "El rombo amarillo indica que tienes prioridad en las próximas intersecciones."
+      },
+      {
+        "texto": "Peligro: intersección.",
+        "correcta": false,
+        "explicacion": "Las de peligro son triangulares.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Fin de prioridad.",
+        "correcta": false,
+        "explicacion": "La de fin de prioridad lleva franjas negras.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0113",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:fin-prioridad",
+    "opciones": [
+      {
+        "texto": "Fin de la calzada con prioridad.",
+        "correcta": true,
+        "explicacion": "Ya no tienes prioridad en las intersecciones: atento a la norma general o a otras señales."
+      },
+      {
+        "texto": "Calzada con prioridad.",
+        "correcta": false,
+        "explicacion": "Esa no tiene franjas negras.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido el paso.",
+        "correcta": false,
+        "explicacion": "No es una señal de prohibición.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0114",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:velocidad-minima-50",
+    "opciones": [
+      {
+        "texto": "Velocidad mínima obligatoria de 50 km/h.",
+        "correcta": true,
+        "explicacion": "Circular y azul: es de obligación."
+      },
+      {
+        "texto": "Velocidad máxima de 50 km/h.",
+        "correcta": false,
+        "explicacion": "La máxima es circular con borde rojo.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Velocidad aconsejada de 50 km/h.",
+        "correcta": false,
+        "explicacion": "La aconsejada es cuadrada.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0115",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:parada-estacionamiento-prohibido",
+    "opciones": [
+      {
+        "texto": "Parada y estacionamiento prohibidos.",
+        "correcta": true,
+        "explicacion": "El aspa roja prohíbe tanto parar como estacionar."
+      },
+      {
+        "texto": "Solo estacionamiento prohibido.",
+        "correcta": false,
+        "explicacion": "Esa lleva una sola franja.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Zona de estacionamiento regulado.",
+        "correcta": false,
+        "explicacion": "Es de prohibición.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0116",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:giratorio-obligatorio",
+    "opciones": [
+      {
+        "texto": "Intersección de sentido giratorio obligatorio.",
+        "correcta": true,
+        "explicacion": "Círculo azul con flechas en círculo: es de obligación."
+      },
+      {
+        "texto": "Peligro: glorieta próxima.",
+        "correcta": false,
+        "explicacion": "La de peligro es triangular.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Cambio de sentido permitido.",
+        "correcta": false,
+        "explicacion": "No indica eso.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0117",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:paso-peatones",
+    "opciones": [
+      {
+        "texto": "Situación de un paso para peatones.",
+        "correcta": true,
+        "explicacion": "Es cuadrada y azul: indica dónde está el paso."
+      },
+      {
+        "texto": "Peligro: peatones.",
+        "correcta": false,
+        "explicacion": "La de peligro es triangular con borde rojo.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Calle peatonal.",
+        "correcta": false,
+        "explicacion": "No prohíbe la circulación.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0118",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:peatones-aviso",
+    "opciones": [
+      {
+        "texto": "Peligro por la proximidad de un lugar frecuentado por peatones.",
+        "correcta": true,
+        "explicacion": "Es triangular: avisa de un peligro."
+      },
+      {
+        "texto": "Situación de un paso para peatones.",
+        "correcta": false,
+        "explicacion": "Esa es cuadrada y azul.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido el paso de peatones.",
+        "correcta": false,
+        "explicacion": "Las de prohibición son circulares.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0119",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:semaforos-aviso",
+    "opciones": [
+      {
+        "texto": "Peligro: tramo regulado por semáforos.",
+        "correcta": true,
+        "explicacion": "Es triangular y avisa de semáforos más adelante."
+      },
+      {
+        "texto": "Semáforo averiado.",
+        "correcta": false,
+        "explicacion": "No informa de averías.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Obligatorio detenerse.",
+        "correcta": false,
+        "explicacion": "No es una señal de obligación.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0120",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:interseccion-prioridad",
+    "opciones": [
+      {
+        "texto": "Intersección en la que tienes prioridad.",
+        "correcta": true,
+        "explicacion": "Triángulo de peligro con un cruce de trazo más grueso en tu dirección."
+      },
+      {
+        "texto": "Cruce donde debes ceder el paso.",
+        "correcta": false,
+        "explicacion": "Ceder el paso se indica con el triángulo invertido.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Fin de la vía.",
+        "correcta": false,
+        "explicacion": "No indica eso.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  }
+]

@@ -1,0 +1,169 @@
+[
+  {
+    "id": "VIA-0201",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es una calle de plataforma única?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Una calle en la que la calzada y la acera están al mismo nivel.",
+        "correcta": true,
+        "explicacion": "Su límite genérico es de 20 km/h."
+      },
+      {
+        "texto": "Una calle de un solo carril.",
+        "correcta": false,
+        "explicacion": "No se refiere a los carriles.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Una calle peatonal.",
+        "correcta": false,
+        "explicacion": "Se puede circular, con límite bajo.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 50",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0202",
+    "mundo": "via",
+    "subtema": "carril-bus",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Quién puede circular por un carril reservado al autobús?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los autobuses y los vehículos que indique la señalización (por ejemplo, taxis).",
+        "correcta": true,
+        "explicacion": "Los turismos no pueden usarlo salvo lo que diga la señal."
+      },
+      {
+        "texto": "Cualquier vehículo en hora punta.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Las motos siempre.",
+        "correcta": false,
+        "explicacion": "Solo si la señal lo permite.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC (carriles reservados)",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0203",
+    "mundo": "via",
+    "subtema": "peatones",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Si hay un paso para peatones cerca, un peatón debe cruzar…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por el paso para peatones.",
+        "correcta": true,
+        "explicacion": "Es lo más seguro."
+      },
+      {
+        "texto": "Por donde quiera.",
+        "correcta": false,
+        "explicacion": "Si hay paso cerca, debe usarlo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Entre los coches aparcados.",
+        "correcta": false,
+        "explicacion": "Es peligroso: no le ven.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 124",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0204",
+    "mundo": "via",
+    "subtema": "vmp",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Puede un patinete eléctrico (VMP) llevar un pasajero?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "Está diseñado para una sola persona."
+      },
+      {
+        "texto": "Sí, si es un niño.",
+        "correcta": false,
+        "explicacion": "Tampoco.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, si va despacio.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC (vehículos de movilidad personal)",
+    "revisar": true
+  },
+  {
+    "id": "VIA-0205",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es un poblado?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Un espacio con edificaciones en cuyas entradas y salidas hay señales de comienzo y fin de poblado.",
+        "correcta": true,
+        "explicacion": "Dentro se aplican los límites urbanos."
+      },
+      {
+        "texto": "Cualquier zona con casas cerca de la carretera.",
+        "correcta": false,
+        "explicacion": "Lo define la señalización.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Solo las ciudades grandes.",
+        "correcta": false,
+        "explicacion": "También los pueblos pequeños.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  }
+]

@@ -1,0 +1,470 @@
+[
+  {
+    "id": "MAN-0101",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Vas detrás de un camión y en el centro hay una línea continua. ¿Puedes adelantarle?",
+    "imagen": "escena:adelantar-continua",
+    "opciones": [
+      {
+        "texto": "No, porque tendrías que cruzar la línea continua.",
+        "correcta": true,
+        "explicacion": "La línea continua no se puede atravesar."
+      },
+      {
+        "texto": "Sí, si no viene nadie de frente.",
+        "correcta": false,
+        "explicacion": "Aunque no venga nadie, la continua lo prohíbe.",
+        "error_tipo": "maniobra_adelantamiento"
+      },
+      {
+        "texto": "Sí, si el camión va despacio.",
+        "correcta": false,
+        "explicacion": "Que vaya despacio no cambia la prohibición.",
+        "error_tipo": "maniobra_adelantamiento"
+      }
+    ],
+    "error_tipo": [
+      "maniobra_adelantamiento"
+    ],
+    "fuente": "RGC art. 167",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0102",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Vas a adelantar a este ciclista. ¿Qué separación lateral debes dejar como mínimo?",
+    "imagen": "escena:adelantar-ciclista",
+    "opciones": [
+      {
+        "texto": "1,5 metros.",
+        "correcta": true,
+        "explicacion": "Si no hay espacio, espera."
+      },
+      {
+        "texto": "50 centímetros.",
+        "correcta": false,
+        "explicacion": "Es muy poco.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "La que quepa, aunque sea poca.",
+        "correcta": false,
+        "explicacion": "Hay un mínimo legal.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RGC art. 85.4",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0103",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Antes de iniciar un adelantamiento debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Comprobar por los espejos y el ángulo muerto que nadie te va a adelantar, y señalizar.",
+        "correcta": true,
+        "explicacion": "Además, que tienes espacio y visibilidad suficientes."
+      },
+      {
+        "texto": "Acelerar y luego señalizar.",
+        "correcta": false,
+        "explicacion": "Primero se comprueba y se señaliza.",
+        "error_tipo": "maniobra_adelantamiento"
+      },
+      {
+        "texto": "Tocar el claxon siempre.",
+        "correcta": false,
+        "explicacion": "En poblado está prohibido salvo para evitar un accidente.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "maniobra_adelantamiento",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 84",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0104",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al terminar un adelantamiento, debes volver a tu carril…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cuando puedas hacerlo sin obligar al adelantado a frenar o apartarse.",
+        "correcta": true,
+        "explicacion": "Deja distancia suficiente antes de volver."
+      },
+      {
+        "texto": "En cuanto hayas sobrepasado su parachoques delantero.",
+        "correcta": false,
+        "explicacion": "Es demasiado pronto: le cerrarías el paso.",
+        "error_tipo": "maniobra_adelantamiento"
+      },
+      {
+        "texto": "No hace falta volver si la vía está libre.",
+        "correcta": false,
+        "explicacion": "Fuera de poblado se vuelve al carril derecho.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "maniobra_adelantamiento"
+    ],
+    "fuente": "RGC art. 85",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0105",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Como norma general, ¿se puede adelantar en una intersección?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, salvo en los casos permitidos, como en glorietas o si tienes prioridad señalizada.",
+        "correcta": true,
+        "explicacion": "Las intersecciones son lugares de riesgo."
+      },
+      {
+        "texto": "Sí, siempre que no venga nadie.",
+        "correcta": false,
+        "explicacion": "No es la norma general.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Sí, por la derecha.",
+        "correcta": false,
+        "explicacion": "Tampoco por la derecha.",
+        "error_tipo": "maniobra_adelantamiento"
+      }
+    ],
+    "error_tipo": [
+      "maniobra_adelantamiento",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 87",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0106",
+    "mundo": "maniobras",
+    "subtema": "giros",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Para girar a la derecha, debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Ceñirte todo lo posible al borde derecho de la calzada.",
+        "correcta": true,
+        "explicacion": "Así no invades otros carriles al girar."
+      },
+      {
+        "texto": "Abrirte a la izquierda para tomar mejor la curva.",
+        "correcta": false,
+        "explicacion": "Puedes cerrar el paso a quien te sigue.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Situarte en el centro de la calzada.",
+        "correcta": false,
+        "explicacion": "Eso es para girar a la izquierda.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 75",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0107",
+    "mundo": "maniobras",
+    "subtema": "giros",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una vía de doble sentido, para girar a la izquierda debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Ceñirte al eje central de la calzada, sin invadir el sentido contrario.",
+        "correcta": true,
+        "explicacion": "Así dejas pasar por tu derecha a los que siguen recto."
+      },
+      {
+        "texto": "Ceñirte al borde derecho.",
+        "correcta": false,
+        "explicacion": "Eso es para girar a la derecha.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Invadir el carril contrario antes del cruce.",
+        "correcta": false,
+        "explicacion": "Es peligroso y está prohibido.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 75",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0108",
+    "mundo": "maniobras",
+    "subtema": "estacionar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una vía urbana de doble sentido, ¿en qué lado se estaciona como norma general?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En el lado derecho, según tu sentido de marcha.",
+        "correcta": true,
+        "explicacion": "Salvo que la señalización diga otra cosa."
+      },
+      {
+        "texto": "En cualquier lado.",
+        "correcta": false,
+        "explicacion": "No es libre.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "En el lado izquierdo.",
+        "correcta": false,
+        "explicacion": "Tendrías que cruzar el sentido contrario.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 90",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0109",
+    "mundo": "maniobras",
+    "subtema": "estacionar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Se puede estacionar en doble fila?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "Está prohibido: dificulta la circulación."
+      },
+      {
+        "texto": "Sí, durante 5 minutos.",
+        "correcta": false,
+        "explicacion": "No hay un tiempo permitido.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Sí, con las luces de emergencia encendidas.",
+        "correcta": false,
+        "explicacion": "Las luces de emergencia no lo hacen legal.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 94",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0110",
+    "mundo": "maniobras",
+    "subtema": "parar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Dónde está prohibido parar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En los pasos para peatones.",
+        "correcta": true,
+        "explicacion": "También en curvas y cambios de rasante de visibilidad reducida y en los pasos a nivel, entre otros lugares."
+      },
+      {
+        "texto": "En cualquier calle con un carril.",
+        "correcta": false,
+        "explicacion": "Depende de la señalización y del lugar, no de los carriles.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo en las autopistas.",
+        "correcta": false,
+        "explicacion": "No solo en autopistas.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 91",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0111",
+    "mundo": "maniobras",
+    "subtema": "estacionar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si estacionas en una cuesta, debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Dejar el freno de mano puesto, una marcha metida y las ruedas giradas hacia el bordillo.",
+        "correcta": true,
+        "explicacion": "Así, si el coche se mueve, el bordillo lo para."
+      },
+      {
+        "texto": "Dejarlo en punto muerto.",
+        "correcta": false,
+        "explicacion": "Sin marcha, es más fácil que se mueva.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Dejar las ruedas rectas.",
+        "correcta": false,
+        "explicacion": "Giradas hacia el bordillo son más seguras.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 92",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0112",
+    "mundo": "maniobras",
+    "subtema": "puertas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Antes de abrir la puerta del coche aparcado debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Comprobar que no se acerca ningún vehículo, ciclista o patinete.",
+        "correcta": true,
+        "explicacion": "Una puerta abierta de golpe es un peligro para los ciclistas."
+      },
+      {
+        "texto": "Abrirla rápido para no molestar.",
+        "correcta": false,
+        "explicacion": "Abrir rápido sin mirar es peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Tocar el claxon.",
+        "correcta": false,
+        "explicacion": "No es necesario ni sirve para esto.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 114",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0113",
+    "mundo": "maniobras",
+    "subtema": "senalizar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Cuando terminas una maniobra, el intermitente…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Debe apagarse.",
+        "correcta": true,
+        "explicacion": "Si lo dejas encendido, confundes a los demás."
+      },
+      {
+        "texto": "Debe quedar encendido unos segundos más.",
+        "correcta": false,
+        "explicacion": "No: se apaga al terminar.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Da igual.",
+        "correcta": false,
+        "explicacion": "No da igual: confunde.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 109",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0114",
+    "mundo": "maniobras",
+    "subtema": "cambio-carril",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es el ángulo muerto?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La zona alrededor del coche que no se ve en los espejos.",
+        "correcta": true,
+        "explicacion": "Por eso hay que girar la cabeza antes de cambiar de carril."
+      },
+      {
+        "texto": "La zona delante del coche que tapa el capó.",
+        "correcta": false,
+        "explicacion": "Se refiere a la que no ves por los espejos, a los lados.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Una curva sin visibilidad.",
+        "correcta": false,
+        "explicacion": "No es eso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: maniobras",
+    "revisar": false
+  }
+]

@@ -2,7 +2,7 @@ import { useConFallos } from '../store/selectores'
 import { infoError } from '../learning/errores'
 import { preguntaPorId } from '../content/banco'
 import type { ConfigPartida } from './Nivel'
-import { SenalSVG } from './SenalSVG'
+import { ImagenPregunta } from './EscenaSVG'
 
 export function Cuaderno({ onJugar }: { onJugar: (c: ConfigPartida) => void }) {
   const conFallos = useConFallos()
@@ -51,7 +51,7 @@ export function Cuaderno({ onJugar }: { onJugar: (c: ConfigPartida) => void }) {
                   const correcta = p.opciones.find((o) => o.correcta)!
                   return (
                     <article key={e.id} className="pegatina fallo">
-                      {p.imagen?.startsWith('senal:') && <SenalSVG id={p.imagen.slice(6)} size={64} />}
+                      <ImagenPregunta imagen={p.imagen} pequena />
                       <p className="enunciado">{p.enunciado}</p>
                       <p>
                         <span className="rotulo">Correcta</span>

@@ -536,3 +536,47 @@ canvas.particulas { position: fixed; inset: 0; width: 100%; height: 100%; pointe
 .pasos li::before { content: counter(paso); flex: none; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--gold); color: var(--gold-ink); border: 2px solid var(--line); font-family: var(--font-d); font-weight: 800; }
 .icono-paso { display: inline-grid; place-items: center; min-width: 26px; height: 26px; padding: 0 5px; margin: 0 2px; vertical-align: -6px; border: 2px solid var(--line); border-radius: 8px; background: var(--panel); font-weight: 800; }
 .icono-paso svg { width: 16px; height: 16px; }
+
+/* ---------- Guía de juego ---------- */
+.guia-paso { display: flex; flex-direction: column; gap: 10px; text-align: center; }
+.guia-dibujo { min-height: 120px; display: grid; place-items: center; }
+.guia-nodos { display: flex; align-items: center; }
+.guia-nodo { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-d); font-size: 24px; color: #fff; background: #7C5CFF; border: var(--bw) solid #1E1B2E; box-shadow: 0 4px 0 #1E1B2E; }
+.guia-nodo.hecho { background: #4ADE80; color: #0B2E19; }
+.guia-nodo.actual { outline: 4px solid #7C5CFF; outline-offset: 5px; }
+.guia-camino { width: 70px; height: 18px; background: #4A4E69; border-block: 3px solid #1E1B2E; }
+.guia-fila { display: flex; align-items: center; gap: 18px; }
+.guia-estrellas { display: flex; }
+.guia-estrellas svg { width: 40px; height: 40px; }
+.guia-fallo { padding: 12px; display: flex; flex-direction: column; gap: 4px; background: color-mix(in srgb, var(--bad) 18%, var(--panel)); font-size: 14px; text-align: left; }
+.guia-medidor { display: flex; align-items: center; gap: 10px; font-family: var(--font-d); font-size: 44px; color: var(--good-ink); background: var(--good); padding: 8px 18px; border-radius: 20px; border: var(--bw) solid var(--line); }
+.guia-medidor svg { width: 46px; height: 46px; }
+.guia-racha { display: flex; align-items: center; gap: 4px; font-family: var(--font-d); font-size: 36px; }
+.guia-racha svg { width: 40px; height: 40px; }
+.guia-puntos { display: flex; justify-content: center; gap: 6px; }
+.guia-puntos i { width: 10px; height: 10px; border-radius: 50%; background: var(--bg2); border: 2px solid var(--line); }
+.guia-puntos i.si { background: var(--accent); }
+.boton.compartir { background: linear-gradient(90deg, #FF3D81, #FF9F1C); color: #fff; }
+.examen-real { padding: 16px; display: flex; flex-direction: column; gap: 10px; background: color-mix(in srgb, var(--good) 20%, var(--panel)); }
+.examen-real p { margin: 0; }
+.aviso-diario { padding: 14px; display: flex; align-items: center; gap: 12px; }
+.aviso-diario > div { flex: 1; min-width: 0; }
+.aviso-diario p { margin: 4px 0 0; }
+.interruptor { flex: none; width: 58px; height: 34px; border-radius: 99px; border: var(--bw) solid var(--line); background: var(--bg2); position: relative; padding: 0; }
+.interruptor i { position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: var(--panel); border: 2px solid var(--line); transition: left .2s; }
+.interruptor.on { background: var(--good); }
+.interruptor.on i { left: 27px; }
+
+/* Cabecera compacta: marca, racha, monedas y tres botones en una sola fila en móvil. */
+.cabecera { column-gap: 6px; }
+.cabecera .marca { font-size: 21px; }
+.cabecera .icono-boton { width: 36px; height: 36px; border-radius: 10px; }
+.cabecera .icono-boton svg { width: 19px; height: 19px; }
+.cabecera .chip-cab { padding: 3px 7px; font-size: 13px; }
+.cabecera .chips-cabecera { gap: 4px; }
+@media (max-width: 380px) {
+  .cabecera .marca { font-size: 18px; }
+  .cabecera .icono-boton { width: 33px; height: 33px; }
+  .cabecera .chip-cab { padding: 2px 5px; font-size: 12px; gap: 2px; }
+  .cabecera .chip-cab svg { width: 14px; height: 14px; }
+}

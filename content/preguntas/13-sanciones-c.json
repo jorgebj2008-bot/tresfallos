@@ -1,0 +1,136 @@
+[
+  {
+    "id": "SAN-0201",
+    "mundo": "sanciones",
+    "subtema": "delitos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Conducir con el permiso retirado por un juez es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Un delito.",
+        "correcta": true,
+        "explicacion": "Igual que conducir sin haberlo obtenido nunca."
+      },
+      {
+        "texto": "Una infracción leve.",
+        "correcta": false,
+        "explicacion": "Mucho más grave.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "Legal en trayectos cortos.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "sanciones"
+    ],
+    "fuente": "Código Penal, art. 384",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0202",
+    "mundo": "sanciones",
+    "subtema": "recurso",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Si no estás de acuerdo con una multa, puedes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Presentar alegaciones o recurso en los plazos indicados.",
+        "correcta": true,
+        "explicacion": "Si pagas con descuento, renuncias a recurrir."
+      },
+      {
+        "texto": "Nada: hay que pagarla siempre.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre».",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Ignorarla.",
+        "correcta": false,
+        "explicacion": "Acabaría en un cobro con recargo.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), arts. 93 a 95",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0203",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pierden por no usar el sistema de retención infantil?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "4 puntos.",
+        "correcta": true,
+        "explicacion": "Igual que no llevar el cinturón."
+      },
+      {
+        "texto": "2 puntos.",
+        "correcta": false,
+        "explicacion": "Te quedas corto.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "Ninguno.",
+        "correcta": false,
+        "explicacion": "Sí se pierden.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0204",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pierden por conducir con una tasa de alcohol superior a 0,50 mg/l en aire (sin llegar a delito)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "6 puntos.",
+        "correcta": true,
+        "explicacion": "Además de 1.000 euros de multa."
+      },
+      {
+        "texto": "4 puntos.",
+        "correcta": false,
+        "explicacion": "Eso es entre 0,25 y 0,50.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "2 puntos.",
+        "correcta": false,
+        "explicacion": "Muchos más.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  }
+]

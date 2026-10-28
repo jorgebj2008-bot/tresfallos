@@ -1,0 +1,336 @@
+[
+  {
+    "id": "PRI-0201",
+    "mundo": "prioridad",
+    "subtema": "estrechamientos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En un estrechamiento tienes una señal de «prioridad respecto al sentido contrario». ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Pasar, con precaución: tienes prioridad.",
+        "correcta": true,
+        "explicacion": "Quien viene de frente debe esperar."
+      },
+      {
+        "texto": "Esperar a que pasen los de enfrente.",
+        "correcta": false,
+        "explicacion": "Esa sería la señal contraria.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Pasar a la vez que el otro.",
+        "correcta": false,
+        "explicacion": "No caben dos.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "confunde_senales"
+    ],
+    "fuente": "RGC (señales de prioridad en estrechamientos)",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0202",
+    "mundo": "prioridad",
+    "subtema": "estrechamientos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En un estrechamiento tienes una señal de «prioridad en sentido contrario». ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Ceder el paso a los que vienen de frente.",
+        "correcta": true,
+        "explicacion": "Ellos tienen prioridad."
+      },
+      {
+        "texto": "Pasar tú primero.",
+        "correcta": false,
+        "explicacion": "Tú no tienes prioridad.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Tocar el claxon y pasar.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "confunde_senales"
+    ],
+    "fuente": "RGC (señales de prioridad en estrechamientos)",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0203",
+    "mundo": "prioridad",
+    "subtema": "peatones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Giras a la derecha con el semáforo en verde y los peatones cruzan con su semáforo también en verde. ¿Quién pasa?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los peatones.",
+        "correcta": true,
+        "explicacion": "Al girar, cedes a los peatones que cruzan la calle a la que entras."
+      },
+      {
+        "texto": "Tú, porque tienes verde.",
+        "correcta": false,
+        "explicacion": "Ellos también tienen verde y prioridad.",
+        "error_tipo": "prioridad_peaton"
+      },
+      {
+        "texto": "El que llegue antes.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "prioridad_peaton"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_peaton"
+    ],
+    "fuente": "RGC art. 65",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0204",
+    "mundo": "prioridad",
+    "subtema": "ciclistas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Giras a la derecha y un ciclista circula por el arcén en tu mismo sentido. ¿Quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El ciclista.",
+        "correcta": true,
+        "explicacion": "Debes dejarle pasar antes de girar."
+      },
+      {
+        "texto": "Tú, porque vas a girar.",
+        "correcta": false,
+        "explicacion": "Girar no da prioridad.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Quien vaya más rápido.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 64",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0205",
+    "mundo": "prioridad",
+    "subtema": "giros",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Dos coches llegan a la vez de frente, ambos con un STOP. Uno sigue recto y el otro gira a la izquierda. ¿Quién pasa primero?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El que sigue recto.",
+        "correcta": true,
+        "explicacion": "Entre iguales, quien gira a la izquierda cede a quien viene de frente."
+      },
+      {
+        "texto": "El que gira a la izquierda.",
+        "correcta": false,
+        "explicacion": "Al revés.",
+        "error_tipo": "giro_izquierda"
+      },
+      {
+        "texto": "El que llegó antes al STOP.",
+        "correcta": false,
+        "explicacion": "No es el criterio.",
+        "error_tipo": "giro_izquierda"
+      }
+    ],
+    "error_tipo": [
+      "giro_izquierda"
+    ],
+    "fuente": "RGC, normas de intersección",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0206",
+    "mundo": "prioridad",
+    "subtema": "glorietas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Sales de una glorieta y un peatón cruza por el paso de peatones de la salida. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detenerte y dejarle pasar.",
+        "correcta": true,
+        "explicacion": "El peatón en el paso tiene prioridad."
+      },
+      {
+        "texto": "Pasar, porque vienes de la glorieta.",
+        "correcta": false,
+        "explicacion": "Salir de la glorieta no da prioridad sobre el peatón.",
+        "error_tipo": "prioridad_peaton"
+      },
+      {
+        "texto": "Tocar el claxon.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "prioridad_peaton"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_peaton"
+    ],
+    "fuente": "RGC art. 65",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0207",
+    "mundo": "prioridad",
+    "subtema": "animales",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En una carretera, un pastor conduce un rebaño. Fuera de las cañadas señalizadas, como norma general…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los conductores de animales deben ceder el paso a los vehículos, pero tú debes extremar la precaución.",
+        "correcta": true,
+        "explicacion": "Reduce la velocidad y no asustes a los animales."
+      },
+      {
+        "texto": "Los animales siempre tienen prioridad.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre».",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Puedes pitar para que se aparten.",
+        "correcta": false,
+        "explicacion": "Asustarías a los animales.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 66",
+    "revisar": true
+  },
+  {
+    "id": "PRI-0208",
+    "mundo": "prioridad",
+    "subtema": "urgencias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Estás parado en un semáforo en rojo y llega por detrás una ambulancia con sirena. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Facilitarle el paso moviéndote con precaución si es posible, sin poner a nadie en peligro.",
+        "correcta": true,
+        "explicacion": "Ayúdala a pasar con seguridad."
+      },
+      {
+        "texto": "No moverte: el semáforo está en rojo.",
+        "correcta": false,
+        "explicacion": "Si puedes facilitarle el paso con seguridad, debes hacerlo.",
+        "error_tipo": "prioridad_urgencia"
+      },
+      {
+        "texto": "Saltarte el semáforo a toda velocidad.",
+        "correcta": false,
+        "explicacion": "Con precaución, sin crear peligro.",
+        "error_tipo": "prioridad_urgencia"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_urgencia"
+    ],
+    "fuente": "RGC art. 69",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0209",
+    "mundo": "prioridad",
+    "subtema": "sin-senales",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En un cruce sin señales llega un tranvía por tu derecha y tú vas recto. ¿Quién pasa?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El tranvía.",
+        "correcta": true,
+        "explicacion": "Los vehículos sobre raíles tienen prioridad."
+      },
+      {
+        "texto": "Tú.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "Depende de quién llegue antes.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "prioridad_derecha"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC art. 57.1",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0210",
+    "mundo": "prioridad",
+    "subtema": "incorporacion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Sales de un aparcamiento en batería a la calle. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Ceder el paso a los vehículos y peatones que circulan.",
+        "correcta": true,
+        "explicacion": "Quien se incorpora a la circulación cede el paso."
+      },
+      {
+        "texto": "Salir rápido para no molestar.",
+        "correcta": false,
+        "explicacion": "Puede ser peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Salir, porque estás a su derecha.",
+        "correcta": false,
+        "explicacion": "No se aplica la derecha.",
+        "error_tipo": "prioridad_derecha"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC art. 72",
+    "revisar": false
+  }
+]

@@ -1,0 +1,201 @@
+[
+  {
+    "id": "CON-0201",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué permite conducir el permiso C1?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Camiones de entre 3.500 y 7.500 kg de MMA.",
+        "correcta": true,
+        "explicacion": "Por encima de 7.500 kg hace falta el C."
+      },
+      {
+        "texto": "Autobuses pequeños.",
+        "correcta": false,
+        "explicacion": "Para eso es el D1.",
+        "error_tipo": "confunde_permisos"
+      },
+      {
+        "texto": "Motos grandes.",
+        "correcta": false,
+        "explicacion": "Para eso es el A.",
+        "error_tipo": "confunde_permisos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_permisos"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0202",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué permite conducir el permiso D1?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Autobuses de hasta 16 plazas para pasajeros, además de la del conductor.",
+        "correcta": true,
+        "explicacion": "Los autobuses más grandes requieren el D."
+      },
+      {
+        "texto": "Camiones ligeros.",
+        "correcta": false,
+        "explicacion": "Para eso es el C1.",
+        "error_tipo": "confunde_permisos"
+      },
+      {
+        "texto": "Turismos con remolque.",
+        "correcta": false,
+        "explicacion": "Para eso está el B o el B+E.",
+        "error_tipo": "confunde_permisos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_permisos"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0203",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Cuándo hace falta el permiso B+E?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Para un turismo con un remolque de más de 750 kg si el conjunto supera los 3.500 kg.",
+        "correcta": true,
+        "explicacion": "Con remolques ligeros basta el B."
+      },
+      {
+        "texto": "Para cualquier remolque.",
+        "correcta": false,
+        "explicacion": "Los de hasta 750 kg se llevan con el B.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Solo para caravanas.",
+        "correcta": false,
+        "explicacion": "Depende de la masa, no del tipo.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0204",
+    "mundo": "conductor",
+    "subtema": "puntos",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Dónde puedes consultar tu saldo de puntos?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En la sede electrónica de la DGT o en la app miDGT.",
+        "correcta": true,
+        "explicacion": "Es gratuito."
+      },
+      {
+        "texto": "Solo en una autoescuela.",
+        "correcta": false,
+        "explicacion": "No hace falta ir a la autoescuela.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo en la ITV.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "DGT (servicios en línea)",
+    "revisar": false
+  },
+  {
+    "id": "CON-0205",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿A qué edad se puede obtener el permiso C (camiones)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "21 años.",
+        "correcta": true,
+        "explicacion": "El C1 se puede obtener a los 18."
+      },
+      {
+        "texto": "18 años.",
+        "correcta": false,
+        "explicacion": "18 es el C1.",
+        "error_tipo": "confunde_permisos"
+      },
+      {
+        "texto": "25 años.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_permisos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_permisos"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0206",
+    "mundo": "conductor",
+    "subtema": "documentos",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Si pierdes el permiso de conducción, ¿qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Pedir un duplicado a la DGT.",
+        "correcta": true,
+        "explicacion": "Mientras tanto, puedes llevar el permiso digital en la app miDGT."
+      },
+      {
+        "texto": "Volver a examinarte.",
+        "correcta": false,
+        "explicacion": "No hace falta.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Nada: no hace falta tenerlo.",
+        "correcta": false,
+        "explicacion": "Necesitas acreditar tu permiso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "DGT (duplicados)",
+    "revisar": false
+  }
+]

@@ -1,0 +1,399 @@
+[
+  {
+    "id": "AUT-0101",
+    "mundo": "autopistas",
+    "subtema": "carriles",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Circulas por esta autovía de tres carriles y el derecho está libre. ¿Qué debes hacer?",
+    "imagen": "escena:autovia-carriles",
+    "opciones": [
+      {
+        "texto": "Volver al carril derecho.",
+        "correcta": true,
+        "explicacion": "Fuera de poblado se circula por el derecho y los demás se usan para adelantar o si la densidad del tráfico lo aconseja."
+      },
+      {
+        "texto": "Seguir por el central, que es más cómodo.",
+        "correcta": false,
+        "explicacion": "Es una infracción si el derecho está libre.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Pasar al carril izquierdo.",
+        "correcta": false,
+        "explicacion": "El izquierdo es para adelantar.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC, utilización de los carriles fuera de poblado",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0102",
+    "mundo": "autopistas",
+    "subtema": "pasos-nivel",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Llegas a este paso a nivel con las luces rojas encendidas. ¿Qué haces?",
+    "imagen": "escena:paso-nivel",
+    "opciones": [
+      {
+        "texto": "Detenerte antes del paso.",
+        "correcta": true,
+        "explicacion": "Las luces rojas indican que se acerca un tren."
+      },
+      {
+        "texto": "Pasar rápido antes de que llegue el tren.",
+        "correcta": false,
+        "explicacion": "Nunca: el tren llega antes de lo que parece.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Pasar si no ves el tren.",
+        "correcta": false,
+        "explicacion": "Puede venir aunque no lo veas.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz"
+    ],
+    "fuente": "RGC (semáforos en pasos a nivel)",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0103",
+    "mundo": "autopistas",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué caracteriza a una autopista?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Está reservada a automóviles, sin cruces a nivel y con accesos limitados.",
+        "correcta": true,
+        "explicacion": "Las calzadas para cada sentido están separadas."
+      },
+      {
+        "texto": "Que tiene peaje.",
+        "correcta": false,
+        "explicacion": "Hay autopistas sin peaje.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Que tiene dos carriles.",
+        "correcta": false,
+        "explicacion": "No se define por el número de carriles.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0104",
+    "mundo": "autopistas",
+    "subtema": "usuarios",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Pueden circular ciclomotores por una autovía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "Los ciclomotores tienen prohibido circular por autopistas y autovías."
+      },
+      {
+        "texto": "Sí, por el arcén.",
+        "correcta": false,
+        "explicacion": "Ni por el arcén.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, a 45 km/h.",
+        "correcta": false,
+        "explicacion": "Está prohibido a cualquier velocidad.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 38",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0105",
+    "mundo": "autopistas",
+    "subtema": "arcen",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Puedes parar en el arcén de una autopista para hacer una llamada?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No: solo se puede parar en caso de emergencia o avería.",
+        "correcta": true,
+        "explicacion": "Para llamar, sal en un área de servicio."
+      },
+      {
+        "texto": "Sí, con las luces de emergencia.",
+        "correcta": false,
+        "explicacion": "Las luces no lo hacen legal.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, si es corta.",
+        "correcta": false,
+        "explicacion": "No depende de la duración.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 91",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0106",
+    "mundo": "autopistas",
+    "subtema": "tuneles",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En un túnel de un solo carril por sentido, ¿se puede adelantar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "En túneles con un solo carril por sentido, adelantar está prohibido."
+      },
+      {
+        "texto": "Sí, si hay visibilidad.",
+        "correcta": false,
+        "explicacion": "Está prohibido aunque haya visibilidad.",
+        "error_tipo": "maniobra_adelantamiento"
+      },
+      {
+        "texto": "Sí, a vehículos lentos.",
+        "correcta": false,
+        "explicacion": "Tampoco.",
+        "error_tipo": "maniobra_adelantamiento"
+      }
+    ],
+    "error_tipo": [
+      "maniobra_adelantamiento"
+    ],
+    "fuente": "RGC art. 87",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0107",
+    "mundo": "autopistas",
+    "subtema": "tuneles",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si se produce un incendio dentro de un túnel, lo más seguro es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detener el vehículo, salir y alejarse a pie por las salidas de emergencia.",
+        "correcta": true,
+        "explicacion": "El humo es el mayor peligro."
+      },
+      {
+        "texto": "Dar marcha atrás hasta la entrada.",
+        "correcta": false,
+        "explicacion": "Está prohibido y es muy peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Quedarte dentro del coche con las ventanillas cerradas.",
+        "correcta": false,
+        "explicacion": "El humo puede alcanzarte.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: túneles",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0108",
+    "mundo": "autopistas",
+    "subtema": "pasos-nivel",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica la señal en forma de cruz (aspa) junto a una vía de tren?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La situación de un paso a nivel.",
+        "correcta": true,
+        "explicacion": "Avisa de que vas a cruzar la vía: precaución."
+      },
+      {
+        "texto": "Un cruce de carreteras.",
+        "correcta": false,
+        "explicacion": "No se usa para cruces de carreteras.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido el paso.",
+        "correcta": false,
+        "explicacion": "No es una prohibición.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0109",
+    "mundo": "autopistas",
+    "subtema": "pasos-nivel",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Tu coche se queda parado sobre las vías de un paso a nivel. ¿Qué haces primero?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sacar a los ocupantes y alejarlos de las vías.",
+        "correcta": true,
+        "explicacion": "Después, avisa para que detengan el tren si es posible."
+      },
+      {
+        "texto": "Intentar arrancarlo hasta que funcione.",
+        "correcta": false,
+        "explicacion": "Primero está la seguridad de las personas.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Empujarlo con todos dentro.",
+        "correcta": false,
+        "explicacion": "Es muy peligroso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: pasos a nivel",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0110",
+    "mundo": "autopistas",
+    "subtema": "mediana",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Se puede cruzar la mediana de una autovía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, nunca.",
+        "correcta": true,
+        "explicacion": "Está prohibido atravesarla."
+      },
+      {
+        "texto": "Sí, en caso de atasco.",
+        "correcta": false,
+        "explicacion": "Tampoco en un atasco.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, si hay una abertura.",
+        "correcta": false,
+        "explicacion": "Las aberturas son para servicios de emergencia y mantenimiento.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 79",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0111",
+    "mundo": "autopistas",
+    "subtema": "averias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Tras una avería en la autovía, ¿dónde deben esperar los ocupantes?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Fuera del vehículo, detrás de la barrera de seguridad si es posible.",
+        "correcta": true,
+        "explicacion": "Dentro o junto al coche corren peligro de alcance."
+      },
+      {
+        "texto": "Dentro del coche con los cinturones puestos.",
+        "correcta": false,
+        "explicacion": "Es peligroso si te alcanza otro vehículo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "En el arcén, junto al coche.",
+        "correcta": false,
+        "explicacion": "Es una zona de mucho riesgo.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: averías en vía rápida",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0112",
+    "mundo": "autopistas",
+    "subtema": "incorporacion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al final del carril de aceleración no hay hueco. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detenerte al final del carril y esperar un hueco seguro.",
+        "correcta": true,
+        "explicacion": "Solo si es imprescindible: lo normal es adaptar la velocidad antes."
+      },
+      {
+        "texto": "Entrar de todas formas, ya te harán sitio.",
+        "correcta": false,
+        "explicacion": "Puedes provocar un accidente.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Seguir por el arcén.",
+        "correcta": false,
+        "explicacion": "Está prohibido.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 72",
+    "revisar": false
+  }
+]

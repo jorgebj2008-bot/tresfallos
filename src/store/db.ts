@@ -22,6 +22,8 @@ export interface Perfil {
   coches?: string[]
   coche?: string
   logros?: string[]
+  /** Música de fondo (por defecto, encendida). */
+  musica?: boolean
 }
 
 export interface ResultadoNivel {

@@ -1,0 +1,499 @@
+[
+  {
+    "id": "ALC-0101",
+    "mundo": "alcohol",
+    "subtema": "tasas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la tasa máxima de alcohol en aire espirado para un conductor profesional?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "0,15 mg/l.",
+        "correcta": true,
+        "explicacion": "Igual que para los noveles."
+      },
+      {
+        "texto": "0,25 mg/l.",
+        "correcta": false,
+        "explicacion": "Esa es la general.",
+        "error_tipo": "tasas_alcohol"
+      },
+      {
+        "texto": "0,30 mg/l.",
+        "correcta": false,
+        "explicacion": "0,3 es en sangre (g/l), no en aire.",
+        "error_tipo": "tasas_alcohol"
+      }
+    ],
+    "error_tipo": [
+      "tasas_alcohol"
+    ],
+    "fuente": "RGC art. 20",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0102",
+    "mundo": "alcohol",
+    "subtema": "tasas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la tasa máxima de alcohol en sangre para un conductor novel?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "0,3 g/l.",
+        "correcta": true,
+        "explicacion": "Equivale a 0,15 mg/l en aire."
+      },
+      {
+        "texto": "0,5 g/l.",
+        "correcta": false,
+        "explicacion": "Esa es la general.",
+        "error_tipo": "tasas_alcohol"
+      },
+      {
+        "texto": "0,15 g/l.",
+        "correcta": false,
+        "explicacion": "0,15 es en aire (mg/l).",
+        "error_tipo": "tasas_alcohol"
+      }
+    ],
+    "error_tipo": [
+      "tasas_alcohol"
+    ],
+    "fuente": "RGC art. 20",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0103",
+    "mundo": "alcohol",
+    "subtema": "efectos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si bebes alcohol con el estómago vacío…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Se absorbe más rápido y la tasa sube antes.",
+        "correcta": true,
+        "explicacion": "Comer no evita el efecto, solo lo retrasa algo."
+      },
+      {
+        "texto": "Se absorbe más despacio.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No influye.",
+        "correcta": false,
+        "explicacion": "Sí influye.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: alcohol",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0104",
+    "mundo": "alcohol",
+    "subtema": "efectos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Mezclar alcohol con algunos medicamentos…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Puede multiplicar sus efectos sobre la conducción.",
+        "correcta": true,
+        "explicacion": "La combinación es especialmente peligrosa."
+      },
+      {
+        "texto": "Anula el efecto del alcohol.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No tiene ningún efecto.",
+        "correcta": false,
+        "explicacion": "Sí lo tiene.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: alcohol y medicamentos",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0105",
+    "mundo": "alcohol",
+    "subtema": "efectos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "El alcohol afecta a la visión porque…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Reduce el campo visual y empeora la adaptación a la oscuridad.",
+        "correcta": true,
+        "explicacion": "Se conoce como «visión en túnel»."
+      },
+      {
+        "texto": "Mejora la visión nocturna.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No afecta a la vista.",
+        "correcta": false,
+        "explicacion": "Sí afecta.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: alcohol",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0106",
+    "mundo": "alcohol",
+    "subtema": "controles",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Quién está obligado a someterse a una prueba de alcoholemia?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Todos los conductores, y también los usuarios implicados en un accidente.",
+        "correcta": true,
+        "explicacion": "Un agente puede pedirla aunque no hayas cometido ninguna infracción."
+      },
+      {
+        "texto": "Solo los conductores que hayan cometido una infracción.",
+        "correcta": false,
+        "explicacion": "No hace falta haber cometido una infracción.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Solo los conductores profesionales.",
+        "correcta": false,
+        "explicacion": "Afecta a todos.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 21",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0107",
+    "mundo": "alcohol",
+    "subtema": "controles",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si das positivo, ¿cuánto tiempo debe pasar como mínimo hasta la segunda prueba?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "10 minutos.",
+        "correcta": true,
+        "explicacion": "La segunda prueba confirma el resultado."
+      },
+      {
+        "texto": "1 hora.",
+        "correcta": false,
+        "explicacion": "Es demasiado.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "No hay segunda prueba.",
+        "correcta": false,
+        "explicacion": "Sí la hay.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "dato_numerico"
+    ],
+    "fuente": "RGC art. 23",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0108",
+    "mundo": "alcohol",
+    "subtema": "controles",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si no estás de acuerdo con el resultado del etilómetro, puedes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Pedir un análisis de sangre para contrastarlo.",
+        "correcta": true,
+        "explicacion": "Es un derecho del conductor."
+      },
+      {
+        "texto": "Negarte a firmar y marcharte.",
+        "correcta": false,
+        "explicacion": "Negarte a las pruebas es delito.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Repetir la prueba hasta que salga negativa.",
+        "correcta": false,
+        "explicacion": "No se repite indefinidamente.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 23",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0109",
+    "mundo": "alcohol",
+    "subtema": "drogas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "El cannabis, al volante…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Aumenta el tiempo de reacción y altera la percepción de distancias.",
+        "correcta": true,
+        "explicacion": "Además, sus efectos se suman a los del alcohol."
+      },
+      {
+        "texto": "Mejora la concentración.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No afecta si se consume poco.",
+        "correcta": false,
+        "explicacion": "Afecta incluso en dosis pequeñas.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: drogas",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0110",
+    "mundo": "alcohol",
+    "subtema": "fatiga",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál de estas señales indica que estás fatigado?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Bostezos frecuentes, parpadeo y picor de ojos.",
+        "correcta": true,
+        "explicacion": "Cuando aparecen, para y descansa."
+      },
+      {
+        "texto": "Tener hambre.",
+        "correcta": false,
+        "explicacion": "No es una señal de fatiga.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Tener ganas de ir más rápido.",
+        "correcta": false,
+        "explicacion": "No es una señal típica de fatiga.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: fatiga",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0111",
+    "mundo": "alcohol",
+    "subtema": "fatiga",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es lo más eficaz contra el sueño al volante?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Parar y descansar (o dormir un rato).",
+        "correcta": true,
+        "explicacion": "Abrir la ventanilla o subir la música solo lo disimula unos minutos."
+      },
+      {
+        "texto": "Tomar un café y seguir.",
+        "correcta": false,
+        "explicacion": "El café no sustituye al descanso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Abrir la ventanilla.",
+        "correcta": false,
+        "explicacion": "Solo despeja un momento.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Recomendación DGT: fatiga",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0112",
+    "mundo": "alcohol",
+    "subtema": "fatiga",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un microsueño de 3 segundos a 120 km/h supone recorrer a ciegas unos…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "100 metros.",
+        "correcta": true,
+        "explicacion": "A 120 km/h se avanzan unos 33 metros por segundo."
+      },
+      {
+        "texto": "30 metros.",
+        "correcta": false,
+        "explicacion": "Eso sería en 1 segundo.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "10 metros.",
+        "correcta": false,
+        "explicacion": "Mucho más.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Temario DGT: fatiga",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0113",
+    "mundo": "alcohol",
+    "subtema": "distracciones",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Mirar el móvil 2 segundos a 100 km/h significa avanzar sin mirar unos…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "55 metros.",
+        "correcta": true,
+        "explicacion": "A 100 km/h recorres casi 28 metros por segundo."
+      },
+      {
+        "texto": "20 metros.",
+        "correcta": false,
+        "explicacion": "Te quedas corto.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "5 metros.",
+        "correcta": false,
+        "explicacion": "Mucho más.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Temario DGT: distracciones",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0114",
+    "mundo": "alcohol",
+    "subtema": "distracciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuándo es mejor programar el navegador?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Antes de empezar a circular, con el coche parado.",
+        "correcta": true,
+        "explicacion": "Manipularlo en marcha es una distracción peligrosa."
+      },
+      {
+        "texto": "Mientras conduces por una recta.",
+        "correcta": false,
+        "explicacion": "Sigue siendo una distracción.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "En los semáforos en rojo.",
+        "correcta": false,
+        "explicacion": "Sigues conduciendo aunque estés parado en un semáforo.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 18",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0115",
+    "mundo": "alcohol",
+    "subtema": "comida",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Antes de un viaje largo es recomendable…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Comer ligero.",
+        "correcta": true,
+        "explicacion": "Las comidas copiosas dan sueño."
+      },
+      {
+        "texto": "Comer mucho para aguantar más.",
+        "correcta": false,
+        "explicacion": "Da somnolencia.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No comer nada.",
+        "correcta": false,
+        "explicacion": "Tampoco es bueno: puedes marearte o perder concentración.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Recomendación DGT: fatiga",
+    "revisar": false
+  }
+]

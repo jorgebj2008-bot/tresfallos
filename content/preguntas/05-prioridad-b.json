@@ -1,0 +1,436 @@
+[
+  {
+    "id": "PRI-0101",
+    "mundo": "prioridad",
+    "subtema": "glorietas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Fíjate en la escena. ¿Quién tiene prioridad?",
+    "imagen": "escena:glorieta-entrar",
+    "opciones": [
+      {
+        "texto": "El coche azul, que ya está dentro de la glorieta.",
+        "correcta": true,
+        "explicacion": "En las glorietas, quien está dentro tiene prioridad sobre quien quiere entrar."
+      },
+      {
+        "texto": "Tú, porque el azul viene por tu izquierda.",
+        "correcta": false,
+        "explicacion": "En las glorietas no se aplica la prioridad de la derecha a quien entra.",
+        "error_tipo": "prioridad_glorieta"
+      },
+      {
+        "texto": "El que vaya más rápido.",
+        "correcta": false,
+        "explicacion": "La velocidad no da prioridad.",
+        "error_tipo": "prioridad_glorieta"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_glorieta"
+    ],
+    "fuente": "RGC art. 57.1",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0102",
+    "mundo": "prioridad",
+    "subtema": "sin-senales",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Llegáis a la vez a este cruce sin señales. ¿Quién pasa primero?",
+    "imagen": "escena:cruce-derecha",
+    "opciones": [
+      {
+        "texto": "El coche azul, porque viene por tu derecha.",
+        "correcta": true,
+        "explicacion": "Sin señales ni agentes, prioridad a la derecha."
+      },
+      {
+        "texto": "Tú, porque vas recto.",
+        "correcta": false,
+        "explicacion": "Ir recto no da prioridad.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "Tú, porque llegas por la calle más ancha.",
+        "correcta": false,
+        "explicacion": "La anchura no da prioridad.",
+        "error_tipo": "prioridad_derecha"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC art. 57.1",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0103",
+    "mundo": "prioridad",
+    "subtema": "senales",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Tienes un STOP y por la vía principal se acerca un coche por tu izquierda. ¿Qué haces?",
+    "imagen": "escena:cruce-stop",
+    "opciones": [
+      {
+        "texto": "Detenerte y dejarle pasar.",
+        "correcta": true,
+        "explicacion": "Con STOP cedes el paso a todos los de la vía principal, vengan por donde vengan."
+      },
+      {
+        "texto": "Pasar, porque viene por tu izquierda.",
+        "correcta": false,
+        "explicacion": "La señal manda sobre la prioridad de la derecha.",
+        "error_tipo": "prioridad_senales"
+      },
+      {
+        "texto": "Pasar si llegas primero al cruce.",
+        "correcta": false,
+        "explicacion": "Con STOP, llegar antes no cuenta.",
+        "error_tipo": "prioridad_senales"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_senales"
+    ],
+    "fuente": "RGC art. 56",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0104",
+    "mundo": "prioridad",
+    "subtema": "giros",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Quieres girar a la izquierda y viene un coche de frente que sigue recto. ¿Qué haces?",
+    "imagen": "escena:giro-izquierda",
+    "opciones": [
+      {
+        "texto": "Esperar a que pase y después girar.",
+        "correcta": true,
+        "explicacion": "Al girar a la izquierda cruzas su trayectoria: cede."
+      },
+      {
+        "texto": "Girar rápido antes de que llegue.",
+        "correcta": false,
+        "explicacion": "Es muy peligroso y no tienes prioridad.",
+        "error_tipo": "giro_izquierda"
+      },
+      {
+        "texto": "Girar, porque has señalizado con tiempo.",
+        "correcta": false,
+        "explicacion": "Señalizar no da prioridad.",
+        "error_tipo": "giro_izquierda"
+      }
+    ],
+    "error_tipo": [
+      "giro_izquierda"
+    ],
+    "fuente": "RGC, normas de intersección",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0105",
+    "mundo": "prioridad",
+    "subtema": "peatones",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Un peatón ha empezado a cruzar por el paso de peatones. ¿Qué haces?",
+    "imagen": "escena:paso-peatones",
+    "opciones": [
+      {
+        "texto": "Detenerte y dejarle cruzar.",
+        "correcta": true,
+        "explicacion": "En el paso de peatones, el peatón tiene prioridad."
+      },
+      {
+        "texto": "Pasar despacio por detrás de él.",
+        "correcta": false,
+        "explicacion": "No: hay que detenerse.",
+        "error_tipo": "prioridad_peaton"
+      },
+      {
+        "texto": "Pitar para que se dé prisa.",
+        "correcta": false,
+        "explicacion": "Pitar no da prioridad y además es una falta de respeto.",
+        "error_tipo": "prioridad_peaton"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_peaton"
+    ],
+    "fuente": "RGC art. 65",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0106",
+    "mundo": "prioridad",
+    "subtema": "senales",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "La señal de ceda el paso…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Obliga a ceder el paso, pero no a detenerte si no viene nadie.",
+        "correcta": true,
+        "explicacion": "Si la vía está libre, puedes pasar sin parar."
+      },
+      {
+        "texto": "Obliga a detenerte siempre.",
+        "correcta": false,
+        "explicacion": "Eso es el STOP.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Te da prioridad sobre los demás.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "RGC art. 151",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0107",
+    "mundo": "prioridad",
+    "subtema": "glorietas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿En qué sentido se circula por una glorieta?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En sentido contrario a las agujas del reloj, dejando el centro a la izquierda.",
+        "correcta": true,
+        "explicacion": "Se circula siempre por la derecha, y en una glorieta eso es girar así."
+      },
+      {
+        "texto": "En el sentido de las agujas del reloj.",
+        "correcta": false,
+        "explicacion": "Al revés: eso sería en países donde se circula por la izquierda.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "En el sentido que te lleve antes a tu salida.",
+        "correcta": false,
+        "explicacion": "No se elige.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC (glorietas)",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0108",
+    "mundo": "prioridad",
+    "subtema": "glorietas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Para salir de una glorieta de varios carriles, lo correcto es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Situarte con antelación en el carril exterior (derecho) y señalizar.",
+        "correcta": true,
+        "explicacion": "Así no cortas el paso a los que circulan por fuera."
+      },
+      {
+        "texto": "Salir directamente desde el carril interior.",
+        "correcta": false,
+        "explicacion": "Cortarías el paso a los del carril exterior.",
+        "error_tipo": "prioridad_glorieta"
+      },
+      {
+        "texto": "Frenar dentro de la glorieta hasta que haya hueco.",
+        "correcta": false,
+        "explicacion": "Detenerte dentro es peligroso.",
+        "error_tipo": "prioridad_glorieta"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_glorieta"
+    ],
+    "fuente": "Temario DGT: glorietas",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0109",
+    "mundo": "prioridad",
+    "subtema": "urgencias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una ambulancia circula sin luces ni sirena. ¿Tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No: solo la tiene cuando va en servicio de urgencia con sus señales encendidas.",
+        "correcta": true,
+        "explicacion": "Sin señales, se comporta como cualquier otro vehículo."
+      },
+      {
+        "texto": "Sí, siempre.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: solo con las señales encendidas.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Sí, en los cruces.",
+        "correcta": false,
+        "explicacion": "No, si no lleva las señales.",
+        "error_tipo": "prioridad_urgencia"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_urgencia",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC arts. 67 y 68",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0110",
+    "mundo": "prioridad",
+    "subtema": "ciclistas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un grupo de ciclistas está cruzando una intersección y el primero ya ha empezado a cruzar. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Esperar a que pase todo el grupo.",
+        "correcta": true,
+        "explicacion": "El grupo se considera una unidad a efectos de prioridad."
+      },
+      {
+        "texto": "Pasar entre ellos cuando haya un hueco.",
+        "correcta": false,
+        "explicacion": "Partir el grupo es peligroso y no se permite.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Pasar, porque solo el primero tenía prioridad.",
+        "correcta": false,
+        "explicacion": "El grupo entero tiene prioridad.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 64",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0111",
+    "mundo": "prioridad",
+    "subtema": "incorporacion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Sales de un garaje a la calle. ¿Quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los vehículos y peatones que circulan por la calle.",
+        "correcta": true,
+        "explicacion": "Quien se incorpora desde una propiedad o un garaje cede el paso."
+      },
+      {
+        "texto": "Tú, si vienes por su derecha.",
+        "correcta": false,
+        "explicacion": "La prioridad de la derecha no se aplica al salir de un garaje.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "El que llegue antes.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC art. 72",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0112",
+    "mundo": "prioridad",
+    "subtema": "residencial",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una calle residencial, ¿quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los peatones.",
+        "correcta": true,
+        "explicacion": "Los vehículos deben adaptarse a ellos y no superar los 20 km/h."
+      },
+      {
+        "texto": "Los vehículos, si van despacio.",
+        "correcta": false,
+        "explicacion": "Los peatones tienen prioridad.",
+        "error_tipo": "prioridad_peaton"
+      },
+      {
+        "texto": "El que llegue antes.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "prioridad_peaton"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_peaton"
+    ],
+    "fuente": "RGC (señal de calle residencial)",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0113",
+    "mundo": "prioridad",
+    "subtema": "incorporacion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Te incorporas a la autovía por el carril de aceleración y por el carril derecho viene un coche. ¿Qué haces?",
+    "imagen": "escena:incorporacion",
+    "opciones": [
+      {
+        "texto": "Ajustar tu velocidad y entrar cuando haya hueco, cediéndole el paso.",
+        "correcta": true,
+        "explicacion": "Quien se incorpora cede el paso a los que ya circulan."
+      },
+      {
+        "texto": "Entrar, porque tienes prioridad al venir por la derecha.",
+        "correcta": false,
+        "explicacion": "En las incorporaciones no se aplica la derecha.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "Detenerte siempre al final del carril.",
+        "correcta": false,
+        "explicacion": "Solo si es imprescindible: lo normal es ajustar la velocidad.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_derecha",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 72",
+    "revisar": false
+  }
+]

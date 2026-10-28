@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => ({
               ],
             },
             // Todo el juego queda guardado en el móvil: funciona sin conexión.
-            workbox: { globPatterns: ['**/*.{js,css,html,svg,png,woff,woff2}'] },
+            workbox: { globPatterns: ['**/*.{js,css,html,svg,png,woff,woff2}'], importScripts: ['sw-avisos.js'] },
           }),
         ]),
   ],

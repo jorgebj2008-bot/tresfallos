@@ -31,6 +31,14 @@ export const Altavoz = ({ on }: { on: boolean }) => (
     {on ? <path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" {...trazo} /> : <path d="M16 9.5l5 5M21 9.5l-5 5" {...trazo} />}
   </svg>
 )
+export const Nota = ({ on }: { on: boolean }) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 18V5l11-2v13" {...trazo} />
+    <circle cx="6.5" cy="18" r="2.6" {...trazo} />
+    <circle cx="17.5" cy="16" r="2.6" {...trazo} />
+    {!on && <path d="M3 3l18 18" {...trazo} />}
+  </svg>
+)
 export const Luna = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" {...trazo} /></svg>
 )

@@ -1,0 +1,499 @@
+[
+  {
+    "id": "VEL-0101",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la velocidad máxima genérica de una motocicleta en autopista o autovía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "120 km/h.",
+        "correcta": true,
+        "explicacion": "Es la misma que la de los turismos."
+      },
+      {
+        "texto": "100 km/h.",
+        "correcta": false,
+        "explicacion": "Las motos tienen el mismo límite que los turismos en autopista.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "90 km/h.",
+        "correcta": false,
+        "explicacion": "Es demasiado bajo.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0102",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la velocidad máxima de un ciclomotor?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "45 km/h.",
+        "correcta": true,
+        "explicacion": "Es su límite, tanto por diseño como en la vía."
+      },
+      {
+        "texto": "50 km/h.",
+        "correcta": false,
+        "explicacion": "50 es el límite urbano de algunas calles, no el del ciclomotor.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "60 km/h.",
+        "correcta": false,
+        "explicacion": "Demasiado: un ciclomotor no puede pasar de 45.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0103",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué límite genérico rige en una travesía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El de las vías urbanas.",
+        "correcta": true,
+        "explicacion": "La travesía está dentro del poblado: 50, 30 o 20 km/h según el tipo de vía."
+      },
+      {
+        "texto": "90 km/h, porque sigue siendo una carretera.",
+        "correcta": false,
+        "explicacion": "Al cruzar el pueblo se aplican los límites urbanos.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "100 km/h.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 50",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0104",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una autovía, una señal limita la velocidad a 80 km/h. ¿Qué límite debes respetar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "80 km/h.",
+        "correcta": true,
+        "explicacion": "La señal prevalece sobre el límite genérico."
+      },
+      {
+        "texto": "120 km/h, que es el genérico de autovía.",
+        "correcta": false,
+        "explicacion": "El genérico se aplica cuando no hay señal.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "100 km/h, una media entre ambos.",
+        "correcta": false,
+        "explicacion": "No se hacen medias.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales",
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0105",
+    "mundo": "velocidad",
+    "subtema": "adecuada",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Aunque el límite sea 120 km/h, si hay niebla espesa debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Reducir la velocidad y adaptarla a la visibilidad.",
+        "correcta": true,
+        "explicacion": "El límite es un máximo: hay que adaptarse a las condiciones."
+      },
+      {
+        "texto": "Mantener 120 si no hay otros vehículos.",
+        "correcta": false,
+        "explicacion": "Con poca visibilidad podrías no frenar a tiempo ante un obstáculo.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Ir a 120 con las antiniebla encendidas.",
+        "correcta": false,
+        "explicacion": "Las luces ayudan a ser visto, pero no a frenar antes.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 45",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0106",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "A 90 km/h, ¿qué distancia aproximada recorres en 1 segundo de reacción?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Unos 25 metros.",
+        "correcta": true,
+        "explicacion": "90 km/h son 25 metros por segundo."
+      },
+      {
+        "texto": "Unos 9 metros.",
+        "correcta": false,
+        "explicacion": "Error típico: no basta con quitar un cero.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "Unos 90 metros.",
+        "correcta": false,
+        "explicacion": "Eso sería en casi 4 segundos.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0107",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "A 120 km/h, ¿cuántos metros recorres aproximadamente cada segundo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Unos 33 metros.",
+        "correcta": true,
+        "explicacion": "Divide los km/h entre 3,6."
+      },
+      {
+        "texto": "Unos 12 metros.",
+        "correcta": false,
+        "explicacion": "No basta con quitar un cero.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "Unos 120 metros.",
+        "correcta": false,
+        "explicacion": "Eso sería en casi 4 segundos.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0108",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Durante el tiempo de reacción, el vehículo…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sigue avanzando a la misma velocidad.",
+        "correcta": true,
+        "explicacion": "Todavía no has empezado a frenar."
+      },
+      {
+        "texto": "Empieza a frenar poco a poco.",
+        "correcta": false,
+        "explicacion": "La frenada empieza cuando pisas el freno, al terminar la reacción.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "Se detiene.",
+        "correcta": false,
+        "explicacion": "Aún no has reaccionado.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0109",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál de estos factores aumenta la distancia de frenado?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Llevar el vehículo muy cargado.",
+        "correcta": true,
+        "explicacion": "Más masa hace que cueste más detenerlo."
+      },
+      {
+        "texto": "Llevar los neumáticos con buen dibujo.",
+        "correcta": false,
+        "explicacion": "Al contrario: ayuda a frenar antes.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Circular por asfalto seco.",
+        "correcta": false,
+        "explicacion": "El asfalto seco es la mejor situación.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0110",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "La distancia de seguridad con el vehículo de delante debe permitir…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detenerte sin chocar si él frena bruscamente.",
+        "correcta": true,
+        "explicacion": "Es la definición de distancia de seguridad."
+      },
+      {
+        "texto": "Que te vea por el espejo.",
+        "correcta": false,
+        "explicacion": "No es ese el criterio.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Adelantarle en cuanto puedas.",
+        "correcta": false,
+        "explicacion": "No tiene que ver con adelantar.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 54",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0111",
+    "mundo": "velocidad",
+    "subtema": "minimas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En una carretera convencional, ¿por debajo de qué velocidad se considera que un turismo circula anormalmente despacio?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "45 km/h, la mitad de la genérica.",
+        "correcta": true,
+        "explicacion": "La mínima es la mitad de la velocidad genérica de la vía."
+      },
+      {
+        "texto": "30 km/h.",
+        "correcta": false,
+        "explicacion": "Es menos de la mitad.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "60 km/h.",
+        "correcta": false,
+        "explicacion": "60 es la mínima en autopista y autovía.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 49",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0112",
+    "mundo": "velocidad",
+    "subtema": "residencial",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una calle residencial señalizada como tal, la velocidad máxima es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "20 km/h.",
+        "correcta": true,
+        "explicacion": "Peatones y vehículos comparten el espacio: los peatones tienen prioridad."
+      },
+      {
+        "texto": "30 km/h.",
+        "correcta": false,
+        "explicacion": "30 es para vías de un carril por sentido.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "40 km/h.",
+        "correcta": false,
+        "explicacion": "No existe ese límite para calles residenciales.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC (señal de calle residencial)",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0113",
+    "mundo": "velocidad",
+    "subtema": "radares",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un radar de tramo controla…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Tu velocidad media entre dos puntos.",
+        "correcta": true,
+        "explicacion": "Calcula cuánto tardas en recorrer el tramo."
+      },
+      {
+        "texto": "Solo la velocidad en el punto donde está la cámara.",
+        "correcta": false,
+        "explicacion": "Eso es un radar fijo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Si llevas puesto el cinturón.",
+        "correcta": false,
+        "explicacion": "No es su función.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: velocidad",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0114",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la velocidad máxima genérica de un autobús en autopista?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "100 km/h.",
+        "correcta": true,
+        "explicacion": "Los autobuses tienen un límite inferior al de los turismos."
+      },
+      {
+        "texto": "120 km/h.",
+        "correcta": false,
+        "explicacion": "120 es para turismos y motos.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "80 km/h.",
+        "correcta": false,
+        "explicacion": "Es demasiado bajo para un autobús en autopista.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": true
+  },
+  {
+    "id": "VEL-0115",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la velocidad máxima genérica de un turismo con remolque en una carretera convencional?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "80 km/h.",
+        "correcta": true,
+        "explicacion": "Con remolque los límites bajan: 90 en autopista y 80 en convencional."
+      },
+      {
+        "texto": "90 km/h.",
+        "correcta": false,
+        "explicacion": "90 es sin remolque.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "70 km/h.",
+        "correcta": false,
+        "explicacion": "Es demasiado bajo.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": true
+  }
+]

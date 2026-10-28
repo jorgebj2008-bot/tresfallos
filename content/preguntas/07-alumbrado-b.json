@@ -1,0 +1,401 @@
+[
+  {
+    "id": "ALU-0101",
+    "mundo": "alumbrado",
+    "subtema": "posicion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "De noche, te quedas inmovilizado en una vía interurbana mal iluminada. ¿Qué luces dejas encendidas?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La de posición y las de emergencia.",
+        "correcta": true,
+        "explicacion": "Así los demás te ven parado desde lejos."
+      },
+      {
+        "texto": "Solo la luz de carretera.",
+        "correcta": false,
+        "explicacion": "Deslumbrarías y no indica que estás parado.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Ninguna, para no gastar batería.",
+        "correcta": false,
+        "explicacion": "Es muy peligroso: no te verían.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC (alumbrado de vehículos inmovilizados)",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0102",
+    "mundo": "alumbrado",
+    "subtema": "carretera",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuándo se puede usar la luz de carretera (largas)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En vías interurbanas mal iluminadas, si no deslumbras a nadie.",
+        "correcta": true,
+        "explicacion": "Hay que cambiar a cruce al cruzarte con otro vehículo o al seguirlo de cerca."
+      },
+      {
+        "texto": "Siempre que sea de noche.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: no si deslumbras o si la vía está iluminada.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "En ciudad, para ver mejor.",
+        "correcta": false,
+        "explicacion": "En vías urbanas iluminadas está prohibido.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 100",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0103",
+    "mundo": "alumbrado",
+    "subtema": "carretera",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "De noche vas detrás de otro coche. ¿Qué luz debes llevar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La de cruce.",
+        "correcta": true,
+        "explicacion": "Con las largas le deslumbrarías a través del espejo."
+      },
+      {
+        "texto": "La de carretera, para ver más lejos.",
+        "correcta": false,
+        "explicacion": "Le deslumbrarías.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Solo la de posición.",
+        "correcta": false,
+        "explicacion": "No basta para circular de noche.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 100",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0104",
+    "mundo": "alumbrado",
+    "subtema": "antiniebla",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Cuándo se puede usar la luz antiniebla delantera?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Con niebla, lluvia o nieve intensas, y en tramos estrechos con muchas curvas señalizados.",
+        "correcta": true,
+        "explicacion": "Ilumina bajo y ancho, útil con poca visibilidad."
+      },
+      {
+        "texto": "Siempre que sea de noche.",
+        "correcta": false,
+        "explicacion": "No sustituye a la luz de cruce de forma general.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Nunca: solo existe la trasera.",
+        "correcta": false,
+        "explicacion": "También existe y se puede usar en esos casos.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 106",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0105",
+    "mundo": "alumbrado",
+    "subtema": "emergencia",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una autopista, el tráfico se detiene de golpe delante de ti. Además de frenar, puedes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Encender las luces de emergencia para avisar a los de detrás.",
+        "correcta": true,
+        "explicacion": "Así reduces el riesgo de un alcance."
+      },
+      {
+        "texto": "Encender la antiniebla trasera.",
+        "correcta": false,
+        "explicacion": "No es para eso.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Dar ráfagas con las largas.",
+        "correcta": false,
+        "explicacion": "No avisaría a los de detrás.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 109",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0106",
+    "mundo": "alumbrado",
+    "subtema": "brazo",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un conductor saca el brazo izquierdo extendido horizontalmente. ¿Qué indica?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que va a girar o desplazarse a la izquierda.",
+        "correcta": true,
+        "explicacion": "Es la señal con el brazo para el giro a la izquierda."
+      },
+      {
+        "texto": "Que va a detenerse.",
+        "correcta": false,
+        "explicacion": "La detención se indica moviendo el brazo de arriba abajo.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Que va a girar a la derecha.",
+        "correcta": false,
+        "explicacion": "Eso se indica con el brazo izquierdo doblado hacia arriba.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 113",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0107",
+    "mundo": "alumbrado",
+    "subtema": "brazo",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un ciclista mueve el brazo de arriba abajo. ¿Qué indica?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que va a reducir la velocidad o detenerse.",
+        "correcta": true,
+        "explicacion": "Es la señal con el brazo para frenar."
+      },
+      {
+        "texto": "Que te deja pasar.",
+        "correcta": false,
+        "explicacion": "No es una invitación a pasar.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Que va a girar a la izquierda.",
+        "correcta": false,
+        "explicacion": "Para eso extendería el brazo en horizontal.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 113",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0108",
+    "mundo": "alumbrado",
+    "subtema": "claxon",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Fuera de poblado, ¿para qué se puede usar el claxon?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Para avisar a otro conductor de que vas a adelantarle, o para evitar un accidente.",
+        "correcta": true,
+        "explicacion": "Siempre con sonidos breves."
+      },
+      {
+        "texto": "Para saludar.",
+        "correcta": false,
+        "explicacion": "No está permitido.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Para meter prisa al de delante.",
+        "correcta": false,
+        "explicacion": "Tampoco.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 110",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0109",
+    "mundo": "alumbrado",
+    "subtema": "visibilidad",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "De día, con lluvia intensa que reduce mucho la visibilidad, debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Encender la luz de cruce (y, si es muy intensa, la antiniebla).",
+        "correcta": true,
+        "explicacion": "Así te ven los demás."
+      },
+      {
+        "texto": "No encender nada, porque es de día.",
+        "correcta": false,
+        "explicacion": "Aunque sea de día, con poca visibilidad hay que ser visto.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Encender las largas.",
+        "correcta": false,
+        "explicacion": "Con lluvia, las largas reflejan y deslumbran.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 106",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0110",
+    "mundo": "alumbrado",
+    "subtema": "reglaje",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Unos faros mal regulados (demasiado altos)…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Deslumbran a los demás conductores.",
+        "correcta": true,
+        "explicacion": "Hay que revisar su reglaje, sobre todo si cargas mucho el maletero."
+      },
+      {
+        "texto": "Iluminan mejor y son más seguros.",
+        "correcta": false,
+        "explicacion": "Iluminan más lejos, pero deslumbran.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "No influyen en nada.",
+        "correcta": false,
+        "explicacion": "Sí influyen.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "Temario DGT: alumbrado",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0111",
+    "mundo": "alumbrado",
+    "subtema": "posicion",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Para qué sirve la luz de posición?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Para que el vehículo sea visto, no para ver.",
+        "correcta": true,
+        "explicacion": "Señala su presencia y su anchura."
+      },
+      {
+        "texto": "Para iluminar la carretera de noche.",
+        "correcta": false,
+        "explicacion": "Es demasiado débil para eso.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Para avisar de un giro.",
+        "correcta": false,
+        "explicacion": "Eso es el intermitente.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 99",
+    "revisar": true
+  },
+  {
+    "id": "ALU-0112",
+    "mundo": "alumbrado",
+    "subtema": "tuneles",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Te acercas a este túnel de día y está iluminado. ¿Qué luz llevas?",
+    "imagen": "escena:tunel",
+    "opciones": [
+      {
+        "texto": "La luz de cruce.",
+        "correcta": true,
+        "explicacion": "En túneles es obligatoria aunque estén iluminados."
+      },
+      {
+        "texto": "Ninguna, porque está iluminado.",
+        "correcta": false,
+        "explicacion": "Aunque esté iluminado, es obligatoria la de cruce.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "La antiniebla trasera.",
+        "correcta": false,
+        "explicacion": "No es para túneles.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 104",
+    "revisar": true
+  }
+]

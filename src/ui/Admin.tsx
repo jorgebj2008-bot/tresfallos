@@ -7,7 +7,7 @@ import { MUNDOS } from '../content/mundos'
 import type { MundoId, Pregunta } from '../content/tipos'
 import { validarPregunta } from '../content/validar'
 import { ERRORES } from '../learning/errores'
-import { SenalSVG } from './SenalSVG'
+import { ImagenPregunta } from './EscenaSVG'
 
 const CLAVE = 'tresfallos-admin-cambios'
 
@@ -133,7 +133,7 @@ function Editor({ p, cambiada, onGuardar, onDescartar, onCerrar }: { p: Pregunta
   return (
     <section className="pegatina admin-editor" aria-label={`Editar ${p.id}`}>
       <h2>{p.id} · {MUNDOS.find((m) => m.id === p.mundo)?.nombre}</h2>
-      {b.imagen?.startsWith('senal:') && <SenalSVG id={b.imagen.slice(6)} size={80} />}
+      <ImagenPregunta imagen={b.imagen} pequena />
       <label>Enunciado<textarea id={`ed-${p.id}-enunciado`} value={b.enunciado} onChange={(e) => set('enunciado', e.target.value)} /></label>
       {b.opciones.map((o, i) => (
         <div key={i} className="admin-opcion">

@@ -1,0 +1,433 @@
+[
+  {
+    "id": "SEG-0101",
+    "mundo": "seguridad",
+    "subtema": "pasiva",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál de estos es un elemento de seguridad pasiva?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El airbag.",
+        "correcta": true,
+        "explicacion": "La seguridad pasiva reduce las lesiones cuando el accidente ya ocurre."
+      },
+      {
+        "texto": "El ABS.",
+        "correcta": false,
+        "explicacion": "El ABS es de seguridad activa: ayuda a evitar el accidente.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Los frenos.",
+        "correcta": false,
+        "explicacion": "También son de seguridad activa.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad activa y pasiva",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0102",
+    "mundo": "seguridad",
+    "subtema": "cinturon",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cómo debe ir colocada la banda superior del cinturón?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sobre la clavícula y el pecho, sin rozar el cuello.",
+        "correcta": true,
+        "explicacion": "La inferior, sobre las caderas, no sobre el vientre."
+      },
+      {
+        "texto": "Por debajo del brazo.",
+        "correcta": false,
+        "explicacion": "En un choque no te sujetaría bien.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sobre el cuello.",
+        "correcta": false,
+        "explicacion": "Podría causar lesiones.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad pasiva",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0103",
+    "mundo": "seguridad",
+    "subtema": "cinturon",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Deben llevar cinturón las embarazadas?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí, con la banda inferior por debajo del vientre.",
+        "correcta": true,
+        "explicacion": "El cinturón protege a la madre y al bebé."
+      },
+      {
+        "texto": "No, están exentas.",
+        "correcta": false,
+        "explicacion": "No hay exención por embarazo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo en carretera.",
+        "correcta": false,
+        "explicacion": "También en ciudad.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 117",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0104",
+    "mundo": "seguridad",
+    "subtema": "cinturon",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿En qué maniobra se puede no llevar el cinturón?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Al hacer marcha atrás o estacionar.",
+        "correcta": true,
+        "explicacion": "Es una de las pocas excepciones previstas."
+      },
+      {
+        "texto": "En trayectos urbanos cortos.",
+        "correcta": false,
+        "explicacion": "En ciudad también es obligatorio.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "En autopista, si vas despacio.",
+        "correcta": false,
+        "explicacion": "Nunca en autopista.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 119",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0105",
+    "mundo": "seguridad",
+    "subtema": "sri",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Para un bebé, ¿qué posición de la silla es más segura?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "A contramarcha (mirando hacia atrás).",
+        "correcta": true,
+        "explicacion": "Protege mejor su cabeza y su cuello en un choque frontal."
+      },
+      {
+        "texto": "Mirando hacia delante, para que vea el camino.",
+        "correcta": false,
+        "explicacion": "Es menos segura en los más pequeños.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "En brazos de un adulto.",
+        "correcta": false,
+        "explicacion": "Nunca: en un choque no podría sujetarlo.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Recomendación DGT: sistemas de retención infantil",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0106",
+    "mundo": "seguridad",
+    "subtema": "neumaticos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si un neumático se desgasta más por los bordes que por el centro, suele indicar…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que se ha circulado con presión baja.",
+        "correcta": true,
+        "explicacion": "Con poca presión, el neumático se apoya sobre sus bordes."
+      },
+      {
+        "texto": "Que la presión era demasiado alta.",
+        "correcta": false,
+        "explicacion": "La presión alta desgasta más el centro.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Que el neumático es nuevo.",
+        "correcta": false,
+        "explicacion": "No tiene relación.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: neumáticos",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0107",
+    "mundo": "seguridad",
+    "subtema": "abs",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una frenada de emergencia con ABS, debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Pisar el freno a fondo y mantenerlo, sin soltar.",
+        "correcta": true,
+        "explicacion": "El ABS hace el resto y puedes seguir girando el volante."
+      },
+      {
+        "texto": "Bombear el freno (pisar y soltar).",
+        "correcta": false,
+        "explicacion": "Eso era para coches sin ABS.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Frenar suave para que no salte el ABS.",
+        "correcta": false,
+        "explicacion": "En emergencia hay que frenar a fondo.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad activa",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0108",
+    "mundo": "seguridad",
+    "subtema": "casco",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Para un motorista, el casco es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Obligatorio y debe estar homologado y abrochado.",
+        "correcta": true,
+        "explicacion": "Un casco sin abrochar no protege en una caída."
+      },
+      {
+        "texto": "Obligatorio solo en carretera.",
+        "correcta": false,
+        "explicacion": "También en ciudad.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Recomendable.",
+        "correcta": false,
+        "explicacion": "Es obligatorio.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 118",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0109",
+    "mundo": "seguridad",
+    "subtema": "carga",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una mochila pesada suelta en la bandeja trasera…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En un frenazo puede salir disparada y herir a los ocupantes.",
+        "correcta": true,
+        "explicacion": "Coloca la carga en el maletero y bien sujeta."
+      },
+      {
+        "texto": "No es peligrosa.",
+        "correcta": false,
+        "explicacion": "En un choque multiplica su peso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Mejora la estabilidad.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad pasiva",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0110",
+    "mundo": "seguridad",
+    "subtema": "amortiguadores",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Unos amortiguadores en mal estado…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Aumentan la distancia de frenado y empeoran la estabilidad.",
+        "correcta": true,
+        "explicacion": "Las ruedas pierden contacto con el suelo."
+      },
+      {
+        "texto": "Solo hacen el viaje menos cómodo.",
+        "correcta": false,
+        "explicacion": "También afectan a la seguridad.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Reducen el consumo.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad activa",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0111",
+    "mundo": "seguridad",
+    "subtema": "nieve",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Con nieve en la calzada, debes llevar…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cadenas o neumáticos de invierno, según indique la señalización.",
+        "correcta": true,
+        "explicacion": "Mejoran mucho el agarre."
+      },
+      {
+        "texto": "Neumáticos con más presión.",
+        "correcta": false,
+        "explicacion": "Más presión reduce el agarre.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Nada especial si vas despacio.",
+        "correcta": false,
+        "explicacion": "Con nieve, ir despacio no basta.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC (circulación con nieve)",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0112",
+    "mundo": "seguridad",
+    "subtema": "animales",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si viajas con un perro en el coche, debe ir…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sujeto o separado para que no interfiera en la conducción.",
+        "correcta": true,
+        "explicacion": "Suelto puede distraerte y, en un choque, salir despedido."
+      },
+      {
+        "texto": "Suelto en el asiento de delante.",
+        "correcta": false,
+        "explicacion": "Es peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "En brazos de un pasajero.",
+        "correcta": false,
+        "explicacion": "No es seguro.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 18",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0113",
+    "mundo": "seguridad",
+    "subtema": "activa",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál de estos sistemas pertenece a la seguridad activa?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La dirección y la suspensión.",
+        "correcta": true,
+        "explicacion": "Ayudan a mantener el control y a evitar el accidente."
+      },
+      {
+        "texto": "El cinturón de seguridad.",
+        "correcta": false,
+        "explicacion": "Es de seguridad pasiva.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "El airbag.",
+        "correcta": false,
+        "explicacion": "Es de seguridad pasiva.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad activa y pasiva",
+    "revisar": false
+  }
+]

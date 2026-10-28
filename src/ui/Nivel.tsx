@@ -12,7 +12,7 @@ import { claveNivel, useJuego } from '../store/useJuego'
 import { sfx, vibrar } from '../audio/sfx'
 import { explosion } from './particulas'
 import { Check, Cruz, Llama } from './iconos'
-import { SenalSVG } from './SenalSVG'
+import { ImagenPregunta } from './EscenaSVG'
 import { JefeRetrato } from './JefeRetrato'
 import { FALLOS_PERMITIDOS, GOLPES_JEFE, estrellasJefe, fraseJefe, preguntasJefe } from '../game/jefes'
 
@@ -232,9 +232,7 @@ export function Nivel({ config, onSalir, onTerminar }: Props) {
                   : `Repaso · ${mundoPorId(actual.pregunta.mundo).nombre}`
                 : `${config.tipo === 'repaso' ? config.titulo : 'Repaso'} · ${mundoPorId(actual.pregunta.mundo).nombre}`}
             </div>
-            {actual.pregunta.imagen?.startsWith('senal:') && (
-              <div className="imagen-pregunta"><SenalSVG id={actual.pregunta.imagen.slice(6)} size={110} titulo="Señal de la pregunta" /></div>
-            )}
+            <ImagenPregunta imagen={actual.pregunta.imagen} />
             <h2>{actual.pregunta.enunciado}</h2>
           </div>
 

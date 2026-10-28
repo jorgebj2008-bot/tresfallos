@@ -13,6 +13,8 @@ import { confeti, explosion } from './particulas'
 import { Juegos } from './juegos/Juegos'
 import type { JuegoId } from '../game/juegos'
 import { Candado, Llama } from './iconos'
+import { BotonCompartir } from './Resultados'
+import { AvisoDiario } from './AvisoDiario'
 
 const NOMBRE_COFRE: Record<TipoCofre, string> = { diario: 'Cofre diario', misiones: 'Cofre de misiones', jefe: 'Cofre de jefe' }
 const COLOR_COFRE: Record<TipoCofre, string> = { diario: '#C98B4A', misiones: '#7C5CFF', jefe: '#FFD23F' }
@@ -53,10 +55,11 @@ function Progreso({ texto, valor, objetivo, monedas, hecha }: { texto: string; v
   )
 }
 
-export function Retos({ onJuego, onSimulacro, onInstalar }: { onJuego: (j: JuegoId) => void; onSimulacro: () => void; onInstalar: () => void }) {
+export function Retos({ onJuego, onSimulacro, onInstalar, onGuia }: { onJuego: (j: JuegoId) => void; onSimulacro: () => void; onInstalar: () => void; onGuia: () => void }) {
   const perfil = useJuego((s) => s.perfil)
   const simulacros = useJuego((s) => s.simulacros)
   const [vista, setVista] = useState<'retos' | 'garaje' | 'logros'>('retos')
+  const [aprobadoReal, setAprobadoReal] = useState(false)
   const [apertura, setApertura] = useState<{ tipo: TipoCofre; premio: Premio | null } | null>(null)
 
   const ahora = Date.now()
@@ -102,6 +105,8 @@ export function Retos({ onJuego, onSimulacro, onInstalar }: { onJuego: (j: Juego
         </div>
       </section>
 
+      <AvisoDiario />
+
       <div className="accesos">
         <button className="boton secundario" onClick={() => setVista('garaje')}>Garaje · {perfil.monedas ?? 0} monedas</button>
         <button className="boton secundario" onClick={() => setVista('logros')}>Logros · {(perfil.logros ?? []).length}/{LOGROS.length}</button>
@@ -146,6 +151,23 @@ export function Retos({ onJuego, onSimulacro, onInstalar }: { onJuego: (j: Juego
 
       <Juegos onJugar={onJuego} incrustado />
 
+      <section className="pegatina examen-real">
+        {aprobadoReal ? (
+          <>
+            <h2>¡Enhorabuena, conductor!</h2>
+            <p>Has aprobado el teórico de verdad. Compártelo y ayuda a tus amigos a conseguirlo.</p>
+            <BotonCompartir sello="APROBADO" titulo="¡Aprobé el teórico!" detalle="A la primera, con TresFallos" />
+          </>
+        ) : (
+          <>
+            <h2>¿Ya te has examinado?</h2>
+            <p>Si has aprobado el examen real de la DGT, celébralo aquí.</p>
+            <button className="boton" onClick={() => { setAprobadoReal(true); confeti(200); sfx.subida(); vibrar([60, 60, 60, 60, 160]) }}>¡He aprobado el examen real!</button>
+          </>
+        )}
+      </section>
+
+      <button className="boton secundario" onClick={onGuia}>Cómo se juega</button>
       <button className="boton secundario" onClick={onInstalar}>Cómo instalar la app en tu móvil</button>
 
       <AnimatePresence>

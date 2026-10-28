@@ -1,0 +1,135 @@
+[
+  {
+    "id": "AUT-0201",
+    "mundo": "autopistas",
+    "subtema": "averias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Tu coche se avería dentro de un túnel. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Encender las luces de emergencia, apagar el motor y avisar desde un poste SOS o al 112.",
+        "correcta": true,
+        "explicacion": "Sal del vehículo con el chaleco si hay peligro."
+      },
+      {
+        "texto": "Dejar el motor encendido.",
+        "correcta": false,
+        "explicacion": "Apágalo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Dar marcha atrás hasta la salida.",
+        "correcta": false,
+        "explicacion": "Está prohibido.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: túneles",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0202",
+    "mundo": "autopistas",
+    "subtema": "senales",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿De qué color es la señal que indica el comienzo de una autopista?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Azul.",
+        "correcta": true,
+        "explicacion": "Las señales de autopista y autovía son azules."
+      },
+      {
+        "texto": "Verde.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Roja.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0203",
+    "mundo": "autopistas",
+    "subtema": "fin",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Pasas una señal de fin de autovía. ¿Qué cambia?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Pasan a aplicarse los límites y normas del tipo de vía que empieza.",
+        "correcta": true,
+        "explicacion": "Por ejemplo, 90 km/h en una carretera convencional."
+      },
+      {
+        "texto": "Nada.",
+        "correcta": false,
+        "explicacion": "Sí cambia.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Puedes ir más rápido.",
+        "correcta": false,
+        "explicacion": "Suele ser al contrario.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": false
+  },
+  {
+    "id": "AUT-0204",
+    "mundo": "autopistas",
+    "subtema": "averias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Para qué sirven los postes SOS de las autopistas?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Para pedir ayuda en caso de avería o accidente.",
+        "correcta": true,
+        "explicacion": "Indican tu posición exacta."
+      },
+      {
+        "texto": "Para llamar a cualquier número.",
+        "correcta": false,
+        "explicacion": "Solo para emergencias.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Para pagar el peaje.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: autopistas",
+    "revisar": false
+  }
+]

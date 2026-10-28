@@ -1,0 +1,431 @@
+[
+  {
+    "id": "SEN-0201",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:otros-peligros",
+    "opciones": [
+      {
+        "texto": "Peligro distinto de los que tienen señal propia.",
+        "correcta": true,
+        "explicacion": "El signo de exclamación avisa de un peligro genérico."
+      },
+      {
+        "texto": "Fin de prohibiciones.",
+        "correcta": false,
+        "explicacion": "Esa es circular y blanca con franjas grises.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Obligación de detenerse.",
+        "correcta": false,
+        "explicacion": "Eso es el STOP.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0202",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:glorieta-aviso",
+    "opciones": [
+      {
+        "texto": "Peligro: intersección con circulación giratoria (glorieta) próxima.",
+        "correcta": true,
+        "explicacion": "Es triangular: avisa."
+      },
+      {
+        "texto": "Obligatorio circular en sentido giratorio.",
+        "correcta": false,
+        "explicacion": "Esa es circular y azul.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Cambio de sentido.",
+        "correcta": false,
+        "explicacion": "No indica eso.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0203",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:curva-derecha",
+    "opciones": [
+      {
+        "texto": "Curva peligrosa hacia la derecha.",
+        "correcta": true,
+        "explicacion": "Triangular: avisa de una curva por su radio o visibilidad."
+      },
+      {
+        "texto": "Sentido obligatorio a la derecha.",
+        "correcta": false,
+        "explicacion": "Las de obligación son circulares y azules.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido girar a la derecha.",
+        "correcta": false,
+        "explicacion": "Las de prohibición son circulares con borde rojo.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0204",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:interseccion-prioridad-derecha",
+    "opciones": [
+      {
+        "texto": "Intersección con prioridad sobre una vía que se incorpora por la derecha.",
+        "correcta": true,
+        "explicacion": "Tienes prioridad sobre quien viene por esa vía."
+      },
+      {
+        "texto": "Debes ceder el paso a quien viene por la derecha.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Fin de la vía.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0205",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:perfil-irregular",
+    "opciones": [
+      {
+        "texto": "Peligro: perfil irregular (baches u ondulaciones).",
+        "correcta": true,
+        "explicacion": "Reduce la velocidad."
+      },
+      {
+        "texto": "Paso de ciclistas.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido circular.",
+        "correcta": false,
+        "explicacion": "Las de prohibición son circulares.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0206",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:velocidad-50",
+    "opciones": [
+      {
+        "texto": "Velocidad máxima: 50 km/h.",
+        "correcta": true,
+        "explicacion": "Circular con borde rojo: es obligatoria."
+      },
+      {
+        "texto": "Velocidad aconsejada: 50 km/h.",
+        "correcta": false,
+        "explicacion": "La aconsejada es cuadrada y azul.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Velocidad mínima: 50 km/h.",
+        "correcta": false,
+        "explicacion": "La mínima es circular y azul.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0207",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:adelantamiento-prohibido",
+    "opciones": [
+      {
+        "texto": "Adelantamiento prohibido.",
+        "correcta": true,
+        "explicacion": "Prohíbe adelantar a otros vehículos de motor."
+      },
+      {
+        "texto": "Prohibido circular a turismos.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Doble sentido de circulación.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0208",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:fin-velocidad-50",
+    "opciones": [
+      {
+        "texto": "Fin de la limitación de velocidad de 50 km/h.",
+        "correcta": true,
+        "explicacion": "Desde ahí se aplica el límite genérico de la vía (o el que indique otra señal)."
+      },
+      {
+        "texto": "Velocidad máxima de 50 km/h.",
+        "correcta": false,
+        "explicacion": "Esa no está tachada.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido circular a 50 km/h.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0209",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:sentido-obligatorio",
+    "opciones": [
+      {
+        "texto": "Sentido obligatorio: hay que seguir la dirección de la flecha.",
+        "correcta": true,
+        "explicacion": "Circular y azul: es de obligación."
+      },
+      {
+        "texto": "Calle de sentido único.",
+        "correcta": false,
+        "explicacion": "Esa es cuadrada.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Recomendación de ir recto.",
+        "correcta": false,
+        "explicacion": "No es una recomendación.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0210",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:paso-obligatorio",
+    "opciones": [
+      {
+        "texto": "Paso obligatorio por el lado que indica la flecha.",
+        "correcta": true,
+        "explicacion": "Por ejemplo, para rodear una isleta."
+      },
+      {
+        "texto": "Curva peligrosa.",
+        "correcta": false,
+        "explicacion": "Esa es triangular.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido girar.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0211",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:ceda",
+    "opciones": [
+      {
+        "texto": "Ceda el paso.",
+        "correcta": true,
+        "explicacion": "Triángulo invertido: cedes, pero sin obligación de parar si no viene nadie."
+      },
+      {
+        "texto": "Peligro.",
+        "correcta": false,
+        "explicacion": "Las de peligro tienen el vértice arriba.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Detención obligatoria.",
+        "correcta": false,
+        "explicacion": "Eso es el STOP.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0212",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:estacionamiento",
+    "opciones": [
+      {
+        "texto": "Lugar donde se permite estacionar.",
+        "correcta": true,
+        "explicacion": "Es de indicación."
+      },
+      {
+        "texto": "Prohibido estacionar.",
+        "correcta": false,
+        "explicacion": "Esa es circular con franja roja.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Parada de taxis.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0213",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:sentido-unico",
+    "opciones": [
+      {
+        "texto": "Calzada de sentido único.",
+        "correcta": true,
+        "explicacion": "Cuadrada y azul: informa."
+      },
+      {
+        "texto": "Sentido obligatorio.",
+        "correcta": false,
+        "explicacion": "Esa es circular.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Prohibido girar.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  }
+]

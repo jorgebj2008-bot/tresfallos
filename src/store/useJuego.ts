@@ -2,6 +2,7 @@
 import { create } from 'zustand'
 import { seguro, type Perfil, type ResultadoNivel } from './db'
 import { setSonido } from '../audio/sfx'
+import { setMusica } from '../audio/musica'
 import { actualizar, nuevoEstado, type EstadoPregunta } from '../learning/sm2'
 import type { Simulacro } from '../learning/estoyListo'
 
@@ -21,6 +22,7 @@ interface EstadoJuego {
   guardarSimulacro: (s: Simulacro) => void
   guardarRecord: (juego: string, puntos: number) => void
   alternarSonido: () => void
+  alternarMusica: () => void
   cambiarTema: () => void
 }
 
@@ -39,6 +41,7 @@ export const useJuego = create<EstadoJuego>((set, get) => ({
     const estados = (await seguro((db) => db.estados.toArray())) ?? []
     const simulacros = (await seguro((db) => db.simulacros.toArray())) ?? []
     setSonido(perfil.sonido)
+    setMusica(perfil.musica !== false)
     set({
       cargado: true,
       perfil,
@@ -91,6 +94,13 @@ export const useJuego = create<EstadoJuego>((set, get) => ({
   alternarSonido() {
     const perfil = { ...get().perfil, sonido: !get().perfil.sonido }
     setSonido(perfil.sonido)
+    set({ perfil })
+    guardarPerfil(perfil)
+  },
+
+  alternarMusica() {
+    const perfil = { ...get().perfil, musica: get().perfil.musica === false }
+    setMusica(perfil.musica)
     set({ perfil })
     guardarPerfil(perfil)
   },

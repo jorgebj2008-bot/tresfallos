@@ -10,6 +10,7 @@ import type { Novedades } from '../store/progresoDiario'
 import { mundoPorId } from '../content/mundos'
 import { Llama } from './iconos'
 import { Cofre } from './Retos'
+import { compartirImagen } from './compartir'
 
 const TITULOS = ['¡A repasar!', '¡Superado!', '¡Muy bien!', '¡Nivel examen!']
 
@@ -194,6 +195,8 @@ export function Resultados({ r, nov, onRepetir, onMapa }: Props) {
         </details>
       )}
 
+      {r.config.tipo === 'simulacro' && r.victoria && <BotonCompartir sello="APTO" titulo="¡Simulacro aprobado!" detalle={`${r.aciertos}/30 aciertos · ${r.total - r.aciertos} ${r.total - r.aciertos === 1 ? 'fallo' : 'fallos'}`} />}
+
       <div className="acciones">
         <button className="boton" onClick={onRepetir}>
           Jugar otra vez
@@ -203,5 +206,15 @@ export function Resultados({ r, nov, onRepetir, onMapa }: Props) {
         </button>
       </div>
     </main>
+  )
+}
+
+export function BotonCompartir(props: { sello: string; titulo: string; detalle: string }) {
+  const [aviso, setAviso] = useState('')
+  return (
+    <>
+      <button className="boton compartir" onClick={async () => setAviso(await compartirImagen(props))}>Compartir en mis redes</button>
+      {aviso && <p className="nota" role="status">{aviso}</p>}
+    </>
   )
 }

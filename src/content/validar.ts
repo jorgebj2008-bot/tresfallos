@@ -5,6 +5,7 @@ import type { Afirmacion } from './afirmaciones'
 import { MUNDOS } from './mundos'
 import { SENALES } from './senales'
 import { ERRORES } from '../learning/errores'
+import { ESCENAS_IDS } from '../ui/EscenaSVG'
 
 export interface Problema {
   id: string
@@ -38,7 +39,8 @@ export function validarPregunta(p: Pregunta): Problema[] {
   if (new Set(p.opciones.map((o) => normal(o.texto))).size !== p.opciones.length) grave('Hay opciones repetidas')
   if (p.imagen) {
     const [tipo, id] = p.imagen.split(':')
-    if (tipo !== 'senal' || !SENALES_VALIDAS.has(id)) grave(`Imagen desconocida: ${p.imagen}`)
+    const valida = (tipo === 'senal' && SENALES_VALIDAS.has(id)) || (tipo === 'escena' && ESCENAS_IDS.includes(id))
+    if (!valida) grave(`Imagen desconocida: ${p.imagen}`)
   }
   return out
 }

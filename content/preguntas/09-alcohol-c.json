@@ -1,0 +1,136 @@
+[
+  {
+    "id": "ALC-0201",
+    "mundo": "alcohol",
+    "subtema": "efectos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "El alcohol es una sustancia que actúa como…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Depresora del sistema nervioso.",
+        "correcta": true,
+        "explicacion": "Ralentiza las reacciones, aunque al principio parezca que anima."
+      },
+      {
+        "texto": "Estimulante que mejora los reflejos.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Neutra en pequeñas dosis.",
+        "correcta": false,
+        "explicacion": "Incluso en pequeñas dosis afecta.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: alcohol",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0202",
+    "mundo": "alcohol",
+    "subtema": "drogas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cómo se detecta en un control si un conductor ha consumido drogas?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Con una prueba de saliva.",
+        "correcta": true,
+        "explicacion": "Si da positivo, se confirma en un laboratorio."
+      },
+      {
+        "texto": "Con el etilómetro.",
+        "correcta": false,
+        "explicacion": "El etilómetro mide alcohol.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No se puede detectar.",
+        "correcta": false,
+        "explicacion": "Sí se puede.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 28",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0203",
+    "mundo": "alcohol",
+    "subtema": "medicamentos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Muchos antihistamínicos (para la alergia) pueden…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Producir somnolencia y afectar a la conducción.",
+        "correcta": true,
+        "explicacion": "Lee el prospecto y fíjate en el pictograma del coche."
+      },
+      {
+        "texto": "Mejorar la concentración.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No afectan nunca.",
+        "correcta": false,
+        "explicacion": "Ojo con el «nunca».",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "Temario DGT: medicamentos",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0204",
+    "mundo": "alcohol",
+    "subtema": "alcohol",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la tasa de alcohol más segura para conducir?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cero.",
+        "correcta": true,
+        "explicacion": "Cualquier cantidad afecta a la conducción."
+      },
+      {
+        "texto": "La permitida por la ley.",
+        "correcta": false,
+        "explicacion": "La ley pone un límite, pero cualquier cantidad afecta.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Hasta una cerveza.",
+        "correcta": false,
+        "explicacion": "Ya afecta.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "Recomendación DGT: alcohol",
+    "revisar": false
+  }
+]

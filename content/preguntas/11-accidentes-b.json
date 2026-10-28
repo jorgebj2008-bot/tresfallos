@@ -1,0 +1,432 @@
+[
+  {
+    "id": "ACC-0101",
+    "mundo": "accidentes",
+    "subtema": "avisar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al llamar al 112 tras un accidente, ¿qué debes indicar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El lugar exacto, cuántos heridos hay y su estado.",
+        "correcta": true,
+        "explicacion": "Así envían los medios adecuados."
+      },
+      {
+        "texto": "Solo tu nombre.",
+        "correcta": false,
+        "explicacion": "No basta.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo la marca de los coches.",
+        "correcta": false,
+        "explicacion": "No es lo importante.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0102",
+    "mundo": "accidentes",
+    "subtema": "proteger",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al llegar a un accidente, ¿dónde dejas tu vehículo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Fuera de la calzada si es posible, antes del lugar del accidente, con las luces de emergencia.",
+        "correcta": true,
+        "explicacion": "Así proteges la zona sin crear otro peligro."
+      },
+      {
+        "texto": "Justo al lado de los heridos.",
+        "correcta": false,
+        "explicacion": "Podrías estorbar y crear otro peligro.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "En medio de la calzada para cortar el tráfico.",
+        "correcta": false,
+        "explicacion": "Es peligroso para ti.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0103",
+    "mundo": "accidentes",
+    "subtema": "rcp",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En la reanimación cardiopulmonar (RCP) de un adulto, ¿a qué ritmo se hacen las compresiones?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Entre 100 y 120 por minuto.",
+        "correcta": true,
+        "explicacion": "En el centro del pecho, hundiéndolo unos 5 cm."
+      },
+      {
+        "texto": "Unas 30 por minuto.",
+        "correcta": false,
+        "explicacion": "Es demasiado lento.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "Unas 200 por minuto.",
+        "correcta": false,
+        "explicacion": "Demasiado rápido.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "Guías de reanimación cardiopulmonar",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0104",
+    "mundo": "accidentes",
+    "subtema": "rcp",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En la RCP de un adulto, ¿cuántas compresiones se hacen por cada 2 insuflaciones?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "30.",
+        "correcta": true,
+        "explicacion": "Se repiten ciclos de 30 compresiones y 2 insuflaciones."
+      },
+      {
+        "texto": "15.",
+        "correcta": false,
+        "explicacion": "Te quedas corto.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "5.",
+        "correcta": false,
+        "explicacion": "Muy pocas.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "Guías de reanimación cardiopulmonar",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0105",
+    "mundo": "accidentes",
+    "subtema": "consciencia",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cómo compruebas si un herido está consciente?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Hablándole y estimulándole suavemente, por ejemplo en los hombros.",
+        "correcta": true,
+        "explicacion": "Sin moverle la cabeza ni el cuello."
+      },
+      {
+        "texto": "Moviéndole bruscamente.",
+        "correcta": false,
+        "explicacion": "Podrías agravar una lesión.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Dándole agua.",
+        "correcta": false,
+        "explicacion": "No se da de beber a un herido.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0106",
+    "mundo": "accidentes",
+    "subtema": "fracturas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Ante una posible fractura, ¿qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Inmovilizar la zona tal como está, sin intentar recolocar el hueso.",
+        "correcta": true,
+        "explicacion": "Mover el hueso puede dañar vasos y nervios."
+      },
+      {
+        "texto": "Intentar recolocar el hueso.",
+        "correcta": false,
+        "explicacion": "Puede agravar la lesión.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Pedirle que camine para comprobarlo.",
+        "correcta": false,
+        "explicacion": "Puede empeorar la fractura.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0107",
+    "mundo": "accidentes",
+    "subtema": "quemaduras",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si la ropa de un quemado está pegada a la piel…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No se debe quitar.",
+        "correcta": true,
+        "explicacion": "Arrancarla puede agravar la herida."
+      },
+      {
+        "texto": "Hay que quitarla de un tirón.",
+        "correcta": false,
+        "explicacion": "Agravaría la lesión.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Hay que mojarla con alcohol.",
+        "correcta": false,
+        "explicacion": "El alcohol no se aplica en quemaduras.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0108",
+    "mundo": "accidentes",
+    "subtema": "socorrer",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuándo se puede sacar a un herido del vehículo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Si corre un peligro inmediato, como fuego o riesgo de atropello.",
+        "correcta": true,
+        "explicacion": "Si no hay peligro, mejor no moverlo."
+      },
+      {
+        "texto": "Siempre, para que esté más cómodo.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: moverlo puede agravar lesiones.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Nunca, en ningún caso.",
+        "correcta": false,
+        "explicacion": "Si hay fuego, hay que sacarlo.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0109",
+    "mundo": "accidentes",
+    "subtema": "dea",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si hay un desfibrilador (DEA) disponible, ¿cómo se usa?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Encendiéndolo y siguiendo las instrucciones de voz del aparato.",
+        "correcta": true,
+        "explicacion": "Está diseñado para que lo use cualquier persona."
+      },
+      {
+        "texto": "Solo lo pueden usar médicos.",
+        "correcta": false,
+        "explicacion": "Cualquiera puede usarlo siguiendo sus instrucciones.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Hay que esperar a la ambulancia.",
+        "correcta": false,
+        "explicacion": "Usarlo cuanto antes salva vidas.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Guías de reanimación cardiopulmonar",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0110",
+    "mundo": "accidentes",
+    "subtema": "choque-leve",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Tienes un pequeño choque sin heridos. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Retirar los vehículos de la calzada si es posible e intercambiar los datos (por ejemplo, con la declaración amistosa).",
+        "correcta": true,
+        "explicacion": "Así evitas otro accidente."
+      },
+      {
+        "texto": "Dejar los coches donde están hasta que llegue la policía.",
+        "correcta": false,
+        "explicacion": "Si no hay heridos y se pueden mover, es mejor retirarlos.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Irte sin decir nada si el daño es pequeño.",
+        "correcta": false,
+        "explicacion": "Debes detenerte e identificarte.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 129",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0111",
+    "mundo": "accidentes",
+    "subtema": "deber",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si estás implicado en un accidente, ¿tienes que detenerte?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí, siempre.",
+        "correcta": true,
+        "explicacion": "Debes detenerte, ayudar si hace falta y facilitar tus datos."
+      },
+      {
+        "texto": "Solo si hay heridos.",
+        "correcta": false,
+        "explicacion": "También sin heridos.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "No, si no fue culpa tuya.",
+        "correcta": false,
+        "explicacion": "La culpa no cambia la obligación.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 129",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0112",
+    "mundo": "accidentes",
+    "subtema": "shock",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un herido está pálido, sudoroso y con el pulso rápido (posible shock), sin lesiones en piernas ni columna. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Tumbarle boca arriba con las piernas un poco elevadas y abrigarle.",
+        "correcta": true,
+        "explicacion": "Así llega más sangre a los órganos vitales."
+      },
+      {
+        "texto": "Sentarle y darle agua.",
+        "correcta": false,
+        "explicacion": "No se le da de beber.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Hacerle caminar.",
+        "correcta": false,
+        "explicacion": "Podría desmayarse.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0113",
+    "mundo": "accidentes",
+    "subtema": "botiquin",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Qué es lo primero que deberías ponerte para atender a un herido que sangra?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Unos guantes.",
+        "correcta": true,
+        "explicacion": "Te protegen a ti y protegen al herido de infecciones."
+      },
+      {
+        "texto": "Una mascarilla de buceo.",
+        "correcta": false,
+        "explicacion": "No es lo indicado.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Nada.",
+        "correcta": false,
+        "explicacion": "Si tienes guantes, úsalos.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  }
+]

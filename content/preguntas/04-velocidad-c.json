@@ -1,0 +1,201 @@
+[
+  {
+    "id": "VEL-0201",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "A 50 km/h, ¿cuántos metros recorres aproximadamente cada segundo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Unos 14 metros.",
+        "correcta": true,
+        "explicacion": "Divide 50 entre 3,6."
+      },
+      {
+        "texto": "Unos 5 metros.",
+        "correcta": false,
+        "explicacion": "No basta con quitar un cero.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "Unos 50 metros.",
+        "correcta": false,
+        "explicacion": "Muchos menos.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0202",
+    "mundo": "velocidad",
+    "subtema": "curvas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuándo debes reducir la velocidad para tomar una curva?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Antes de entrar en ella.",
+        "correcta": true,
+        "explicacion": "Frenar dentro de la curva puede desestabilizar el coche."
+      },
+      {
+        "texto": "En mitad de la curva.",
+        "correcta": false,
+        "explicacion": "Es más peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Al salir de ella.",
+        "correcta": false,
+        "explicacion": "Demasiado tarde.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: velocidad",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0203",
+    "mundo": "velocidad",
+    "subtema": "pendientes",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una bajada larga y pronunciada, para controlar la velocidad debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Usar una marcha corta y ayudarte del freno motor.",
+        "correcta": true,
+        "explicacion": "Si solo usas el freno, se calienta y pierde eficacia."
+      },
+      {
+        "texto": "Ir en punto muerto y frenar.",
+        "correcta": false,
+        "explicacion": "Pierdes el freno motor.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Frenar todo el rato.",
+        "correcta": false,
+        "explicacion": "Los frenos se calientan.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: velocidad",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0204",
+    "mundo": "velocidad",
+    "subtema": "vision",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al aumentar la velocidad, el campo visual…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Se estrecha.",
+        "correcta": true,
+        "explicacion": "Ves peor lo que pasa a los lados."
+      },
+      {
+        "texto": "Se amplía.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No cambia.",
+        "correcta": false,
+        "explicacion": "Sí cambia.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: velocidad",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0205",
+    "mundo": "velocidad",
+    "subtema": "adecuada",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Pasas junto a un colegio a la hora de salida y el límite es 30. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Circular incluso más despacio si la situación lo requiere.",
+        "correcta": true,
+        "explicacion": "El límite es un máximo; adapta la velocidad a la situación."
+      },
+      {
+        "texto": "Ir a 30 exactos.",
+        "correcta": false,
+        "explicacion": "Puede ser demasiado.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Acelerar para pasar rápido.",
+        "correcta": false,
+        "explicacion": "Es peligroso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 46",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0206",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si el firme está mojado, la distancia de frenado…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Puede llegar a ser casi el doble que en seco.",
+        "correcta": true,
+        "explicacion": "El agarre es mucho menor."
+      },
+      {
+        "texto": "Es la misma.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "Es menor.",
+        "correcta": false,
+        "explicacion": "Al contrario.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  }
+]

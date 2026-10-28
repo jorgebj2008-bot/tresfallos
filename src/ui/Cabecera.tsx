@@ -1,13 +1,13 @@
 import { motion } from 'motion/react'
 import { useJuego } from '../store/useJuego'
 import { rangoDe } from '../game/progreso'
-import { Altavoz, Auto, Llama, Luna, Sol } from './iconos'
+import { Altavoz, Auto, Llama, Luna, Nota, Sol } from './iconos'
 import { RACHA_INICIAL, diaLocal, rachaVisible } from '../game/retencion'
 
 const NOMBRE_TEMA = { auto: 'Tema automático', claro: 'Tema de día', noche: 'Tema de noche' }
 
 export function Cabecera() {
-  const { perfil, alternarSonido, cambiarTema } = useJuego()
+  const { perfil, alternarSonido, alternarMusica, cambiarTema } = useJuego()
   const rango = rangoDe(perfil.xp)
   const racha = rachaVisible(perfil.racha ?? RACHA_INICIAL, diaLocal(Date.now()))
 
@@ -30,6 +30,9 @@ export function Cabecera() {
       </div>
       <button className="icono-boton" onClick={cambiarTema} aria-label={NOMBRE_TEMA[perfil.tema]} title={NOMBRE_TEMA[perfil.tema]}>
         {perfil.tema === 'auto' ? <Auto /> : perfil.tema === 'claro' ? <Sol /> : <Luna />}
+      </button>
+      <button className="icono-boton" onClick={alternarMusica} aria-label={perfil.musica === false ? 'Activar música' : 'Quitar música'}>
+        <Nota on={perfil.musica !== false} />
       </button>
       <button className="icono-boton" onClick={alternarSonido} aria-label={perfil.sonido ? 'Silenciar' : 'Activar sonido'}>
         <Altavoz on={perfil.sonido} />

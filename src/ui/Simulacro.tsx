@@ -9,7 +9,7 @@ import { barajar } from '../game/nivel'
 import { useJuego } from '../store/useJuego'
 import { sfx, vibrar } from '../audio/sfx'
 import { confeti } from './particulas'
-import { SenalSVG } from './SenalSVG'
+import { ImagenPregunta } from './EscenaSVG'
 import type { ConfigPartida, ResultadoPartida } from './Nivel'
 import { Check, Cruz } from './iconos'
 
@@ -111,7 +111,7 @@ export function Simulacro({ config, onSalir, onTerminar }: { config: ConfigParti
             return (
               <article key={p.id} className="pegatina fallo">
                 <p className="enunciado">{k + 1}. {p.enunciado}</p>
-                {p.imagen?.startsWith('senal:') && <SenalSVG id={p.imagen.slice(6)} size={56} />}
+                <ImagenPregunta imagen={p.imagen} pequena />
                 <p><span className="rotulo">Tu respuesta</span>{r === null ? 'Sin responder' : opciones[r].texto}</p>
                 {r !== null && <p className="nota">{opciones[r].explicacion}</p>}
                 <p><span className="rotulo">Correcta</span>{buena.texto}</p>
@@ -136,7 +136,7 @@ export function Simulacro({ config, onSalir, onTerminar }: { config: ConfigParti
       </div>
 
       <div className="tarjeta pegatina">
-        {p.imagen?.startsWith('senal:') && <div className="imagen-pregunta"><SenalSVG id={p.imagen.slice(6)} size={100} /></div>}
+        <ImagenPregunta imagen={p.imagen} />
         <h2>{p.enunciado}</h2>
       </div>
       <div className="opciones">

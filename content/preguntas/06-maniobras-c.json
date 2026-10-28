@@ -1,0 +1,269 @@
+[
+  {
+    "id": "MAN-0201",
+    "mundo": "maniobras",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Te quedas parado en un atasco. Eso es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Una detención.",
+        "correcta": true,
+        "explicacion": "La detención es una inmovilización por necesidades de la circulación."
+      },
+      {
+        "texto": "Una parada.",
+        "correcta": false,
+        "explicacion": "La parada es voluntaria y breve.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Un estacionamiento.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0202",
+    "mundo": "maniobras",
+    "subtema": "estacionar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Se puede estacionar delante de un vado señalizado?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "Impide la entrada y salida de vehículos."
+      },
+      {
+        "texto": "Sí, si es poco tiempo.",
+        "correcta": false,
+        "explicacion": "No hay tiempo permitido.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Sí, si te quedas dentro del coche.",
+        "correcta": false,
+        "explicacion": "Tampoco.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 94",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0203",
+    "mundo": "maniobras",
+    "subtema": "estacionar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Se puede estacionar en un carril reservado al autobús?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "Está prohibido parar y estacionar en él."
+      },
+      {
+        "texto": "Sí, de noche.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Sí, con las luces de emergencia.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 94",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0204",
+    "mundo": "maniobras",
+    "subtema": "incorporarse",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Para salir de un estacionamiento a la calzada debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Señalizar y ceder el paso a los que circulan.",
+        "correcta": true,
+        "explicacion": "Quien se incorpora a la circulación cede."
+      },
+      {
+        "texto": "Salir rápido y luego señalizar.",
+        "correcta": false,
+        "explicacion": "Primero se señaliza.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Tocar el claxon y salir.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 72",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0205",
+    "mundo": "maniobras",
+    "subtema": "obstaculo",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Para rodear un obstáculo que ocupa tu carril, debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Señalizar el desplazamiento lateral y ceder el paso a quien venga de frente.",
+        "correcta": true,
+        "explicacion": "Es como un adelantamiento."
+      },
+      {
+        "texto": "Pasar rápido sin señalizar.",
+        "correcta": false,
+        "explicacion": "Hay que señalizar.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Pasar por el arcén.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 88",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0206",
+    "mundo": "maniobras",
+    "subtema": "estacionar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Se puede estacionar sobre un paso para peatones?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "Está prohibido parar y estacionar en él."
+      },
+      {
+        "texto": "Sí, si no hay peatones.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Sí, de noche.",
+        "correcta": false,
+        "explicacion": "No.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 91",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0207",
+    "mundo": "maniobras",
+    "subtema": "marcha-atras",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Como norma general, ¿se puede dar marcha atrás para incorporarte a otra vía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, salvo que sea imposible hacerlo de otra forma y en un recorrido mínimo.",
+        "correcta": true,
+        "explicacion": "La marcha atrás es una maniobra excepcional."
+      },
+      {
+        "texto": "Sí, siempre.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre».",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Sí, si no hay tráfico.",
+        "correcta": false,
+        "explicacion": "No es la condición.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 80",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0208",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Puedes adelantar a varios vehículos a la vez?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí, si tienes espacio y visibilidad para hacerlo con seguridad y puedes volver a tu carril.",
+        "correcta": true,
+        "explicacion": "Si no, adelanta de uno en uno."
+      },
+      {
+        "texto": "No, nunca.",
+        "correcta": false,
+        "explicacion": "Desconfía del «nunca».",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Sí, siempre.",
+        "correcta": false,
+        "explicacion": "Depende del espacio y la visibilidad.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 84",
+    "revisar": true
+  }
+]

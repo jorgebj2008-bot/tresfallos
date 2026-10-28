@@ -13,7 +13,10 @@ import { EstoyListo } from './EstoyListo'
 import { Cuaderno } from './Cuaderno'
 import { Admin } from './Admin'
 import { marcarEnPartida } from '../actualizar'
+import { sonarMusica } from '../audio/musica'
+import { MUNDOS } from '../content/mundos'
 import { Bienvenida, debeMostrarseBienvenida } from './Bienvenida'
+import { Guia, debeMostrarseGuia } from './Guia'
 import { Retos } from './Retos'
 import { Simulacro } from './Simulacro'
 import { registrarPartida, type Novedades } from '../store/progresoDiario'
@@ -41,6 +44,7 @@ export function App() {
   const conFallos = useConFallos()
   const [admin, setAdmin] = useState(() => location.hash === '#admin')
   const [bienvenida, setBienvenida] = useState(debeMostrarseBienvenida)
+  const [guia, setGuia] = useState(debeMostrarseGuia)
 
   // Panel de administración: se abre con #admin en la dirección.
   useEffect(() => {
@@ -66,6 +70,22 @@ export function App() {
 
   // Las actualizaciones esperan a que termines la partida.
   useEffect(() => marcarEnPartida(pantalla.tipo === 'partida'), [pantalla.tipo])
+
+  // Música: la del mundo que se juega; en el mapa, la del mundo al que has llegado; en el simulacro, silencio.
+  const jefesVencidos = perfil.stats?.jefes.length ?? 0
+  const musicaMundo =
+    pantalla.tipo === 'partida'
+      ? pantalla.config.tipo === 'simulacro' ? null
+        : 'mundo' in pantalla.config && pantalla.config.mundo ? MUNDOS.findIndex((m) => m.id === (pantalla.config as { mundo: string }).mundo)
+        : 2
+      : Math.min(jefesVencidos, MUNDOS.length - 1)
+  useEffect(() => {
+    // El navegador solo deja sonar audio tras un toque: se arranca con el primero.
+    const arrancar = () => sonarMusica(musicaMundo)
+    if (cargado) arrancar()
+    addEventListener('pointerdown', arrancar, { once: true })
+    return () => removeEventListener('pointerdown', arrancar)
+  }, [musicaMundo, cargado, perfil.musica])
 
   if (admin) return <div className="app"><Admin /></div>
   if (!cargado) return <div className="app"><div className="cargando">Tres<span style={{ color: 'var(--bad)' }}>Fallos</span></div></div>
@@ -122,11 +142,12 @@ export function App() {
           <Mapa onJugar={jugarNivel} onJefe={(mundo) => jugar({ tipo: 'jefe', mundo })} />
         </>
       )}
-      {tab === 'retos' && <Retos onJuego={(juego) => jugar({ tipo: 'juego', juego })} onSimulacro={() => jugar({ tipo: 'simulacro' })} onInstalar={() => setBienvenida(true)} />}
+      {tab === 'retos' && <Retos onJuego={(juego) => jugar({ tipo: 'juego', juego })} onSimulacro={() => jugar({ tipo: 'simulacro' })} onInstalar={() => setBienvenida(true)} onGuia={() => setGuia(true)} />}
       {tab === 'listo' && <EstoyListo onAccion={accion} simulacroDisponible={(perfil.stats?.jefes.length ?? 0) >= 1} />}
       {tab === 'errores' && <Cuaderno onJugar={jugar} />}
 
       {bienvenida && tab && <Bienvenida onCerrar={() => setBienvenida(false)} />}
+      {!bienvenida && guia && tab && <Guia onCerrar={() => setGuia(false)} />}
       {partida}
       {pantalla.tipo === 'resultado' && <Resultados r={pantalla.r} nov={pantalla.nov} onRepetir={() => jugar(pantalla.r.config)} onMapa={volverMapa} />}
 

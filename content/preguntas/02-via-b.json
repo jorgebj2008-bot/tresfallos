@@ -1,0 +1,470 @@
+[
+  {
+    "id": "VIA-0101",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es una travesía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El tramo de una carretera que atraviesa un poblado.",
+        "correcta": true,
+        "explicacion": "Sigue siendo carretera, pero pasa por dentro de un pueblo."
+      },
+      {
+        "texto": "Una calle peatonal.",
+        "correcta": false,
+        "explicacion": "Eso es una zona peatonal.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Un camino de tierra entre dos pueblos.",
+        "correcta": false,
+        "explicacion": "No es eso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0102",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "La franja que separa las dos calzadas de una autovía se llama…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Mediana.",
+        "correcta": true,
+        "explicacion": "No se puede circular, parar ni cruzar por ella."
+      },
+      {
+        "texto": "Arcén.",
+        "correcta": false,
+        "explicacion": "El arcén está al lado de la calzada, no entre las dos.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Isleta.",
+        "correcta": false,
+        "explicacion": "La isleta es una zona pequeña que encauza el tráfico, por ejemplo en un cruce.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0103",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es una vía interurbana?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Toda vía pública situada fuera de poblado.",
+        "correcta": true,
+        "explicacion": "Lo contrario es una vía urbana, dentro de poblado."
+      },
+      {
+        "texto": "Solo las autopistas y autovías.",
+        "correcta": false,
+        "explicacion": "Las carreteras convencionales también son interurbanas.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Una calle que une dos barrios.",
+        "correcta": false,
+        "explicacion": "Si está dentro del poblado, es urbana.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0104",
+    "mundo": "via",
+    "subtema": "ciclomotores",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Fuera de poblado, si hay arcén transitable, ¿por dónde debe circular un ciclomotor?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por el arcén de la derecha.",
+        "correcta": true,
+        "explicacion": "Los vehículos lentos, como ciclomotores y bicicletas, usan el arcén si es transitable."
+      },
+      {
+        "texto": "Por el centro del carril.",
+        "correcta": false,
+        "explicacion": "Si hay arcén transitable, debe usarlo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Por el arcén de la izquierda.",
+        "correcta": false,
+        "explicacion": "Por la izquierda van los peatones.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 36",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0105",
+    "mundo": "via",
+    "subtema": "arcen",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Puede un turismo circular por el arcén?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, salvo en situaciones de emergencia.",
+        "correcta": true,
+        "explicacion": "El arcén no está pensado para los automóviles."
+      },
+      {
+        "texto": "Sí, para adelantar por la derecha.",
+        "correcta": false,
+        "explicacion": "Nunca se adelanta por el arcén.",
+        "error_tipo": "maniobra_adelantamiento"
+      },
+      {
+        "texto": "Sí, en los atascos para avanzar.",
+        "correcta": false,
+        "explicacion": "Tampoco en atascos.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "maniobra_adelantamiento"
+    ],
+    "fuente": "RGC art. 36",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0106",
+    "mundo": "via",
+    "subtema": "peatones",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "En poblado, ¿por dónde deben ir los peatones?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por la acera.",
+        "correcta": true,
+        "explicacion": "La acera es su zona; la calzada es para los vehículos."
+      },
+      {
+        "texto": "Por el arcén de la izquierda.",
+        "correcta": false,
+        "explicacion": "Eso es fuera de poblado sin acera.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Por el carril bici si está vacío.",
+        "correcta": false,
+        "explicacion": "El carril bici es para bicicletas.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 121",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0107",
+    "mundo": "via",
+    "subtema": "peatones",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "De noche, un peatón camina por una carretera sin iluminar. ¿Qué debe llevar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Un elemento luminoso o reflectante para que le vean.",
+        "correcta": true,
+        "explicacion": "Le hace visible a los conductores a tiempo."
+      },
+      {
+        "texto": "Nada, si va por la izquierda.",
+        "correcta": false,
+        "explicacion": "Ir por la izquierda es correcto, pero también debe hacerse visible.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Ropa oscura para no deslumbrar.",
+        "correcta": false,
+        "explicacion": "La ropa oscura le hace invisible: es lo contrario.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 123",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0108",
+    "mundo": "via",
+    "subtema": "bicicletas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Es obligatorio el casco para un ciclista en una vía interurbana?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí.",
+        "correcta": true,
+        "explicacion": "En vías interurbanas el casco es obligatorio para los ciclistas."
+      },
+      {
+        "texto": "No, nunca es obligatorio.",
+        "correcta": false,
+        "explicacion": "Ojo con el «nunca»: fuera de poblado sí lo es.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Solo si es menor de edad.",
+        "correcta": false,
+        "explicacion": "Fuera de poblado es obligatorio para todos.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 118",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0109",
+    "mundo": "via",
+    "subtema": "bicicletas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En ciudad, ¿quién debe llevar casco en bicicleta?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los menores de 16 años.",
+        "correcta": true,
+        "explicacion": "En vías urbanas es obligatorio para los menores de 16 años."
+      },
+      {
+        "texto": "Nadie.",
+        "correcta": false,
+        "explicacion": "Los menores de 16 sí deben llevarlo.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Todos los ciclistas.",
+        "correcta": false,
+        "explicacion": "En ciudad solo es obligatorio para los menores de 16.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 118",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0110",
+    "mundo": "via",
+    "subtema": "vmp",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué velocidad máxima por diseño tiene un vehículo de movilidad personal (VMP), como un patinete eléctrico?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Entre 6 y 25 km/h.",
+        "correcta": true,
+        "explicacion": "Si corre más de 25 km/h, ya no es un VMP."
+      },
+      {
+        "texto": "Hasta 45 km/h.",
+        "correcta": false,
+        "explicacion": "45 km/h es el límite de los ciclomotores.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "No tiene límite.",
+        "correcta": false,
+        "explicacion": "Sí lo tiene: 25 km/h.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RD 970/2020 (modifica el RGC)",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0111",
+    "mundo": "via",
+    "subtema": "vmp",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Pueden circular los patinetes eléctricos (VMP) por una autovía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "Tienen prohibido circular por autopistas, autovías, vías interurbanas y travesías."
+      },
+      {
+        "texto": "Sí, por el arcén.",
+        "correcta": false,
+        "explicacion": "Ni siquiera por el arcén.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, si el conductor lleva casco.",
+        "correcta": false,
+        "explicacion": "El casco no cambia la prohibición.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 38",
+    "revisar": true
+  },
+  {
+    "id": "VIA-0112",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una calzada de sentido único es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Una calzada por la que todos los vehículos circulan en el mismo sentido.",
+        "correcta": true,
+        "explicacion": "Se señaliza con una flecha blanca sobre fondo azul."
+      },
+      {
+        "texto": "Una calzada con un solo carril.",
+        "correcta": false,
+        "explicacion": "Puede tener varios carriles, todos en el mismo sentido.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Una calle donde solo pueden entrar los residentes.",
+        "correcta": false,
+        "explicacion": "Eso sería un acceso restringido.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0113",
+    "mundo": "via",
+    "subtema": "vulnerables",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Quiénes son los usuarios vulnerables de la vía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Peatones, ciclistas, motoristas y usuarios de VMP.",
+        "correcta": true,
+        "explicacion": "Son los que sufren las peores consecuencias en un accidente."
+      },
+      {
+        "texto": "Solo los niños y los mayores.",
+        "correcta": false,
+        "explicacion": "No depende de la edad.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Los conductores noveles.",
+        "correcta": false,
+        "explicacion": "No se refiere a la experiencia.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RD 518/2026 (modifica el RGC)",
+    "revisar": true
+  },
+  {
+    "id": "VIA-0114",
+    "mundo": "via",
+    "subtema": "peatones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un grupo de peatones camina por una carretera sin acera. Como norma general, deben ir…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por la izquierda, en fila de uno si hay poca visibilidad o mucho tráfico.",
+        "correcta": true,
+        "explicacion": "Así ven venir a los vehículos y ocupan poco espacio."
+      },
+      {
+        "texto": "Por el centro, en grupo, para que los vean.",
+        "correcta": false,
+        "explicacion": "Es lo más peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Por la derecha, en paralelo.",
+        "correcta": false,
+        "explicacion": "Por la derecha no ven a los vehículos que vienen por detrás.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC arts. 121 y 122",
+    "revisar": false
+  }
+]

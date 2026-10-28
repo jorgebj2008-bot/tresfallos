@@ -1,0 +1,536 @@
+[
+  {
+    "id": "CON-0101",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué edad mínima se exige para el permiso AM (ciclomotores)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "15 años.",
+        "correcta": true,
+        "explicacion": "El AM se puede obtener con 15 años."
+      },
+      {
+        "texto": "14 años.",
+        "correcta": false,
+        "explicacion": "Te quedas corto.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "16 años.",
+        "correcta": false,
+        "explicacion": "16 es la edad del A1.",
+        "error_tipo": "confunde_permisos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_permisos",
+      "dato_numerico"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0102",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿A qué edad se puede obtener el permiso A1 (motos de hasta 125 cc)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "16 años.",
+        "correcta": true,
+        "explicacion": "Es la edad mínima del A1."
+      },
+      {
+        "texto": "18 años.",
+        "correcta": false,
+        "explicacion": "18 es la del A2 y la del B.",
+        "error_tipo": "confunde_permisos"
+      },
+      {
+        "texto": "15 años.",
+        "correcta": false,
+        "explicacion": "15 es la del AM.",
+        "error_tipo": "confunde_permisos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_permisos"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0103",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Con el permiso B, ¿se pueden conducir ciclomotores?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí, el permiso B autoriza también a conducir ciclomotores.",
+        "correcta": true,
+        "explicacion": "El B incluye lo que autoriza el AM."
+      },
+      {
+        "texto": "No, hace falta además el permiso AM.",
+        "correcta": false,
+        "explicacion": "Error típico: el B ya lo incluye.",
+        "error_tipo": "confunde_permisos"
+      },
+      {
+        "texto": "Solo si tienes más de 3 años de permiso.",
+        "correcta": false,
+        "explicacion": "Los 3 años son para las motos A1, no para los ciclomotores.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_permisos",
+      "lectura_matiz"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0104",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿A qué edad se puede obtener el permiso A2?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "18 años.",
+        "correcta": true,
+        "explicacion": "El A2 permite motos de potencia media desde los 18."
+      },
+      {
+        "texto": "16 años.",
+        "correcta": false,
+        "explicacion": "16 es el A1.",
+        "error_tipo": "confunde_permisos"
+      },
+      {
+        "texto": "20 años.",
+        "correcta": false,
+        "explicacion": "20 es la edad para el A, con experiencia previa en A2.",
+        "error_tipo": "confunde_permisos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_permisos"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0105",
+    "mundo": "conductor",
+    "subtema": "documentos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Es obligatorio que un vehículo tenga un seguro de responsabilidad civil para circular?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí, siempre que circule.",
+        "correcta": true,
+        "explicacion": "El seguro obligatorio cubre los daños que puedas causar a otros."
+      },
+      {
+        "texto": "Solo si el vehículo tiene más de 4 años.",
+        "correcta": false,
+        "explicacion": "No depende de la antigüedad.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Solo si se usa a diario.",
+        "correcta": false,
+        "explicacion": "Aunque se use poco, si circula debe estar asegurado.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RDL 8/2004 (responsabilidad civil y seguro), art. 2",
+    "revisar": false
+  },
+  {
+    "id": "CON-0106",
+    "mundo": "conductor",
+    "subtema": "documentos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "El permiso de circulación es el documento que…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Acredita que el vehículo está autorizado a circular e identifica a su titular.",
+        "correcta": true,
+        "explicacion": "Lo expide la DGT al matricular el vehículo."
+      },
+      {
+        "texto": "Acredita que el conductor sabe conducir.",
+        "correcta": false,
+        "explicacion": "Eso es el permiso de conducción.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Recoge los datos técnicos del vehículo.",
+        "correcta": false,
+        "explicacion": "Eso es la tarjeta ITV.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RD 2822/1998 (Reglamento General de Vehículos)",
+    "revisar": false
+  },
+  {
+    "id": "CON-0107",
+    "mundo": "conductor",
+    "subtema": "documentos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué documento recoge las características técnicas del vehículo y sus inspecciones?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La tarjeta de inspección técnica (tarjeta ITV).",
+        "correcta": true,
+        "explicacion": "Indica sus datos técnicos y anota las inspecciones."
+      },
+      {
+        "texto": "El permiso de circulación.",
+        "correcta": false,
+        "explicacion": "El permiso de circulación identifica al titular y autoriza a circular.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "La póliza del seguro.",
+        "correcta": false,
+        "explicacion": "La póliza solo indica la cobertura del seguro.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RD 2822/1998 (Reglamento General de Vehículos)",
+    "revisar": false
+  },
+  {
+    "id": "CON-0108",
+    "mundo": "conductor",
+    "subtema": "vehiculo",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "La masa máxima autorizada (MMA) es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La mayor masa con la que se permite circular a un vehículo, con su carga.",
+        "correcta": true,
+        "explicacion": "Es la que limita, por ejemplo, el permiso B a 3.500 kg."
+      },
+      {
+        "texto": "La masa del vehículo vacío.",
+        "correcta": false,
+        "explicacion": "Esa es la tara o masa en vacío.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "La carga máxima que cabe en el maletero.",
+        "correcta": false,
+        "explicacion": "La MMA incluye vehículo y carga.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "CON-0109",
+    "mundo": "conductor",
+    "subtema": "renovacion",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Para renovar el permiso B hay que…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Superar un reconocimiento en un centro de reconocimiento de conductores.",
+        "correcta": true,
+        "explicacion": "Comprueba que sigues teniendo las aptitudes físicas y psíquicas necesarias."
+      },
+      {
+        "texto": "Repetir el examen teórico.",
+        "correcta": false,
+        "explicacion": "No hace falta volver a examinarse.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No hacer nada: se renueva solo.",
+        "correcta": false,
+        "explicacion": "Hay que pasar el reconocimiento.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores)",
+    "revisar": false
+  },
+  {
+    "id": "CON-0110",
+    "mundo": "conductor",
+    "subtema": "itv",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si un turismo particular tiene más de 10 años, ¿cada cuánto debe pasar la ITV?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cada año.",
+        "correcta": true,
+        "explicacion": "A partir de los 10 años, la inspección es anual."
+      },
+      {
+        "texto": "Cada 2 años.",
+        "correcta": false,
+        "explicacion": "Cada 2 años es entre los 4 y los 10 años.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "Cada 4 años.",
+        "correcta": false,
+        "explicacion": "4 años es la primera ITV.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RD 920/2017 (Inspección Técnica de Vehículos), art. 6",
+    "revisar": false
+  },
+  {
+    "id": "CON-0111",
+    "mundo": "conductor",
+    "subtema": "itv",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si la ITV da resultado «desfavorable», ¿qué ocurre?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Hay que reparar los defectos y volver a la inspección en el plazo que se indica.",
+        "correcta": true,
+        "explicacion": "Mientras tanto, el vehículo solo puede circular para ir al taller y volver a la ITV."
+      },
+      {
+        "texto": "Puedes circular normalmente hasta la próxima ITV.",
+        "correcta": false,
+        "explicacion": "No: hay que corregir los defectos.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "El vehículo se da de baja de forma automática.",
+        "correcta": false,
+        "explicacion": "No hay baja automática.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RD 920/2017 (Inspección Técnica de Vehículos)",
+    "revisar": true
+  },
+  {
+    "id": "CON-0112",
+    "mundo": "conductor",
+    "subtema": "titularidad",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Al vender tu coche, ¿qué debes hacer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Comunicar la venta a la DGT en el plazo establecido.",
+        "correcta": true,
+        "explicacion": "Así dejas de ser responsable de lo que haga el nuevo dueño con el coche."
+      },
+      {
+        "texto": "Nada: lo hace siempre el comprador.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: el vendedor también debe comunicarlo.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Solo entregar las llaves y los papeles.",
+        "correcta": false,
+        "explicacion": "Sin comunicarlo, puedes recibir multas del coche.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RD 2822/1998 (Reglamento General de Vehículos), art. 32",
+    "revisar": true
+  },
+  {
+    "id": "CON-0113",
+    "mundo": "conductor",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un conductor con permiso desde hace 5 años y sin perder ningún punto, ¿cuántos puntos tiene?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "14 puntos.",
+        "correcta": true,
+        "explicacion": "12 a los 2 años y +2 tras 3 años más sin sanciones que quiten puntos."
+      },
+      {
+        "texto": "12 puntos.",
+        "correcta": false,
+        "explicacion": "Te olvidas de la bonificación por 3 años sin sanciones.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "15 puntos.",
+        "correcta": false,
+        "explicacion": "15 necesita otros 3 años más.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 63",
+    "revisar": false
+  },
+  {
+    "id": "CON-0114",
+    "mundo": "conductor",
+    "subtema": "vehiculo",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Un turismo debe llevar placas de matrícula…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Delante y detrás.",
+        "correcta": true,
+        "explicacion": "Las dos deben ser legibles."
+      },
+      {
+        "texto": "Solo detrás.",
+        "correcta": false,
+        "explicacion": "Los turismos la llevan delante y detrás.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Solo delante.",
+        "correcta": false,
+        "explicacion": "También detrás.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz"
+    ],
+    "fuente": "RD 2822/1998 (Reglamento General de Vehículos)",
+    "revisar": false
+  },
+  {
+    "id": "CON-0115",
+    "mundo": "conductor",
+    "subtema": "novel",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Durante el primer año de permiso, la señal L…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Es obligatoria en la parte trasera del vehículo.",
+        "correcta": true,
+        "explicacion": "Indica a los demás que eres conductor novel."
+      },
+      {
+        "texto": "Es solo recomendable.",
+        "correcta": false,
+        "explicacion": "Es obligatoria, no una recomendación.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Se coloca en el parabrisas delantero.",
+        "correcta": false,
+        "explicacion": "Va en la parte trasera.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RD 2822/1998 (Reglamento General de Vehículos), anexo XI",
+    "revisar": false
+  },
+  {
+    "id": "CON-0116",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Con el permiso B, ¿puedes conducir una furgoneta de 3.200 kg de MMA?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí, porque no supera los 3.500 kg.",
+        "correcta": true,
+        "explicacion": "Lo que cuenta es la MMA, no el tipo de vehículo."
+      },
+      {
+        "texto": "No, las furgonetas necesitan el permiso C1.",
+        "correcta": false,
+        "explicacion": "El C1 es para más de 3.500 kg.",
+        "error_tipo": "confunde_permisos"
+      },
+      {
+        "texto": "Solo si no lleva carga.",
+        "correcta": false,
+        "explicacion": "Lo que cuenta es la MMA, que ya incluye la carga.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_permisos",
+      "lectura_matiz"
+    ],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  }
+]

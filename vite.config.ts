@@ -10,10 +10,11 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     ...(mode === 'demo'
-      ? [viteSingleFile()]
+      ? [viteSingleFile(), VitePWA({ disable: true, injectRegister: false })] // en la página de pruebas no hay app instalable
       : [
           VitePWA({
-            registerType: 'autoUpdate',
+            registerType: 'prompt',
+            injectRegister: false,
             includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
             manifest: {
               name: 'TresFallos · Aprueba el teórico',

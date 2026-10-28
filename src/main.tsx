@@ -5,6 +5,9 @@ import '@fontsource/nunito/latin-600.css'
 import '@fontsource/nunito/latin-800.css'
 import './index.css'
 import { App } from './ui/App'
+import { iniciarActualizaciones } from './actualizar'
+
+iniciarActualizaciones()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

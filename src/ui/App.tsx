@@ -12,6 +12,7 @@ import { Resultados } from './Resultados'
 import { EstoyListo } from './EstoyListo'
 import { Cuaderno } from './Cuaderno'
 import { Admin } from './Admin'
+import { marcarEnPartida } from '../actualizar'
 import { Bienvenida, debeMostrarseBienvenida } from './Bienvenida'
 import { Retos } from './Retos'
 import { Simulacro } from './Simulacro'
@@ -62,6 +63,9 @@ export function App() {
   useEffect(() => {
     if (!(pantalla.tipo === 'tab' && pantalla.tab === 'mapa')) window.scrollTo(0, 0)
   }, [pantalla])
+
+  // Las actualizaciones esperan a que termines la partida.
+  useEffect(() => marcarEnPartida(pantalla.tipo === 'partida'), [pantalla.tipo])
 
   if (admin) return <div className="app"><Admin /></div>
   if (!cargado) return <div className="app"><div className="cargando">Tres<span style={{ color: 'var(--bad)' }}>Fallos</span></div></div>

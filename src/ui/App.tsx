@@ -17,6 +17,7 @@ import { sonarMusica } from '../audio/musica'
 import { MUNDOS } from '../content/mundos'
 import { Bienvenida, debeMostrarseBienvenida } from './Bienvenida'
 import { Guia, debeMostrarseGuia } from './Guia'
+import { Intro } from './Intro'
 import { Retos } from './Retos'
 import { Simulacro } from './Simulacro'
 import { registrarPartida, type Novedades } from '../store/progresoDiario'
@@ -45,6 +46,7 @@ export function App() {
   const [admin, setAdmin] = useState(() => location.hash === '#admin')
   const [bienvenida, setBienvenida] = useState(debeMostrarseBienvenida)
   const [guia, setGuia] = useState(debeMostrarseGuia)
+  const [intro, setIntro] = useState(true)
 
   // Panel de administración: se abre con #admin en la dirección.
   useEffect(() => {
@@ -88,7 +90,7 @@ export function App() {
   }, [musicaMundo, cargado, perfil.musica])
 
   if (admin) return <div className="app"><Admin /></div>
-  if (!cargado) return <div className="app"><div className="cargando">Tres<span style={{ color: 'var(--bad)' }}>Fallos</span></div></div>
+  if (!cargado) return <div className="app">{intro && <Intro onTerminar={() => setIntro(false)} />}</div>
 
   const jugar = (config: ConfigPartida) => {
     sfx.toque()
@@ -146,8 +148,9 @@ export function App() {
       {tab === 'listo' && <EstoyListo onAccion={accion} simulacroDisponible={(perfil.stats?.jefes.length ?? 0) >= 1} />}
       {tab === 'errores' && <Cuaderno onJugar={jugar} />}
 
-      {bienvenida && tab && <Bienvenida onCerrar={() => setBienvenida(false)} />}
-      {!bienvenida && guia && tab && <Guia onCerrar={() => setGuia(false)} />}
+      {intro && <Intro onTerminar={() => setIntro(false)} />}
+      {!intro && bienvenida && tab && <Bienvenida onCerrar={() => setBienvenida(false)} />}
+      {!intro && !bienvenida && guia && tab && <Guia onCerrar={() => setGuia(false)} />}
       {partida}
       {pantalla.tipo === 'resultado' && <Resultados r={pantalla.r} nov={pantalla.nov} onRepetir={() => jugar(pantalla.r.config)} onMapa={volverMapa} />}
 

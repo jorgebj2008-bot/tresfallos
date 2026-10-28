@@ -580,3 +580,42 @@ canvas.particulas { position: fixed; inset: 0; width: 100%; height: 100%; pointe
   .cabecera .chip-cab { padding: 2px 5px; font-size: 12px; gap: 2px; }
   .cabecera .chip-cab svg { width: 14px; height: 14px; }
 }
+
+/* ---------- Intro ---------- */
+.intro {
+  position: fixed; inset: 0; z-index: 100; overflow: hidden; cursor: pointer;
+  background: radial-gradient(120% 80% at 50% 30%, #FFF1C2 0%, #FFE8A3 45%, #FFD66B 100%);
+  display: grid; place-items: center;
+}
+.intro-carretera {
+  position: absolute; top: 0; bottom: 0; left: 50%; width: 132px; margin-left: -66px;
+  background: #4A4E69; border-inline: 5px solid #1E1B2E; transform-origin: bottom;
+}
+.intro-rayas {
+  position: absolute; inset: 0; left: 50%; width: 8px; margin-left: -4px;
+  background: linear-gradient(#fff 0 50%, transparent 50% 100%) 0 0 / 100% 64px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .intro-rayas { animation: rayas-intro .45s linear infinite; }
+  @keyframes rayas-intro { to { background-position: 0 64px; } }
+}
+.intro-coche { position: absolute; left: 50%; top: 50%; margin: 70px 0 0 -33px; z-index: 2; filter: drop-shadow(0 6px 0 rgba(0,0,0,.2)); }
+.intro-logo { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: -170px; pointer-events: none; }
+.intro-tres {
+  width: 120px; height: 120px; display: grid; place-items: center;
+  font-family: var(--font-d); font-weight: 800; font-size: 96px; line-height: 1; color: #fff;
+  background: #7C5CFF; border: 6px solid #1E1B2E; border-radius: 32px; box-shadow: 0 8px 0 #1E1B2E;
+  -webkit-text-stroke: 3px #1E1B2E; padding-top: 10px;
+}
+.intro-palabras { display: flex; gap: 2px; font-family: var(--font-d); font-weight: 800; font-size: 54px; line-height: 1; margin-top: 10px; }
+.intro-palabras span, .intro-palabras b {
+  display: inline-block; padding: 4px 12px; border: 5px solid #1E1B2E; border-radius: 16px; box-shadow: 0 6px 0 #1E1B2E;
+}
+.intro-palabras span { background: #fff; color: #1E1B2E; rotate: -3deg; }
+.intro-palabras b { background: #FF5A5F; color: #fff; rotate: 3deg; }
+.intro-lema { margin: 14px 0 0; font-family: var(--font-d); font-weight: 800; font-size: 20px; color: #1E1B2E; background: #fff; padding: 4px 14px; border-radius: 99px; border: 3px solid #1E1B2E; }
+.intro-empezar {
+  position: absolute; z-index: 4; bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+  font-family: var(--font-d); font-weight: 800; font-size: 22px; padding: 14px 28px;
+  background: #1E1B2E; color: #FFE8A3; border: none; border-radius: 99px; box-shadow: 0 6px 0 rgba(0,0,0,.25);
+}

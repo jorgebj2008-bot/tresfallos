@@ -2,7 +2,7 @@
 // Permite revisar, editar y marcar preguntas como revisadas. Los cambios se guardan
 // en este navegador y se exportan como JSON para pegarlos en content/preguntas/.
 import { useMemo, useState } from 'react'
-import { todasLasPreguntas } from '../content/banco'
+import { bancoCompleto } from '../content/banco'
 import { MUNDOS } from '../content/mundos'
 import type { MundoId, Pregunta } from '../content/tipos'
 import { validarPregunta } from '../content/validar'
@@ -35,7 +35,7 @@ export function Admin() {
   const [exportado, setExportado] = useState<string | null>(null)
   const [aviso, setAviso] = useState('')
 
-  const banco = useMemo(() => todasLasPreguntas().map((p) => cambios[p.id] ?? p), [cambios])
+  const banco = useMemo(() => bancoCompleto().map((p) => cambios[p.id] ?? p), [cambios])
   const lista = banco.filter(
     (p) =>
       (mundo === 'todos' || p.mundo === mundo) &&

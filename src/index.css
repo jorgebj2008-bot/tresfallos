@@ -107,6 +107,9 @@ html, body { overflow-x: clip; }
   display: flex; align-items: center; gap: 10px;
   padding-block: calc(10px + env(safe-area-inset-top, 0px)) 12px;
   background: var(--bg);
+  /* El fondo llega hasta los bordes de la pantalla para que el mapa no asome por los lados. */
+  box-shadow: 0 0 0 100vmax var(--bg);
+  clip-path: inset(0 -100vmax);
 }
 .marca { font-family: var(--font-d); font-weight: 800; font-size: 24px; line-height: 1; letter-spacing: -.01em; }
 .marca b { color: var(--bad); }

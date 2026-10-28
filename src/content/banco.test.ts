@@ -1,12 +1,12 @@
 // Validación del banco: se ejecuta con "npm run validar" (y con "npm test").
 import { describe, expect, it } from 'vitest'
-import { todasLasPreguntas } from './banco'
+import { bancoCompleto } from './banco'
 import { AFIRMACIONES } from './afirmaciones'
 import { validarBanco } from './validar'
 import { MUNDOS } from './mundos'
 
 describe('banco de preguntas', () => {
-  const banco = todasLasPreguntas()
+  const banco = bancoCompleto()
   const problemas = validarBanco(banco, AFIRMACIONES)
 
   it('no tiene errores graves', () => {

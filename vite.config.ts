@@ -4,11 +4,16 @@ import react from '@vitejs/plugin-react'
 import { viteSingleFile } from 'vite-plugin-singlefile'
 import { VitePWA } from 'vite-plugin-pwa'
 
+// Dirección pública de la web para la tarjeta de compartir. Vercel la da sola al publicar;
+// si algún día usas un dominio propio, ponlo en la variable SITIO_URL (ej. https://tresfallos.es).
+const SITIO = (process.env.SITIO_URL ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : '')).replace(/\/$/, '')
+
 // "npm run build" genera la web instalable (PWA) que se publica en Vercel.
 // "npm run build:demo" genera un único HTML con todo dentro (para la página de pruebas).
 export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
+    { name: 'sitio', transformIndexHtml: (html: string) => html.replaceAll('%SITIO%', SITIO) },
     ...(mode === 'demo'
       ? [viteSingleFile(), VitePWA({ disable: true, injectRegister: false })] // en la página de pruebas no hay app instalable
       : [
@@ -33,7 +38,7 @@ export default defineConfig(({ mode }) => ({
               ],
             },
             // Todo el juego queda guardado en el móvil: funciona sin conexión.
-            workbox: { globPatterns: ['**/*.{js,css,html,svg,png,woff,woff2}'], importScripts: ['sw-avisos.js'] },
+            workbox: { globPatterns: ['**/*.{js,css,html,svg,png,woff,woff2}'], globIgnores: ['og.png'], importScripts: ['sw-avisos.js'] },
           }),
         ]),
   ],

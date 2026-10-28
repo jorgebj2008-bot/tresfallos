@@ -22,11 +22,12 @@ const MINIATURA: Record<JuegoId, React.ReactNode> = {
   ),
 }
 
-export function Juegos({ onJugar }: { onJugar: (j: JuegoId) => void }) {
+export function Juegos({ onJugar, incrustado = false }: { onJugar: (j: JuegoId) => void; incrustado?: boolean }) {
   const records = useJuego((s) => s.perfil.records) ?? {}
+  const Contenedor = incrustado ? 'section' : 'main'
   return (
-    <main className="pantalla">
-      <h1 className="titulo-pantalla">Minijuegos</h1>
+    <Contenedor className={incrustado ? 'bloque' : 'pantalla'}>
+      {incrustado ? <h2>Minijuegos</h2> : <h1 className="titulo-pantalla">Minijuegos</h1>}
       <p className="nota">Partidas rápidas para entrenar lo que más se falla. Todo lo que juegas aquí también cuenta para tu repaso.</p>
       {JUEGOS.map((j) => (
         <article key={j.id} className="pegatina tarjeta-juego" style={{ '--color': j.color } as React.CSSProperties}>
@@ -40,6 +41,6 @@ export function Juegos({ onJugar }: { onJugar: (j: JuegoId) => void }) {
           <button className="boton mini" onClick={() => onJugar(j.id)}>Jugar</button>
         </article>
       ))}
-    </main>
+    </Contenedor>
   )
 }

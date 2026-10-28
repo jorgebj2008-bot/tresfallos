@@ -6,11 +6,16 @@ import { sfx, vibrar } from '../audio/sfx'
 import { confeti } from './particulas'
 import { Estrella } from './iconos'
 import { pct, useListo } from '../store/selectores'
+import type { Novedades } from '../store/progresoDiario'
+import { mundoPorId } from '../content/mundos'
+import { Llama } from './iconos'
+import { Cofre } from './Retos'
 
 const TITULOS = ['¡A repasar!', '¡Superado!', '¡Muy bien!', '¡Nivel examen!']
 
 interface Props {
   r: ResultadoPartida
+  nov?: Novedades
   onRepetir: () => void
   onMapa: () => void
 }
@@ -32,7 +37,7 @@ function useContador(final: number, duracion = 900, retraso = 0) {
   return v
 }
 
-export function Resultados({ r, onRepetir, onMapa }: Props) {
+export function Resultados({ r, nov, onRepetir, onMapa }: Props) {
   const antes = rangoDe(r.xpAntes)
   const despues = rangoDe(r.xpAntes + r.xpGanada)
   const subeRango = despues.indice > antes.indice
@@ -51,7 +56,7 @@ export function Resultados({ r, onRepetir, onMapa }: Props) {
         vibrar(20)
       }, 350 + i * 300),
     )
-    if (subeRango || r.estrellas === 3) {
+    if (subeRango || r.estrellas === 3 || r.victoria || (nov && nov.logros.length > 0)) {
       timers.push(
         setTimeout(() => {
           confeti()
@@ -72,8 +77,11 @@ export function Resultados({ r, onRepetir, onMapa }: Props) {
   return (
     <main className="resultados">
       <motion.h1 initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ type: 'spring', bounce: 0.5 }}>
-        {TITULOS[r.estrellas]}
+        {r.config.tipo === 'jefe' ? (r.victoria ? `¡Has vencido a ${mundoPorId(r.config.mundo).jefe}!` : `${mundoPorId(r.config.mundo).jefe} gana esta vez`) : r.config.tipo === 'simulacro' ? (r.victoria ? '¡APTO!' : 'No apto, todavía') : TITULOS[r.estrellas]}
       </motion.h1>
+      {r.config.tipo === 'jefe' && (
+        <p className="nota">{r.victoria ? 'Se abre el siguiente mundo y ganas un cofre de jefe.' : 'Al cuarto fallo se pierde, como en el examen. Repasa y vuelve a retarle.'}</p>
+      )}
 
       <div className="estrellas-grandes" aria-label={`${r.estrellas} de 3 estrellas`}>
         {[0, 1, 2].map((i) => (
@@ -101,6 +109,32 @@ export function Resultados({ r, onRepetir, onMapa }: Props) {
           <span>XP ganada</span>
         </div>
       </div>
+
+      {nov && (
+        <div className="novedades">
+          {nov.monedas > 0 && <motion.div className="pegatina novedad" initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1 }}><i className="moneda" /> <b>+{nov.monedas} monedas</b></motion.div>}
+          {nov.racha.cambio !== 'igual' && (
+            <motion.div className="pegatina novedad" initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1.15 }}>
+              <Llama /> <span><b>Racha: {nov.racha.actual} {nov.racha.actual === 1 ? 'día' : 'días'}.</b> {nov.racha.cambio === 'protegida' ? 'Un protector ha salvado tu racha.' : nov.racha.protectorGanado ? '¡Has ganado un protector de racha!' : 'Hoy ya cuenta.'}</span>
+            </motion.div>
+          )}
+          {nov.misiones.map((m, k) => (
+            <motion.div key={m.id} className="pegatina novedad" initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1.3 + k * 0.15 }}>
+              ✓ <span>Misión cumplida: <b>{m.texto}</b> (+{m.monedas})</span>
+            </motion.div>
+          ))}
+          {nov.logros.map((l, k) => (
+            <motion.div key={l.id} className="pegatina novedad logro-nuevo" initial={{ scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.6 + k * 0.2, type: 'spring', bounce: 0.5 }}>
+              ★ <span>Logro: <b>{l.nombre}</b>. {l.descripcion}</span>
+            </motion.div>
+          ))}
+          {nov.cofres.length > 0 && (
+            <motion.div className="pegatina novedad" initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1.9 }}>
+              <Cofre tipo={nov.cofres[0]} size={30} /> <span><b>{nov.cofres.length === 1 ? 'Has ganado un cofre' : `Has ganado ${nov.cofres.length} cofres`}.</b> Ábrelo en Retos.</span>
+            </motion.div>
+          )}
+        </div>
+      )}
 
       {casi && (
         <motion.div className="casi pegatina" initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.3 }}>

@@ -3,6 +3,7 @@
 import Dexie, { type Table } from 'dexie'
 import type { EstadoPregunta } from '../learning/sm2'
 import type { Simulacro } from '../learning/estoyListo'
+import type { EstadoMisiones, Estadisticas, Racha, TipoCofre } from '../game/retencion'
 
 export interface Perfil {
   id: 'yo'
@@ -11,6 +12,16 @@ export interface Perfil {
   tema: 'auto' | 'claro' | 'noche'
   /** Mejor puntuación en cada minijuego. */
   records?: Record<string, number>
+  // Fase 5: retención (opcionales para que los guardados antiguos sigan valiendo)
+  monedas?: number
+  racha?: Racha
+  stats?: Estadisticas
+  misiones?: EstadoMisiones
+  cofres?: TipoCofre[]
+  ultimoCofreDiario?: string
+  coches?: string[]
+  coche?: string
+  logros?: string[]
 }
 
 export interface ResultadoNivel {

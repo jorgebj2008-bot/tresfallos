@@ -12,18 +12,20 @@ import { Resultados } from './Resultados'
 import { EstoyListo } from './EstoyListo'
 import { Cuaderno } from './Cuaderno'
 import { Admin } from './Admin'
-import { Juegos } from './juegos/Juegos'
+import { Retos } from './Retos'
+import { Simulacro } from './Simulacro'
+import { registrarPartida, type Novedades } from '../store/progresoDiario'
 import { ReyDelCruce } from './juegos/ReyDelCruce'
 import { SenalRush } from './juegos/SenalRush'
 import { VerdadTrampa } from './juegos/VerdadTrampa'
 import { IconoCuaderno, IconoMando, IconoMapa, IconoMedidor } from './iconos'
 import { sfx } from '../audio/sfx'
 
-type Tab = 'mapa' | 'juegos' | 'listo' | 'errores'
+type Tab = 'mapa' | 'retos' | 'listo' | 'errores'
 type Pantalla =
   | { tipo: 'tab'; tab: Tab }
   | { tipo: 'partida'; config: ConfigPartida; id: number }
-  | { tipo: 'resultado'; r: ResultadoPartida }
+  | { tipo: 'resultado'; r: ResultadoPartida; nov: Novedades }
 
 /** Minijuego que entrena cada tipo de error (para puntos débiles sin preguntas de test). */
 const JUEGO_PARA_ERROR = (tipo: string): JuegoId =>
@@ -86,18 +88,21 @@ export function App() {
       const ids = [...new Set([...a.debil.preguntas, ...mismas])].filter((id) => preguntaPorId(id))
       if (ids.length >= 3) jugar({ tipo: 'repaso', titulo: a.debil.nombre, ids })
       else jugar({ tipo: 'juego', juego: JUEGO_PARA_ERROR(a.debil.tipo) })
-    } else irA('mapa')
+    } else if (a.tipo === 'simulacro') jugar({ tipo: 'simulacro' })
+    else irA('mapa')
   }
 
   const tab = pantalla.tipo === 'tab' ? pantalla.tab : null
   const volverMapa = () => setPantalla({ tipo: 'tab', tab: 'mapa' })
-  const terminar = (r: ResultadoPartida) => setPantalla({ tipo: 'resultado', r })
+  // Al terminar cualquier partida: racha, misiones, monedas, logros y cofres.
+  const terminar = (r: ResultadoPartida) => setPantalla({ tipo: 'resultado', r, nov: registrarPartida(r) })
 
   let partida: React.ReactNode = null
   if (pantalla.tipo === 'partida') {
     const c = pantalla.config
     const props = { key: pantalla.id, config: c, onSalir: volverMapa, onTerminar: terminar }
-    if (c.tipo !== 'juego') partida = <Nivel {...props} />
+    if (c.tipo === 'simulacro') partida = <Simulacro {...props} />
+    else if (c.tipo !== 'juego') partida = <Nivel {...props} />
     else if (c.juego === 'cruce') partida = <ReyDelCruce {...props} />
     else if (c.juego === 'senales') partida = <SenalRush {...props} />
     else partida = <VerdadTrampa {...props} />
@@ -108,15 +113,15 @@ export function App() {
       {tab === 'mapa' && (
         <>
           <Cabecera />
-          <Mapa onJugar={jugarNivel} />
+          <Mapa onJugar={jugarNivel} onJefe={(mundo) => jugar({ tipo: 'jefe', mundo })} />
         </>
       )}
-      {tab === 'juegos' && <Juegos onJugar={(juego) => jugar({ tipo: 'juego', juego })} />}
-      {tab === 'listo' && <EstoyListo onAccion={accion} simulacroDisponible={false} />}
+      {tab === 'retos' && <Retos onJuego={(juego) => jugar({ tipo: 'juego', juego })} onSimulacro={() => jugar({ tipo: 'simulacro' })} />}
+      {tab === 'listo' && <EstoyListo onAccion={accion} simulacroDisponible={(perfil.stats?.jefes.length ?? 0) >= 1} />}
       {tab === 'errores' && <Cuaderno onJugar={jugar} />}
 
       {partida}
-      {pantalla.tipo === 'resultado' && <Resultados r={pantalla.r} onRepetir={() => jugar(pantalla.r.config)} onMapa={volverMapa} />}
+      {pantalla.tipo === 'resultado' && <Resultados r={pantalla.r} nov={pantalla.nov} onRepetir={() => jugar(pantalla.r.config)} onMapa={volverMapa} />}
 
       {tab && (
         <nav className="pestanas" aria-label="Secciones">
@@ -124,9 +129,10 @@ export function App() {
             <IconoMapa />
             <span>Mapa</span>
           </button>
-          <button className={tab === 'juegos' ? 'activa' : ''} onClick={() => irA('juegos')}>
+          <button className={tab === 'retos' ? 'activa' : ''} onClick={() => irA('retos')}>
             <IconoMando />
-            <span>Juegos</span>
+            <span>Retos</span>
+            {(perfil.cofres ?? []).length > 0 && <b className="globo">{(perfil.cofres ?? []).length}</b>}
           </button>
           <button className={tab === 'listo' ? 'activa' : ''} onClick={() => irA('listo')}>
             <IconoMedidor />

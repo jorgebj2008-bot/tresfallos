@@ -28,6 +28,7 @@ Con el móvil conectado a la misma red wifi que el ordenador, ejecuta `npm run d
 |---|---|
 | `npm test` | Ejecuta las pruebas automáticas de la lógica del juego |
 | `npm run build` | Genera la versión final en la carpeta `dist` |
+| `npm run validar` | Revisa el banco de preguntas (una correcta, explicaciones, fuente, duplicados) |
 | `npm run build:demo` | Genera la página de pruebas en un solo archivo (`dist-demo/tresfallos.html`) |
 
 ## Carpetas
@@ -40,3 +41,12 @@ Con el móvil conectado a la misma red wifi que el ordenador, ejecuta `npm run d
 - `src/store/` estado y guardado local (IndexedDB)
 - `src/ui/` pantallas
 - `docs/` diseño y normativa consultada
+
+## Panel de administración
+
+Añade `#admin` al final de la dirección (por ejemplo `http://localhost:5173/#admin`). Desde ahí puedes filtrar, editar y marcar preguntas como revisadas. Los cambios se guardan en tu navegador: pulsa «Exportar» y pega el JSON en `content/preguntas/`.
+
+## Estado
+
+- Fase 0 a 5 hechas: mapa con 13 mundos, motor de aprendizaje, 3 minijuegos, 152 preguntas, jefes, Simulacro Oficial, racha, misiones, cofres, garaje y logros.
+- Pendiente: Fase 6 (cuentas y nube), Fase 7 (pagos, PWA y despliegue) y Fase 8 (más minijuegos y 1.500 preguntas).

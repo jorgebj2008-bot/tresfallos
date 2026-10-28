@@ -59,7 +59,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 h1, h2, h3 { font-family: var(--font-d); font-weight: 800; line-height: 1.05; margin: 0; text-wrap: balance; }
 
+/* Nada puede ensanchar la página (las animaciones laterales tampoco). */
+html, body { overflow-x: hidden; }
 .app {
+  overflow-x: clip;
   max-width: 480px;
   margin: 0 auto;
   min-height: 100dvh;
@@ -106,7 +109,9 @@ h1, h2, h3 { font-family: var(--font-d); font-weight: 800; line-height: 1.05; ma
 }
 .marca { font-family: var(--font-d); font-weight: 800; font-size: 24px; line-height: 1; letter-spacing: -.01em; }
 .marca b { color: var(--bad); }
-.rango { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.cabecera { flex-wrap: wrap; row-gap: 8px; }
+.cabecera .marca { flex: 1; }
+.rango { order: 5; flex: 1 1 100%; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .rango small { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rango .barra { height: 12px; }
 .rango .barra > i { background: var(--gold); }
@@ -427,3 +432,85 @@ canvas.particulas { position: fixed; inset: 0; width: 100%; height: 100%; pointe
 .admin-acciones { display: flex; flex-wrap: wrap; gap: 8px; }
 .admin-acciones .boton { width: auto; flex: 1 1 140px; font-size: 16px; padding: 10px 12px; }
 .admin pre { max-height: 300px; overflow: auto; font-size: 12px; background: var(--bg2); padding: 10px; border-radius: 10px; border: 2px solid var(--line); }
+
+/* ---------- Jefes ---------- */
+.marcador-jefe { flex: 1; display: flex; align-items: center; gap: 10px; min-width: 0; }
+.vida-jefe { flex: 1; height: 16px; border-radius: 99px; background: var(--bg2); border: var(--bw) solid var(--line); overflow: hidden; }
+.vida-jefe i { display: block; height: 100%; }
+.vidas { display: flex; gap: 2px; font-size: 22px; line-height: 1; }
+.vidas .vida { color: var(--bad); text-shadow: 0 2px 0 var(--line); }
+.vidas .rota { color: var(--muted); }
+.jefe-escena { display: flex; align-items: center; gap: 10px; }
+.jefe-retrato { flex: none; filter: drop-shadow(0 4px 0 rgba(0,0,0,.25)); }
+.bocadillo { position: relative; flex: 1; min-width: 0; padding: 8px 12px; display: flex; flex-direction: column; gap: 2px; font-size: 14px; }
+.bocadillo b { font-family: var(--font-d); font-size: 16px; }
+.bocadillo .aviso-ultimo { color: var(--bad); font-weight: 800; }
+.nodo.jefe.vencido { background: var(--gold); color: var(--gold-ink); }
+
+/* ---------- Simulacro ---------- */
+.simulacro .reglas { padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.simulacro .reglas p { margin: 0; }
+.barra-examen { display: flex; align-items: center; gap: 10px; justify-content: space-between; }
+.reloj { font-family: var(--font-d); font-size: 26px; font-variant-numeric: tabular-nums; padding: 2px 10px; border: var(--bw) solid var(--line); border-radius: 12px; background: var(--panel); }
+.reloj.poco { background: var(--bad); color: var(--bad-ink); }
+.opcion.marcada { background: var(--accent); color: var(--accent-ink); }
+.opcion.marcada .letra { background: #fff; color: #1E1B2E; }
+.nav-examen { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.rejilla-examen { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
+.rejilla-examen button { aspect-ratio: 1; min-width: 0; font-size: 12px; font-weight: 800; border: 2px solid var(--line); border-radius: 8px; background: var(--panel); padding: 0; }
+.rejilla-examen button.hecha { background: var(--bg2); color: var(--muted); }
+.rejilla-examen button.actual { background: var(--gold); color: var(--gold-ink); }
+.sello-examen { align-self: center; margin-top: 10px; padding: 6px 22px; font-family: var(--font-d); font-weight: 800; font-size: 54px; border: 6px solid; border-radius: 16px; letter-spacing: .04em; }
+.sello-examen.apto { color: #15803D; border-color: #15803D; background: color-mix(in srgb, #4ADE80 25%, var(--panel)); }
+.sello-examen.no-apto { color: #DC2626; border-color: #DC2626; background: color-mix(in srgb, #FF5A5F 18%, var(--panel)); }
+.nota-examen { margin: 0; text-align: center; font-size: 18px; }
+.nota-examen b { font-family: var(--font-d); font-size: 28px; }
+.correccion { display: flex; flex-direction: column; gap: 10px; }
+
+/* ---------- Retos, garaje y logros ---------- */
+.tarjeta-racha { display: flex; gap: 12px; align-items: center; padding: 14px; background: color-mix(in srgb, #FF9F1C 22%, var(--panel)); }
+.tarjeta-racha b { font-family: var(--font-d); font-size: 24px; }
+.tarjeta-racha p { margin: 4px 0 0; }
+.llama-grande svg { width: 54px; height: 54px; }
+.accesos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.accesos .boton { font-size: 15px; padding: 10px 8px; }
+.cofres { display: flex; flex-wrap: wrap; gap: 10px; }
+.cofre { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 12px; font-size: 13px; font-weight: 800; }
+.misiones { padding: 12px 14px; display: flex; flex-direction: column; gap: 12px; }
+.mision { display: flex; flex-direction: column; gap: 4px; }
+.mision .fila { display: flex; justify-content: space-between; gap: 8px; font-size: 15px; }
+.mision .fila b { color: var(--accent); white-space: nowrap; font-family: var(--font-d); }
+.mision .barra { display: block; }
+.mision.hecha .fila span { text-decoration: line-through; color: var(--muted); }
+.simulacro-tarjeta { padding: 16px; display: flex; flex-direction: column; gap: 10px; background: color-mix(in srgb, #1C64C8 14%, var(--panel)); }
+.simulacro-tarjeta h2 { font-size: 26px; }
+.simulacro-tarjeta p { margin: 4px 0 0; }
+.simulacro-tarjeta .nota svg { width: 14px; height: 14px; vertical-align: -2px; }
+.boton:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+.velo-modal { position: fixed; inset: 0; z-index: 60; background: rgba(10, 8, 30, .55); display: grid; place-items: center; padding: 20px; }
+.modal-cofre { width: min(100%, 340px); padding: 22px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.modal-cofre h3 { font-size: 30px; }
+.modal-cofre p { margin: 0; }
+.premio-coche { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.cabecera-sub { display: flex; align-items: center; gap: 10px; }
+.garaje { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.coche-celda { padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+.coche-celda.en-uso { background: color-mix(in srgb, var(--gold) 35%, var(--panel)); }
+.coche-celda .boton { width: 100%; }
+.logros { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.logro { display: flex; gap: 12px; align-items: center; padding: 12px; }
+.logro p { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+.logro .medalla { width: 46px; height: 46px; flex: none; display: grid; place-items: center; border-radius: 50%; font-size: 24px; font-weight: 900; border: var(--bw) solid var(--line); }
+.logro.si .medalla { background: var(--gold); color: var(--gold-ink); }
+.logro.no { opacity: .6; }
+.logro.no .medalla { background: var(--bg2); color: var(--muted); }
+
+/* ---------- Novedades en resultados ---------- */
+.novedades { display: flex; flex-direction: column; gap: 8px; text-align: left; }
+.novedad { padding: 10px 12px; display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.novedad b { font-family: var(--font-d); }
+.novedad.logro-nuevo { background: color-mix(in srgb, var(--gold) 40%, var(--panel)); }
+.chips-cabecera { display: flex; gap: 6px; }
+.chip-cab { display: flex; align-items: center; gap: 3px; padding: 4px 8px; border: 2px solid var(--line); border-radius: 99px; background: var(--panel); font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chip-cab svg { width: 16px; height: 16px; }
+.moneda { width: 14px; height: 14px; border-radius: 50%; background: var(--gold); border: 2px solid var(--line); display: inline-block; }

@@ -1,0 +1,157 @@
+<title>Direcciones visuales Carnet Quest</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Barlow+Condensed:wght@600;700&family=Chakra+Petch:wght@600;700&family=Hanken+Grotesk:wght@400;600&family=IBM+Plex+Sans:wght@400;600&family=Nunito:wght@600;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: cabecera corta, tres móviles en rejilla con su ficha de pros y contras, recomendación al final. */
+:root {
+  --bg: #F4F5F7;
+  --fg: #14181F;
+  --muted: #5B6472;
+  --card: #FFFFFF;
+  --line: #D9DDE4;
+  --accent: #1B4E8C;
+  --font-d: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-b: "IBM Plex Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #12151B; --fg: #ECEFF4; --muted: #9AA4B2; --card: #1B2029; --line: #2C3340; --accent: #7FB0F0; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #12151B; --fg: #ECEFF4; --muted: #9AA4B2; --card: #1B2029; --line: #2C3340; --accent: #7FB0F0; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-b); font-size: 16px; line-height: 1.5;
+  padding-block: 32px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1 { font-family: var(--font-d); font-weight: 700; font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.02; margin: 0 0 12px; text-wrap: balance; }
+.lead { max-width: 62ch; color: var(--muted); margin: 0 0 32px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 40px 28px; }
+.opt { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.opt h2 { font-family: var(--font-d); font-size: 1.6rem; margin: 0; letter-spacing: .01em; }
+.opt .tag { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.opt p { margin: 0; }
+.pc { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: .875rem; }
+.pc div { background: var(--card); border: 1px solid var(--line); padding: 10px 12px; border-radius: 8px; }
+.pc b { display: block; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.rec { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 24px; max-width: 70ch; }
+.rec h2 { font-family: var(--font-d); font-size: 1.75rem; margin: 0 0 8px; }
+.rec p { margin: 0 0 10px; }
+
+/* ---------- Móvil de muestra ---------- */
+.phone { width: min(100%, 300px); aspect-ratio: 9 / 18.5; border-radius: 34px; padding: 9px; background: #0c0d10; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.screen { height: 100%; border-radius: 26px; overflow: hidden; display: flex; flex-direction: column; gap: 8px; padding: 14px 12px 12px;
+  background: var(--s-bg); color: var(--s-ink); font-family: var(--s-font-b); }
+.hud { display: flex; align-items: center; gap: 6px; font-size: 11px; }
+.chip { padding: 3px 8px; border-radius: var(--s-chip-r); background: var(--s-panel); border: var(--s-border); font-weight: 600; white-space: nowrap; }
+.xp { flex: 1; height: 8px; border-radius: 99px; background: var(--s-track); overflow: hidden; border: var(--s-xp-border); }
+.xp i { display: block; height: 100%; width: 62%; background: var(--s-accent2); }
+.mundo { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--s-muted); margin-top: 2px; }
+.screen h3 { font-family: var(--s-font-d); font-size: 26px; line-height: 1; margin: 0; color: var(--s-title); font-weight: var(--s-title-w); }
+.scene { border-radius: var(--s-scene-r); overflow: hidden; border: var(--s-scene-border); background: var(--s-ground); }
+.scene svg { display: block; width: 100%; height: auto; }
+.q { background: var(--s-panel); border: var(--s-border); border-radius: var(--s-r); padding: 8px 10px; font-size: 12px; line-height: 1.35; box-shadow: var(--s-shadow); }
+.q b { color: var(--s-accent); }
+.combo { align-self: flex-start; font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 99px; background: var(--s-good); color: var(--s-good-ink); border: var(--s-border); }
+.ready { margin-top: auto; background: var(--s-panel); border: var(--s-border); border-radius: var(--s-r); padding: 8px 10px; box-shadow: var(--s-shadow); }
+.ready .row { display: flex; justify-content: space-between; align-items: baseline; font-size: 11px; color: var(--s-muted); }
+.ready .row strong { font-family: var(--s-font-d); font-size: 22px; color: var(--s-ink); line-height: 1; }
+.ready .bar { height: 10px; border-radius: 99px; background: var(--s-track); margin-top: 6px; overflow: hidden; border: var(--s-xp-border); }
+.ready .bar i { display: block; height: 100%; width: 64%; background: var(--s-good); }
+.btn { text-align: center; font-family: var(--s-font-d); font-weight: var(--s-title-w); font-size: 16px; padding: 9px; border-radius: var(--s-r); background: var(--s-btn); color: var(--s-btn-ink); border: var(--s-border); box-shadow: var(--s-btn-shadow); }
+
+/* Escena SVG: usa variables --c-* heredadas del móvil */
+#cruce .g { fill: var(--c-ground); }
+#cruce .road { fill: var(--c-road); stroke: var(--c-edge); stroke-width: var(--c-sw); }
+#cruce .mark { stroke: var(--c-mark); stroke-width: 2; stroke-dasharray: 8 7; fill: none; }
+#cruce .stopl { stroke: var(--c-mark); stroke-width: 3; }
+#cruce .carA { fill: var(--c-car1); stroke: var(--c-line); stroke-width: var(--c-sw); filter: var(--c-glow1); }
+#cruce .carB { fill: var(--c-car2); stroke: var(--c-line); stroke-width: var(--c-sw); filter: var(--c-glow2); }
+#cruce .win { fill: var(--c-win); }
+#cruce .sign { fill: #D9262C; stroke: #fff; stroke-width: 1.6; }
+#cruce .signt { fill: #fff; font: 700 7px var(--s-font-b); text-anchor: middle; }
+#cruce .badge { fill: var(--c-badge); stroke: var(--c-line); stroke-width: var(--c-sw); }
+#cruce .badget { fill: var(--c-badge-ink); font: 800 12px var(--s-font-d); text-anchor: middle; }
+
+/* ---------- A · Asfalto Neón ---------- */
+.d-a { --s-bg: radial-gradient(120% 70% at 50% 0%, #1B1F45 0%, #0A0D1C 70%); --s-ink: #F2F4FF; --s-muted: #8E97C8; --s-title: #FFFFFF; --s-title-w: 700;
+  --s-panel: rgba(255,255,255,.07); --s-border: 1px solid rgba(255,255,255,.18); --s-track: rgba(255,255,255,.12); --s-xp-border: 0; --s-accent: #FFD23F; --s-accent2: linear-gradient(90deg,#FF3D81,#FFD23F);
+  --s-good: #2DE2E6; --s-good-ink: #04282B; --s-btn: #FF3D81; --s-btn-ink: #fff; --s-btn-shadow: 0 0 18px rgba(255,61,129,.55); --s-shadow: none; --s-r: 12px; --s-chip-r: 99px;
+  --s-scene-r: 14px; --s-scene-border: 1px solid rgba(255,255,255,.14); --s-font-d: "Chakra Petch", sans-serif; --s-font-b: "Hanken Grotesk", sans-serif; --s-ground: #0A0D1C;
+  --c-ground: #0A0D1C; --c-road: #1A2036; --c-edge: transparent; --c-sw: 0; --c-mark: #FFD23F; --c-car1: #FF3D81; --c-car2: #2DE2E6; --c-line: transparent; --c-win: #0A0D1C;
+  --c-glow1: drop-shadow(0 0 7px #FF3D81); --c-glow2: drop-shadow(0 0 7px #2DE2E6); --c-badge: #FFD23F; --c-badge-ink: #1A1400; }
+/* ---------- B · Mapa de Carreteras ---------- */
+.d-b { --s-bg: #E6EEE2; --s-ink: #12263F; --s-muted: #4E6178; --s-title: #FFFFFF; --s-title-w: 700;
+  --s-panel: #FFFFFF; --s-border: 2px solid #12263F; --s-track: #CBD7C6; --s-xp-border: 1.5px solid #12263F; --s-accent: #0A6B3A; --s-accent2: #0A6B3A;
+  --s-good: #F2B705; --s-good-ink: #12263F; --s-btn: #1B4E8C; --s-btn-ink: #fff; --s-btn-shadow: none; --s-shadow: none; --s-r: 6px; --s-chip-r: 4px;
+  --s-scene-r: 6px; --s-scene-border: 2px solid #12263F; --s-font-d: "Barlow Condensed", sans-serif; --s-font-b: "IBM Plex Sans", sans-serif; --s-ground: #CFE0C8;
+  --c-ground: #CFE0C8; --c-road: #FFFFFF; --c-edge: #12263F; --c-sw: 1.5; --c-mark: #F2B705; --c-car1: #C8102E; --c-car2: #1B4E8C; --c-line: #12263F; --c-win: #DCE8F5;
+  --c-glow1: none; --c-glow2: none; --c-badge: #F2B705; --c-badge-ink: #12263F; }
+.d-b .screen h3 { background: #0A6B3A; padding: 6px 10px; border-radius: 4px; border: 2px solid #fff; outline: 2px solid #0A6B3A; margin-top: 4px; }
+/* ---------- C · Pegatina Pop ---------- */
+.d-c { --s-bg: #FFE8A3; --s-ink: #1E1B2E; --s-muted: #5C557A; --s-title: #1E1B2E; --s-title-w: 800;
+  --s-panel: #FFFFFF; --s-border: 3px solid #1E1B2E; --s-track: #FFF6D8; --s-xp-border: 3px solid #1E1B2E; --s-accent: #7C5CFF; --s-accent2: #7C5CFF;
+  --s-good: #4ADE80; --s-good-ink: #0B2E19; --s-btn: #7C5CFF; --s-btn-ink: #fff; --s-btn-shadow: 0 4px 0 #1E1B2E; --s-shadow: 0 4px 0 #1E1B2E; --s-r: 16px; --s-chip-r: 99px;
+  --s-scene-r: 18px; --s-scene-border: 3px solid #1E1B2E; --s-font-d: "Baloo 2", sans-serif; --s-font-b: "Nunito", sans-serif; --s-ground: #9EE6B0;
+  --c-ground: #9EE6B0; --c-road: #4A4E69; --c-edge: #1E1B2E; --c-sw: 3; --c-mark: #FFFFFF; --c-car1: #FF5A5F; --c-car2: #3DA5FF; --c-line: #1E1B2E; --c-win: #FFFFFF;
+  --c-glow1: none; --c-glow2: none; --c-badge: #FFD23F; --c-badge-ink: #1E1B2E; }
+.d-c .btn { box-shadow: var(--s-btn-shadow); }
+@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s; } }
+</style>
+
+<div class="wrap">
+  <h1>Tres direcciones visuales</h1>
+  <p class="lead">Cada móvil muestra la misma pantalla del minijuego Rey del Cruce: un STOP a la izquierda, dos coches y el orden correcto de paso. Cambia solo el estilo, para que compares con lo mismo delante.</p>
+  <div class="grid" id="grid"></div>
+  <section class="rec">
+    <h2>Mi recomendación: C, con A como modo noche</h2>
+    <p>Las escenas de tráfico se entienden mejor con contornos gruesos y colores planos, incluso para quien no distingue bien rojo y verde. Además, la estética de pegatina queda bien en las capturas que la gente comparte al aprobar.</p>
+    <p>Más adelante, la paleta neón de A sirve como tema oscuro opcional, porque en los mundos de noche y alumbrado encaja de forma natural.</p>
+  </section>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cruce" viewBox="0 0 240 240">
+    <rect class="g" width="240" height="240"/>
+    <path class="road" d="M90 0h60v90h90v60h-90v90H90v-90H0V90h90z"/>
+    <path class="mark" d="M120 0v90M120 150v90M0 120h90M150 120h90"/>
+    <path class="stopl" d="M32 126v20" transform="translate(40 0)"/>
+    <g class="carB"><rect x="12" y="126" width="38" height="20" rx="6" class="carB"/><rect x="34" y="130" width="10" height="12" rx="3" class="win"/></g>
+    <g class="carA"><rect x="126" y="168" width="20" height="38" rx="6" class="carA"/><rect x="130" y="172" width="12" height="10" rx="3" class="win"/></g>
+    <g transform="translate(-104 106)"><polygon class="sign" points="191.9,67.7 183.7,75.9 172.3,75.9 164.1,67.7 164.1,56.3 172.3,48.1 183.7,48.1 191.9,56.3"/><text class="signt" x="178" y="64.5">STOP</text></g>
+    <circle class="badge" cx="157" cy="187" r="11"/><text class="badget" x="157" y="191.5">1</text>
+    <circle class="badge" cx="31" cy="112" r="11"/><text class="badget" x="31" y="116.5">2</text>
+  </symbol>
+</svg>
+
+<script>
+const opts = [
+  { k: 'a', nombre: 'A · Asfalto Neón', tag: 'Oscuro · nocturno · arcade',
+    texto: 'Fondo azul noche, asfalto oscuro y luces de neón rosa, cian y amarillo. Recuerda a un arcade conduciendo de noche.',
+    pro: 'Mucho impacto en combos y partículas. Los efectos de luz brillan.', con: 'Cansa la vista en sesiones largas. Los neones dependen del color: hay que reforzarlos con formas.' },
+  { k: 'b', nombre: 'B · Mapa de Carreteras', tag: 'Claro · señalética real · sobrio',
+    texto: 'Inspirado en el atlas de carreteras y los paneles verdes de autopista. Contornos finos, azul DGT, amarillo de marca vial.',
+    pro: 'Parece serio y fiable, ideal para un contenido que debe transmitir rigor. Muy legible.', con: 'Menos “juego”, menos emoción en los premios. Cuesta que se perciba como divertido para 17‑20 años.' },
+  { k: 'c', nombre: 'C · Pegatina Pop', tag: 'Claro · colores planos · contorno grueso',
+    texto: 'Colores vivos, contornos oscuros gruesos y sombras duras, como pegatinas. Los coches y las señales se distinguen de un vistazo.',
+    pro: 'Máxima claridad en móvil, accesible y muy compartible en redes. Cómico sin ser infantil.', con: 'Es la dirección más común en juegos casual; hay que cuidar personajes para que no parezca genérico.' }
+];
+const phone = o => `
+<div class="opt">
+  <div class="phone"><div class="screen d-${o.k}">
+    <div class="hud"><span class="chip">Novel</span><span class="xp"><i></i></span><span class="chip">Racha 7</span></div>
+    <div class="mundo">Mundo 5 · Prioridad de paso</div>
+    <h3>Rey del Cruce</h3>
+    <div class="scene"><svg viewBox="0 0 240 240" role="img" aria-label="Cruce con un coche rojo desde abajo y un coche azul desde la izquierda con señal de STOP. El coche de abajo pasa primero."><use href="#cruce"/></svg></div>
+    <div class="q"><b>STOP</b> para el coche azul. ¿Quién pasa primero? Toca los coches en orden.</div>
+    <span class="combo">Combo x3</span>
+    <div class="ready"><div class="row"><span>Estoy listo</span><strong>64 %</strong></div><div class="bar"><i></i></div></div>
+    <div class="btn">Siguiente</div>
+  </div></div>
+  <div class="tag">${o.tag}</div>
+  <h2>${o.nombre}</h2>
+  <p>${o.texto}</p>
+  <div class="pc"><div><b>A favor</b>${o.pro}</div><div><b>En contra</b>${o.con}</div></div>
+</div>`;
+document.getElementById('grid').innerHTML = opts.map(phone).join('');
+</script>

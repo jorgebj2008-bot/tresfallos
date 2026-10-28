@@ -1,0 +1,206 @@
+[
+  {
+    "id": "CON-0001",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un automóvil que se conduce con el permiso B puede tener como máximo…",
+    "imagen": null,
+    "opciones": [
+      { "texto": "9 plazas, incluida la del conductor.", "correcta": true, "explicacion": "El permiso B autoriza automóviles de hasta 3.500 kg de MMA y hasta 9 plazas contando la del conductor." },
+      { "texto": "9 plazas, sin contar la del conductor.", "correcta": false, "explicacion": "Error típico: olvidar que el conductor cuenta. Eso serían 10 plazas, y ya hace falta un permiso de la clase D.", "error_tipo": "lectura_matiz" },
+      { "texto": "7 plazas, incluida la del conductor.", "correcta": false, "explicacion": "Te quedas corto: el límite son 9 plazas contando al conductor.", "error_tipo": "dato_numerico" }
+    ],
+    "error_tipo": ["lectura_matiz", "dato_numerico"],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0002",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la masa máxima autorizada (MMA) de un automóvil que puede conducir con el permiso B?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "3.500 kg.", "correcta": true, "explicacion": "El permiso B autoriza automóviles cuya MMA no supere los 3.500 kg." },
+      { "texto": "4.250 kg.", "correcta": false, "explicacion": "Error típico: 4.250 kg sería el conjunto de un automóvil de 3.500 kg con un remolque ligero de 750 kg. El automóvil solo no puede pasar de 3.500 kg.", "error_tipo": "dato_numerico" },
+      { "texto": "3.000 kg.", "correcta": false, "explicacion": "Te quedas corto: el límite del permiso B es de 3.500 kg.", "error_tipo": "dato_numerico" }
+    ],
+    "error_tipo": ["dato_numerico"],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0003",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Qué edad mínima se exige para obtener el permiso B?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "18 años cumplidos.", "correcta": true, "explicacion": "Para el permiso B hay que tener 18 años cumplidos." },
+      { "texto": "16 años.", "correcta": false, "explicacion": "A los 16 se puede obtener el permiso A1 (motos ligeras), no el B.", "error_tipo": "confunde_permisos" },
+      { "texto": "21 años.", "correcta": false, "explicacion": "21 años se exige para permisos de vehículos más grandes, como el D1. El B se obtiene a los 18.", "error_tipo": "confunde_permisos" }
+    ],
+    "error_tipo": ["confunde_permisos"],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0004",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un conductor de 30 años, ¿cada cuánto tiempo debe renovar la vigencia de su permiso B?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "Cada 10 años.", "correcta": true, "explicacion": "Hasta los 65 años, el permiso B tiene una vigencia de 10 años." },
+      { "texto": "Cada 5 años.", "correcta": false, "explicacion": "Cada 5 años es a partir de los 65 años, no antes.", "error_tipo": "dato_numerico" },
+      { "texto": "No hay que renovarlo mientras conserve sus puntos.", "correcta": false, "explicacion": "Los puntos no tienen nada que ver con la vigencia: hay que renovar aunque tengas el saldo completo.", "error_tipo": "confunde_conceptos" }
+    ],
+    "error_tipo": ["dato_numerico", "confunde_conceptos"],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 12",
+    "revisar": false
+  },
+  {
+    "id": "CON-0005",
+    "mundo": "conductor",
+    "subtema": "puntos",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Quien obtiene su primer permiso de conducción, ¿con cuántos puntos empieza?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "Con 8 puntos.", "correcta": true, "explicacion": "Con el primer permiso se empieza con 8 puntos." },
+      { "texto": "Con 12 puntos.", "correcta": false, "explicacion": "12 es el saldo general, al que se llega tras 2 años sin perder puntos.", "error_tipo": "dato_numerico" },
+      { "texto": "Con 15 puntos.", "correcta": false, "explicacion": "15 es el máximo, y solo se alcanza tras varios años sin sanciones que resten puntos.", "error_tipo": "dato_numerico" }
+    ],
+    "error_tipo": ["dato_numerico"],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 63",
+    "revisar": false
+  },
+  {
+    "id": "CON-0006",
+    "mundo": "conductor",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Ana obtuvo su primer permiso hace 2 años y no ha perdido ningún punto. ¿Cuántos puntos tiene ahora?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "12 puntos.", "correcta": true, "explicacion": "Tras 2 años sin perder puntos, el saldo pasa de 8 a 12." },
+      { "texto": "8 puntos, porque todavía se la considera novel.", "correcta": false, "explicacion": "Error típico: mezclar normas de conductor novel. La L se lleva el primer año y la tasa de alcohol reducida dura 2 años, pero el saldo sube a 12 a los 2 años sin perder puntos.", "error_tipo": "confunde_conceptos" },
+      { "texto": "15 puntos.", "correcta": false, "explicacion": "Al máximo de 15 se llega más tarde, con bonificaciones por varios años sin sanciones.", "error_tipo": "dato_numerico" }
+    ],
+    "error_tipo": ["confunde_conceptos", "dato_numerico"],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 63",
+    "revisar": false
+  },
+  {
+    "id": "CON-0007",
+    "mundo": "conductor",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es el saldo máximo de puntos que puede llegar a tener un conductor?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "15 puntos.", "correcta": true, "explicacion": "Partiendo de 12, se suman 2 puntos tras 3 años sin sanciones que resten puntos y 1 más tras otros 3 años: máximo 15." },
+      { "texto": "12 puntos.", "correcta": false, "explicacion": "12 es el saldo general, pero se puede subir con bonificaciones por buena conducta.", "error_tipo": "dato_numerico" },
+      { "texto": "20 puntos.", "correcta": false, "explicacion": "No existe un saldo de 20 puntos: el máximo es 15.", "error_tipo": "dato_numerico" }
+    ],
+    "error_tipo": ["dato_numerico"],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 63",
+    "revisar": false
+  },
+  {
+    "id": "CON-0008",
+    "mundo": "conductor",
+    "subtema": "puntos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un conductor no profesional pierde todos sus puntos por primera vez. ¿Cuándo podrá obtener de nuevo el permiso?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "Pasados 6 meses, tras hacer un curso de reeducación vial y superar una prueba.", "correcta": true, "explicacion": "El permiso pierde su vigencia. Hay que esperar 6 meses (3 si es profesional), hacer el curso y aprobar la prueba. Se vuelve a empezar con 8 puntos." },
+      { "texto": "Al día siguiente, en cuanto pague las multas pendientes.", "correcta": false, "explicacion": "Pagar las multas no devuelve el permiso: hay un plazo de espera y un curso obligatorio.", "error_tipo": "confunde_conceptos" },
+      { "texto": "Nunca más podrá obtener un permiso.", "correcta": false, "explicacion": "La pérdida de puntos no es para siempre: hay un plazo de 6 meses y un curso. Ojo con las respuestas absolutas como «nunca».", "error_tipo": "trampa_siempre_nunca" }
+    ],
+    "error_tipo": ["confunde_conceptos", "trampa_siempre_nunca"],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), título IV, cap. IV; Orden INT/914/2024",
+    "revisar": false
+  },
+  {
+    "id": "CON-0009",
+    "mundo": "conductor",
+    "subtema": "novel",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Durante cuánto tiempo debe llevar un conductor novel la señal L en la parte trasera del vehículo?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "Durante el primer año desde que obtiene el permiso.", "correcta": true, "explicacion": "La señal de conductor novel (V‑13) se lleva durante el primer año." },
+      { "texto": "Durante los dos primeros años.", "correcta": false, "explicacion": "Error típico: 2 años es el periodo con tasa de alcohol reducida. La L, solo el primer año.", "error_tipo": "confunde_conceptos" },
+      { "texto": "Solo cuando circule por autopistas y autovías.", "correcta": false, "explicacion": "La L se lleva en cualquier tipo de vía durante el primer año.", "error_tipo": "lectura_matiz" }
+    ],
+    "error_tipo": ["confunde_conceptos", "lectura_matiz"],
+    "fuente": "RD 2822/1998 (Reglamento General de Vehículos), anexo XI, señal V‑13",
+    "revisar": false
+  },
+  {
+    "id": "CON-0010",
+    "mundo": "conductor",
+    "subtema": "vehiculo",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un turismo particular nuevo, ¿cuándo debe pasar su primera inspección técnica (ITV)?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "A los 4 años de su matriculación.", "correcta": true, "explicacion": "Primera ITV a los 4 años. Después, cada 2 años hasta los 10 años de antigüedad y, a partir de ahí, cada año." },
+      { "texto": "Al año de su matriculación.", "correcta": false, "explicacion": "Un turismo particular nuevo está exento los primeros 4 años.", "error_tipo": "dato_numerico" },
+      { "texto": "A los 2 años de su matriculación.", "correcta": false, "explicacion": "Error típico: 2 años es la frecuencia entre los 4 y los 10 años de antigüedad, no la primera inspección.", "error_tipo": "dato_numerico" }
+    ],
+    "error_tipo": ["dato_numerico"],
+    "fuente": "RD 920/2017 (Inspección Técnica de Vehículos), art. 6",
+    "revisar": false
+  },
+  {
+    "id": "CON-0011",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Con el permiso B, ¿se puede llevar un remolque enganchado al turismo?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "Sí, uno de hasta 750 kg de MMA, o uno mayor si el conjunto no supera 3.500 kg.", "correcta": true, "explicacion": "El permiso B permite remolques ligeros (hasta 750 kg) o más pesados si la MMA del conjunto no pasa de 3.500 kg." },
+      { "texto": "Sí, siempre, sea cual sea su masa.", "correcta": false, "explicacion": "La trampa está en «siempre»: el permiso B tiene límites de masa para el remolque.", "error_tipo": "trampa_siempre_nunca" },
+      { "texto": "No, para cualquier remolque hace falta el permiso B+E.", "correcta": false, "explicacion": "Los remolques ligeros sí se pueden llevar con el B. El B+E es para conjuntos que superan esos límites.", "error_tipo": "trampa_siempre_nunca" }
+    ],
+    "error_tipo": ["trampa_siempre_nunca"],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  },
+  {
+    "id": "CON-0012",
+    "mundo": "conductor",
+    "subtema": "permisos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si tiene el permiso B desde hace más de 3 años, ¿puede conducir una moto de las que autoriza el permiso A1 (hasta 125 cc)?",
+    "imagen": null,
+    "opciones": [
+      { "texto": "Sí, pero solo en territorio español.", "correcta": true, "explicacion": "Con más de 3 años de permiso B se pueden conducir motos de clase A1, pero solo dentro de España." },
+      { "texto": "Sí, en cualquier país de la Unión Europea.", "correcta": false, "explicacion": "Esta autorización solo vale en España. Fuera necesitas el permiso A1.", "error_tipo": "lectura_matiz" },
+      { "texto": "No, nunca sin el permiso A1.", "correcta": false, "explicacion": "Cuidado con «nunca»: con más de 3 años de B sí se puede, aunque solo en España.", "error_tipo": "trampa_siempre_nunca" }
+    ],
+    "error_tipo": ["lectura_matiz", "trampa_siempre_nunca"],
+    "fuente": "RD 818/2009 (Reglamento General de Conductores), art. 4",
+    "revisar": false
+  }
+]

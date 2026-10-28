@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import type { CSSProperties } from 'react'
 import { MUNDOS, type Mundo } from '../content/mundos'
 import { mundoTieneContenido } from '../content/banco'
@@ -6,8 +6,8 @@ import { claveNivel, useJuego } from '../store/useJuego'
 import type { ResultadoNivel } from '../store/db'
 import type { MundoId } from '../content/tipos'
 import { Candado, Estrella } from './iconos'
-
-const PASO = 96 // separación vertical entre niveles, en px
+import { W, construirEscena, type EscenaConstruida } from './mapa/escenas'
+import { Coche } from './mapa/decorado'
 
 type Estado = 'hecho' | 'disponible' | 'bloqueado'
 
@@ -29,62 +29,83 @@ function estadoNivel(m: Mundo, abierto: boolean, n: number, niveles: Record<stri
   return 'bloqueado'
 }
 
+/** Carretera con borde, asfalto y raya discontinua (y aceras en los mundos de ciudad). */
+function Carretera({ d, esc, ancho = 36 }: { d: string; esc: EscenaConstruida; ancho?: number }) {
+  return (
+    <>
+      {esc.aceras && <path d={d} className="acera" strokeWidth={ancho + 26} />}
+      <path d={d} className="borde" strokeWidth={ancho + 7} />
+      <path d={d} className={esc.noche ? 'asfalto noche' : 'asfalto'} strokeWidth={ancho} />
+      <path d={d} className={esc.noche ? 'raya noche' : 'raya'} />
+    </>
+  )
+}
+
 export function Mapa({ onJugar }: { onJugar: (mundo: MundoId, nivel: number) => void }) {
   const niveles = useJuego((s) => s.niveles)
   const actualRef = useRef<HTMLButtonElement>(null)
+  // Las escenas no dependen del progreso: se generan una sola vez.
+  const escenas = useMemo(() => MUNDOS.map((m, i) => construirEscena(i, m.niveles)), [])
 
-  // Al entrar, centra la pantalla en el siguiente nivel por jugar.
   useEffect(() => {
     actualRef.current?.scrollIntoView({ block: 'center' })
   }, [])
 
-  // El primer nivel disponible del mapa es el "actual" (late para llamar la atención).
   let actualMarcado = false
 
   return (
     <main className="mapa">
+      <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
+        <defs>
+          <radialGradient id="halo">
+            <stop offset="0" stopColor="#FFE27A" stopOpacity="0.7" />
+            <stop offset="1" stopColor="#FFE27A" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+
       {MUNDOS.map((m, mi) => {
+        const esc = escenas[mi]
         const abierto = mundoAbierto(mi, niveles)
         const conContenido = mundoTieneContenido(m.id)
-        const total = m.niveles + 1
-        const alto = total * PASO + 20
-        const puntos = Array.from({ length: total }, (_, i) => ({
-          x: i === m.niveles ? 50 : 50 + 27 * Math.sin(i * 1.05 + mi * 2),
-          y: alto - 56 - i * PASO,
-        }))
-        // Carretera: curva suave que pasa por el centro de cada nivel.
-        let d = `M50 ${alto + 20} L${puntos[0].x} ${puntos[0].y}`
-        for (let i = 1; i < puntos.length; i++) {
-          const a = puntos[i - 1], b = puntos[i]
-          d += ` C${a.x} ${a.y - PASO / 2} ${b.x} ${b.y + PASO / 2} ${b.x} ${b.y}`
-        }
-        d += ` L50 -20`
         const estrellas = Array.from({ length: m.niveles }, (_, i) => niveles[claveNivel(m.id, i + 1)]?.estrellas ?? 0).reduce((a, b) => a + b, 0)
+        const estados = Array.from({ length: m.niveles }, (_, i) => estadoNivel(m, abierto, i + 1, niveles))
+        const iActual = actualMarcado ? -1 : estados.indexOf('disponible')
+        if (iActual >= 0) actualMarcado = true
+        const coche = iActual >= 0 ? esc.nodos[iActual] : null
 
         return (
           <section key={m.id} className="mundo" style={{ '--color': m.color } as CSSProperties}>
-            <div className={`banner pegatina ${abierto ? '' : 'bloqueado'}`} style={{ position: 'relative', zIndex: 3 }}>
+            <div className={`banner pegatina ${abierto ? '' : 'bloqueado'}`}>
               <span className="num">{m.numero}</span>
               <div className="info">
                 <h2>{m.nombre}</h2>
-                <p>Jefe: {m.jefe}</p>
+                <p>{conContenido ? `Jefe: ${m.jefe}` : 'Próximamente · contenido en preparación'}</p>
               </div>
               <span className="estrellas-mundo" aria-label={`${estrellas} de ${m.niveles * 3} estrellas`}>
                 <Estrella /> {estrellas}/{m.niveles * 3}
               </span>
             </div>
 
-            <div className="camino" style={{ height: alto }}>
-              <svg className="carretera" viewBox={`0 0 100 ${alto}`} preserveAspectRatio="none" aria-hidden="true">
-                <path className="borde" d={d} vectorEffect="non-scaling-stroke" />
-                <path className="asfalto" d={d} vectorEffect="non-scaling-stroke" />
-                <path className="raya" d={d} vectorEffect="non-scaling-stroke" />
+            <div className="escena-caja" style={{ aspectRatio: `${W} / ${esc.H}` }}>
+              <svg className="escena" viewBox={`0 0 ${W} ${esc.H}`} aria-hidden="true">
+                <rect width={W} height={esc.H} fill={esc.suelo} />
+                {esc.fondo}
+                {esc.extras.map((d, i) => <Carretera key={i} d={d} esc={esc} ancho={30} />)}
+                <Carretera d={esc.d} esc={esc} />
+                {esc.sobre}
+                {esc.decor}
+                {coche && (
+                  <g className="mi-coche">
+                    <Coche x={coche.x - Math.cos(coche.ang) * 48} y={coche.y - Math.sin(coche.ang) * 48} ang={(coche.ang * 180) / Math.PI} c="#FFD23F" s={1.15} />
+                  </g>
+                )}
+                {!esc.noche && <rect width={W} height={esc.H} className="velo-noche" />}
+                {!abierto && <rect width={W} height={esc.H} className="velo-bloqueo" />}
               </svg>
 
-              {!conContenido && <div className="etiqueta-pronto pegatina">Contenido en preparación</div>}
-
-              {puntos.map((p, i) => {
-                const pos = { left: `${p.x}%`, top: p.y }
+              {esc.nodos.map((p, i) => {
+                const pos = { left: `${(p.x / W) * 100}%`, top: `${(p.y / esc.H) * 100}%` }
                 if (i === m.niveles) {
                   return (
                     <button key="jefe" className="nodo jefe" style={pos} disabled title="Los jefes llegan en la Fase 5" aria-label={`Jefe: ${m.jefe}. Bloqueado`}>
@@ -94,9 +115,8 @@ export function Mapa({ onJugar }: { onJugar: (mundo: MundoId, nivel: number) => 
                   )
                 }
                 const n = i + 1
-                const estado = estadoNivel(m, abierto, n, niveles)
-                const esActual = estado === 'disponible' && !actualMarcado
-                if (esActual) actualMarcado = true
+                const estado = estados[i]
+                const esActual = i === iActual
                 const res = niveles[claveNivel(m.id, n)]
                 return (
                   <button

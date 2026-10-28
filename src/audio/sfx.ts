@@ -66,11 +66,39 @@ export const sfx = {
   },
 }
 
-/** Vibración háptica (solo Android; iPhone la ignora). */
+/**
+ * iPhone no tiene navigator.vibrate. Desde iOS 18, pulsar un interruptor
+ * <input type="checkbox" switch> produce un toque háptico del sistema:
+ * lo creamos oculto y lo pulsamos por código.
+ */
+function toqueIOS() {
+  const etiqueta = document.createElement('label')
+  etiqueta.ariaHidden = 'true'
+  etiqueta.style.display = 'none'
+  const interruptor = document.createElement('input')
+  interruptor.type = 'checkbox'
+  interruptor.setAttribute('switch', '')
+  etiqueta.appendChild(interruptor)
+  document.head.appendChild(etiqueta)
+  etiqueta.click()
+  etiqueta.remove()
+}
+
+/**
+ * Vibración háptica.
+ * - Android: navigator.vibrate. Chrome la bloquea si el juego va dentro de un
+ *   iframe de otro dominio (la página de pruebas); en la web propia funciona.
+ * - iPhone: un toque por cada pulso del patrón (iOS no permite duraciones).
+ */
 export function vibrar(patron: number | number[]) {
   if (!activo) return
   try {
-    navigator.vibrate?.(patron)
+    if ('vibrate' in navigator) {
+      navigator.vibrate(patron)
+      return
+    }
+    const pulsos = Array.isArray(patron) ? patron.filter((_, i) => i % 2 === 0) : [patron]
+    pulsos.forEach((_, i) => (i === 0 ? toqueIOS() : setTimeout(toqueIOS, i * 90)))
   } catch {
     /* sin vibración */
   }

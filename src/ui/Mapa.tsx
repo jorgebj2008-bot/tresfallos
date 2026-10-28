@@ -5,7 +5,8 @@ import { mundoTieneContenido } from '../content/banco'
 import { claveNivel, useJuego } from '../store/useJuego'
 import type { ResultadoNivel } from '../store/db'
 import type { MundoId } from '../content/tipos'
-import { Candado, Estrella } from './iconos'
+import { Candado, Estrella, IconoMando } from './iconos'
+import { juegoDeNivel, juegoPorId } from '../game/juegos'
 import { W, construirEscena, type EscenaConstruida } from './mapa/escenas'
 import { Coche } from './mapa/decorado'
 
@@ -118,17 +119,18 @@ export function Mapa({ onJugar }: { onJugar: (mundo: MundoId, nivel: number) => 
                 const estado = estados[i]
                 const esActual = i === iActual
                 const res = niveles[claveNivel(m.id, n)]
+                const juego = juegoDeNivel(m.id, n)
                 return (
                   <button
                     key={n}
                     ref={esActual ? actualRef : undefined}
-                    className={`nodo ${esActual ? 'actual' : ''}`}
+                    className={`nodo ${esActual ? 'actual' : ''} ${juego ? 'es-juego' : ''}`}
                     style={pos}
                     disabled={estado === 'bloqueado'}
                     onClick={() => onJugar(m.id, n)}
-                    aria-label={`Nivel ${n}${estado === 'bloqueado' ? ', bloqueado' : ''}${res ? `, ${res.estrellas} estrellas` : ''}`}
+                    aria-label={`Nivel ${n}${juego ? `, minijuego ${juegoPorId(juego).nombre}` : ''}${estado === 'bloqueado' ? ', bloqueado' : ''}${res ? `, ${res.estrellas} estrellas` : ''}`}
                   >
-                    {estado === 'bloqueado' ? <Candado /> : n}
+                    {estado === 'bloqueado' ? <Candado /> : juego ? <IconoMando /> : n}
                     {estado === 'hecho' && (
                       <span className="mini-estrellas">
                         {[1, 2, 3].map((k) => <Estrella key={k} llena={(res?.estrellas ?? 0) >= k} />)}

@@ -19,6 +19,7 @@ interface EstadoJuego {
   registrarRespuesta: (preguntaId: string, correcta: boolean, errorTipo: string | null, ms: number) => void
   guardarNivel: (clave: string, estrellas: number, aciertos: number) => void
   guardarSimulacro: (s: Simulacro) => void
+  guardarRecord: (juego: string, puntos: number) => void
   alternarSonido: () => void
   cambiarTema: () => void
 }
@@ -77,6 +78,14 @@ export const useJuego = create<EstadoJuego>((set, get) => ({
   guardarSimulacro(s) {
     set({ simulacros: [...get().simulacros, s] })
     void seguro((db) => db.simulacros.add(s))
+  },
+
+  guardarRecord(juego, puntos) {
+    const records = get().perfil.records ?? {}
+    if ((records[juego] ?? 0) >= puntos) return
+    const perfil = { ...get().perfil, records: { ...records, [juego]: puntos } }
+    set({ perfil })
+    guardarPerfil(perfil)
   },
 
   alternarSonido() {

@@ -326,3 +326,81 @@ canvas.particulas { position: fixed; inset: 0; width: 100%; height: 100%; pointe
 .temario { display: flex; flex-direction: column; gap: 4px; }
 .temario .fila { display: flex; justify-content: space-between; font-size: 14px; }
 .temario .barra { display: block; }
+.pestanas { grid-template-columns: repeat(4, 1fr); }
+.nodo.es-juego { border-radius: 20px; }
+
+/* ---------- Minijuegos ---------- */
+.juego { flex: 1; display: flex; flex-direction: column; gap: 12px; padding-block: calc(10px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)); }
+.barra-juego { display: flex; align-items: center; gap: 10px; }
+.barra-juego-centro { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.barra-juego-centro b { font-family: var(--font-d); font-size: 18px; line-height: 1; }
+.barra-juego-centro .barra { height: 12px; }
+.barra-juego-centro .barra > i { background: var(--accent); }
+.barra-juego .puntos { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; font-family: var(--font-d); font-size: 22px; line-height: 1; font-variant-numeric: tabular-nums; }
+.barra-juego .puntos .combo-chip { font-size: 13px; padding: 2px 8px; }
+.consigna { margin: 0; font-size: 15px; }
+.lienzo-cruce { overflow: hidden; padding: 0; line-height: 0; }
+.lienzo-cruce svg { width: 100%; height: auto; display: block; touch-action: manipulation; }
+.globo-agente { margin: 0; padding: 8px 12px; background: #1C64C8; color: #fff; border: 2px solid var(--line); border-radius: 12px; font-size: 14px; }
+.leyenda-cruce { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.leyenda-cruce li { display: flex; align-items: center; gap: 8px; }
+.leyenda-cruce li i { width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--line); flex: none; }
+.leyenda-cruce li.hecho { text-decoration: line-through; opacity: .6; }
+.sello-bien {
+  position: fixed; left: 50%; top: 40%; translate: -50% 0; z-index: 45; pointer-events: none;
+  display: flex; align-items: center; gap: 8px; padding: 10px 18px;
+  font-family: var(--font-d); font-weight: 800; font-size: 28px; white-space: nowrap;
+  background: var(--good); color: var(--good-ink); border: var(--bw) solid var(--line); border-radius: 16px; box-shadow: var(--hard);
+}
+.sello-bien svg { width: 28px; height: 28px; }
+@media (prefers-reduced-motion: no-preference) {
+  .destello-alt { animation: destello 1s steps(2) infinite reverse; }
+  svg .destello { animation: destello 1s steps(2) infinite; }
+}
+
+.pista-senales {
+  position: relative; height: min(52vh, 420px); overflow: hidden; padding: 0;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 3px), #fff calc(50% - 3px), #fff calc(50% + 3px), transparent calc(50% + 3px)) 0 0 / 100% 60px,
+    linear-gradient(90deg, #9EE6B0 0 12%, #4A4E69 12% 88%, #9EE6B0 88%);
+  background-repeat: repeat-y, no-repeat;
+  touch-action: pan-y;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pista-senales { animation: carretera 1s linear infinite; }
+  @keyframes carretera { to { background-position: 0 60px, 0 0; } }
+}
+.senal-cayendo { position: absolute; left: calc(50% - 60px); width: 120px; height: 120px; cursor: grab; filter: drop-shadow(0 6px 0 rgba(0,0,0,.35)); }
+.senal-cayendo:active { cursor: grabbing; }
+.opciones-lado { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.opcion-lado {
+  min-height: 64px; padding: 10px; display: flex; align-items: center; justify-content: center; gap: 6px; text-align: center;
+  font-family: var(--font-d); font-weight: 800; font-size: 17px; line-height: 1.1;
+  background: var(--panel); color: var(--ink); border: var(--bw) solid var(--line); border-radius: 16px; box-shadow: var(--hard);
+}
+.opcion-lado:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--line); }
+.opcion-lado.era { background: var(--good); color: var(--good-ink); }
+.opcion-lado.trampa { background: var(--bad); color: var(--bad-ink); }
+.opcion-lado.verdad { background: var(--good); color: var(--good-ink); }
+.opcion-lado svg { width: 22px; height: 22px; }
+.hoja-senal { display: flex; align-items: center; gap: 12px; }
+.hoja-senal h3 { font-size: 22px; }
+
+.tiempo-carta { height: 10px; border-radius: 99px; background: var(--bg2); border: 2px solid var(--line); overflow: hidden; }
+.tiempo-carta i { display: block; height: 100%; background: var(--gold); }
+.mesa-cartas { min-height: 260px; display: grid; place-items: center; touch-action: pan-y; }
+.carta { position: relative; width: 100%; max-width: 380px; min-height: 230px; padding: 34px 22px; display: grid; place-items: center; cursor: grab; }
+.carta p { margin: 0; font-size: 21px; font-weight: 800; line-height: 1.3; text-align: center; text-wrap: balance; }
+.sello { position: absolute; top: 12px; padding: 2px 10px; font-family: var(--font-d); font-weight: 800; font-size: 20px; border: 3px solid; border-radius: 8px; }
+.sello-verdad { left: 14px; color: #15803D; border-color: #15803D; rotate: -10deg; }
+.sello-trampa { right: 14px; color: #DC2626; border-color: #DC2626; rotate: 10deg; }
+.anterior { margin: 0; padding: 10px 12px; display: flex; gap: 8px; align-items: flex-start; font-size: 14px; }
+.anterior svg { width: 20px; height: 20px; flex: none; color: var(--good-ink); background: var(--good); border-radius: 6px; }
+
+.tarjeta-juego { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 14px; align-items: center; }
+.tarjeta-juego .miniatura { width: 72px; height: 72px; display: grid; place-items: center; }
+.tarjeta-juego .miniatura svg { width: 72px; height: 72px; }
+.tarjeta-juego .info-juego { min-width: 0; }
+.tarjeta-juego h2 { font-size: 22px; }
+.tarjeta-juego p { margin: 4px 0 0; font-size: 14px; }
+.tarjeta-juego .boton { grid-column: 1 / -1; background: var(--color); }

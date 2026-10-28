@@ -9,6 +9,8 @@ export interface Perfil {
   xp: number
   sonido: boolean
   tema: 'auto' | 'claro' | 'noche'
+  /** Mejor puntuación en cada minijuego. */
+  records?: Record<string, number>
 }
 
 export interface ResultadoNivel {

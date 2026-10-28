@@ -5,6 +5,7 @@ import { preguntaPorId, preguntasDe, todasLasPreguntas } from '../content/banco'
 import { mundoPorId } from '../content/mundos'
 import { PREGUNTAS_POR_NIVEL, barajar, calcularEstrellas, hitoCombo } from '../game/nivel'
 import { elegirPreguntas } from '../learning/seleccion'
+import type { JuegoId } from '../game/juegos'
 import { calcularListo } from '../learning/estoyListo'
 import { xpFinNivel, xpRespuesta } from '../game/progreso'
 import { claveNivel, useJuego } from '../store/useJuego'
@@ -16,6 +17,7 @@ import { Check, Cruz, Llama } from './iconos'
 export type ConfigPartida =
   | { tipo: 'nivel'; mundo: MundoId; nivel: number }
   | { tipo: 'repaso'; titulo: string; ids: string[] }
+  | { tipo: 'juego'; juego: JuegoId; mundo?: MundoId; nivel?: number }
 
 export interface ResultadoPartida {
   config: ConfigPartida
@@ -50,7 +52,9 @@ export function Nivel({ config, onSalir, onTerminar }: Props) {
     const lista: Pregunta[] =
       config.tipo === 'nivel'
         ? elegirPreguntas(preguntasDe(config.mundo), estados, PREGUNTAS_POR_NIVEL, Date.now(), Math.random, todasLasPreguntas().filter((p) => p.mundo !== config.mundo))
-        : barajar(config.ids.map(preguntaPorId).filter((p): p is Pregunta => !!p)).slice(0, PREGUNTAS_POR_NIVEL)
+        : config.tipo === 'repaso'
+          ? barajar(config.ids.map(preguntaPorId).filter((p): p is Pregunta => !!p)).slice(0, PREGUNTAS_POR_NIVEL)
+          : []
     return lista.map((pregunta) => ({ pregunta, opciones: barajar(pregunta.opciones) }))
   }, [config])
   const xpAntes = useRef(perfil.xp)
@@ -176,7 +180,7 @@ export function Nivel({ config, onSalir, onTerminar }: Props) {
                 ? actual.pregunta.mundo === config.mundo
                   ? `${mundoPorId(config.mundo).nombre} · Nivel ${config.nivel}`
                   : `Repaso · ${mundoPorId(actual.pregunta.mundo).nombre}`
-                : `${config.titulo} · ${mundoPorId(actual.pregunta.mundo).nombre}`}
+                : `${config.tipo === 'repaso' ? config.titulo : 'Repaso'} · ${mundoPorId(actual.pregunta.mundo).nombre}`}
             </div>
             <h2>{actual.pregunta.enunciado}</h2>
           </div>

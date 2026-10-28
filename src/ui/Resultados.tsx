@@ -66,7 +66,7 @@ export function Resultados({ r, onRepetir, onMapa }: Props) {
   // Momento "casi lo tienes": decir lo poco que falta para algo.
   let casi: string | null = null
   if (r.estrellas < 3 && r.aciertos === r.total - 2) casi = 'Te faltó 1 acierto para las 3 estrellas. ¡Repite y lo clavas!'
-  else if (r.estrellas < 3 && r.aciertos >= r.total - 1) casi = 'Acertaste de sobra, pero fuiste lento. Para 3 estrellas: menos de 20 s por pregunta.'
+  else if (r.config.tipo !== 'juego' && r.estrellas < 3 && r.aciertos >= r.total - 1) casi = 'Acertaste de sobra, pero fuiste lento. Para 3 estrellas: menos de 20 s por pregunta.'
   else if (!subeRango && despues.siguiente && despues.faltan <= 60) casi = `Solo ${despues.faltan} XP para ser ${despues.siguiente}.`
 
   return (

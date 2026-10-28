@@ -58,3 +58,6 @@ export const IconoMedidor = () => (
 export const IconoCuaderno = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2" {...trazo} /><path d="M9 8h6M9 12h6M9 16h3" {...trazo} /></svg>
 )
+export const IconoMando = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10a4 4 0 0 1 4 4.5l-.6 3.2a2.3 2.3 0 0 1-4 1L15 15H9l-1.4 1.7a2.3 2.3 0 0 1-4-1L3 12.5A4 4 0 0 1 7 8z" {...trazo} /><path d="M8 11v3M6.5 12.5h3" {...trazo} /><circle cx="15.5" cy="12" r="1.1" fill="currentColor" /><circle cx="17.5" cy="13.6" r="1.1" fill="currentColor" /></svg>
+)

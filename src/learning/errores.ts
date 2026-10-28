@@ -20,6 +20,10 @@ export const ERRORES: Record<string, InfoError> = {
   prioridad_glorieta: { nombre: 'Fallas la prioridad en glorietas', consejo: 'Quien ya está dentro de la glorieta tiene prioridad.' },
   prioridad_derecha: { nombre: 'Olvidas la prioridad de la derecha', consejo: 'Sin señales, pasa primero quien viene por tu derecha.' },
   jerarquia_senales: { nombre: 'Te lías con quién manda', consejo: 'Agente > semáforo > señal vertical > marca vial.' },
+  giro_izquierda: { nombre: 'Olvidas ceder al girar a la izquierda', consejo: 'Si giras a la izquierda, quien viene de frente pasa primero.' },
+  prioridad_senales: { nombre: 'Te saltas el STOP o el ceda', consejo: 'Con STOP o ceda el paso, cedes a todos los que circulan por la vía principal.' },
+  prioridad_urgencia: { nombre: 'No dejas paso a las urgencias', consejo: 'Ambulancia, bomberos o policía con luces y sirena pasan antes que nadie.' },
+  prioridad_peaton: { nombre: 'Te olvidas de los peatones', consejo: 'Peatón en el paso o cruzando la calle a la que giras: pasa él primero.' },
   distancias: { nombre: 'Calculas mal las distancias', consejo: 'Distancia de detención = la de reacción + la de frenado.' },
   tasas_alcohol: { nombre: 'Confundes las tasas de alcohol', consejo: 'General 0,25 mg/l en aire; noveles y profesionales 0,15.' },
 }

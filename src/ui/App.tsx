@@ -2,22 +2,31 @@ import { useEffect, useState } from 'react'
 import { useJuego } from '../store/useJuego'
 import { pct, useConFallos, useListo, useVencidas } from '../store/selectores'
 import type { MundoId } from '../content/tipos'
-import { todasLasPreguntas } from '../content/banco'
+import { preguntaPorId, todasLasPreguntas } from '../content/banco'
 import type { Accion } from '../learning/recomendacion'
+import { juegoDeNivel, type JuegoId } from '../game/juegos'
 import { Cabecera } from './Cabecera'
 import { Mapa } from './Mapa'
 import { Nivel, type ConfigPartida, type ResultadoPartida } from './Nivel'
 import { Resultados } from './Resultados'
 import { EstoyListo } from './EstoyListo'
 import { Cuaderno } from './Cuaderno'
-import { IconoCuaderno, IconoMapa, IconoMedidor } from './iconos'
+import { Juegos } from './juegos/Juegos'
+import { ReyDelCruce } from './juegos/ReyDelCruce'
+import { SenalRush } from './juegos/SenalRush'
+import { VerdadTrampa } from './juegos/VerdadTrampa'
+import { IconoCuaderno, IconoMando, IconoMapa, IconoMedidor } from './iconos'
 import { sfx } from '../audio/sfx'
 
-type Tab = 'mapa' | 'listo' | 'errores'
+type Tab = 'mapa' | 'juegos' | 'listo' | 'errores'
 type Pantalla =
   | { tipo: 'tab'; tab: Tab }
   | { tipo: 'partida'; config: ConfigPartida; id: number }
   | { tipo: 'resultado'; r: ResultadoPartida }
+
+/** Minijuego que entrena cada tipo de error (para puntos débiles sin preguntas de test). */
+const JUEGO_PARA_ERROR = (tipo: string): JuegoId =>
+  tipo.startsWith('prioridad') || tipo === 'giro_izquierda' || tipo === 'jerarquia_senales' ? 'cruce' : tipo === 'confunde_senales' ? 'senales' : 'verdad'
 
 export function App() {
   const { cargado, cargar, perfil } = useJuego()
@@ -47,22 +56,42 @@ export function App() {
     sfx.toque()
     setPantalla({ tipo: 'partida', config, id: Date.now() })
   }
-  const jugarNivel = (mundo: MundoId, nivel: number) => jugar({ tipo: 'nivel', mundo, nivel })
+  const jugarNivel = (mundo: MundoId, nivel: number) => {
+    const juego = juegoDeNivel(mundo, nivel)
+    jugar(juego ? { tipo: 'juego', juego, mundo, nivel } : { tipo: 'nivel', mundo, nivel })
+  }
   const irA = (tab: Tab) => {
     sfx.toque()
     setPantalla({ tipo: 'tab', tab })
   }
 
   const accion = (a: Accion) => {
-    if (a.tipo === 'repaso-vencidas') jugar({ tipo: 'repaso', titulo: 'Repaso del día', ids: vencidas.slice(0, 10) })
-    else if (a.tipo === 'punto-debil') {
+    if (a.tipo === 'repaso-vencidas') {
+      const ids = vencidas.filter((id) => preguntaPorId(id)).slice(0, 10)
+      if (ids.length) jugar({ tipo: 'repaso', titulo: 'Repaso del día', ids })
+      else jugar({ tipo: 'juego', juego: 'verdad' })
+    } else if (a.tipo === 'punto-debil') {
       // Las preguntas falladas de ese tipo, más otras que entrenan el mismo error.
       const mismas = todasLasPreguntas().filter((p) => p.error_tipo.includes(a.debil.tipo)).map((p) => p.id)
-      jugar({ tipo: 'repaso', titulo: a.debil.nombre, ids: [...new Set([...a.debil.preguntas, ...mismas])] })
+      const ids = [...new Set([...a.debil.preguntas, ...mismas])].filter((id) => preguntaPorId(id))
+      if (ids.length >= 3) jugar({ tipo: 'repaso', titulo: a.debil.nombre, ids })
+      else jugar({ tipo: 'juego', juego: JUEGO_PARA_ERROR(a.debil.tipo) })
     } else irA('mapa')
   }
 
   const tab = pantalla.tipo === 'tab' ? pantalla.tab : null
+  const volverMapa = () => setPantalla({ tipo: 'tab', tab: 'mapa' })
+  const terminar = (r: ResultadoPartida) => setPantalla({ tipo: 'resultado', r })
+
+  let partida: React.ReactNode = null
+  if (pantalla.tipo === 'partida') {
+    const c = pantalla.config
+    const props = { key: pantalla.id, config: c, onSalir: volverMapa, onTerminar: terminar }
+    if (c.tipo !== 'juego') partida = <Nivel {...props} />
+    else if (c.juego === 'cruce') partida = <ReyDelCruce {...props} />
+    else if (c.juego === 'senales') partida = <SenalRush {...props} />
+    else partida = <VerdadTrampa {...props} />
+  }
 
   return (
     <div className="app">
@@ -72,30 +101,22 @@ export function App() {
           <Mapa onJugar={jugarNivel} />
         </>
       )}
+      {tab === 'juegos' && <Juegos onJugar={(juego) => jugar({ tipo: 'juego', juego })} />}
       {tab === 'listo' && <EstoyListo onAccion={accion} simulacroDisponible={false} />}
       {tab === 'errores' && <Cuaderno onJugar={jugar} />}
 
-      {pantalla.tipo === 'partida' && (
-        <Nivel
-          key={pantalla.id}
-          config={pantalla.config}
-          onSalir={() => setPantalla({ tipo: 'tab', tab: 'mapa' })}
-          onTerminar={(r) => setPantalla({ tipo: 'resultado', r })}
-        />
-      )}
-      {pantalla.tipo === 'resultado' && (
-        <Resultados
-          r={pantalla.r}
-          onRepetir={() => jugar(pantalla.r.config)}
-          onMapa={() => setPantalla({ tipo: 'tab', tab: 'mapa' })}
-        />
-      )}
+      {partida}
+      {pantalla.tipo === 'resultado' && <Resultados r={pantalla.r} onRepetir={() => jugar(pantalla.r.config)} onMapa={volverMapa} />}
 
       {tab && (
         <nav className="pestanas" aria-label="Secciones">
           <button className={tab === 'mapa' ? 'activa' : ''} onClick={() => irA('mapa')}>
             <IconoMapa />
             <span>Mapa</span>
+          </button>
+          <button className={tab === 'juegos' ? 'activa' : ''} onClick={() => irA('juegos')}>
+            <IconoMando />
+            <span>Juegos</span>
           </button>
           <button className={tab === 'listo' ? 'activa' : ''} onClick={() => irA('listo')}>
             <IconoMedidor />

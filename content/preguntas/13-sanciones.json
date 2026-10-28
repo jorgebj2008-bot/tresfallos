@@ -1,0 +1,369 @@
+[
+  {
+    "id": "SAN-0001",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pierden por conducir usando el móvil sujetándolo con la mano?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "6 puntos.",
+        "correcta": true,
+        "explicacion": "Desde 2022 es una de las infracciones que más puntos quita."
+      },
+      {
+        "texto": "3 puntos.",
+        "correcta": false,
+        "explicacion": "Era la sanción antigua.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "2 puntos.",
+        "correcta": false,
+        "explicacion": "Te quedas corto: son 6.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0002",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pierden por no llevar el cinturón de seguridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "4 puntos.",
+        "correcta": true,
+        "explicacion": "Desde 2022 son 4 puntos."
+      },
+      {
+        "texto": "3 puntos.",
+        "correcta": false,
+        "explicacion": "Error típico: eran 3 antes de la reforma.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "6 puntos.",
+        "correcta": false,
+        "explicacion": "6 es el móvil en la mano o el alcohol por encima de 0,50 mg/l.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0003",
+    "mundo": "sanciones",
+    "subtema": "alcohol",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un conductor general da 0,55 mg/l de alcohol en aire. ¿Qué sanción administrativa le corresponde?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "1.000 euros y 6 puntos.",
+        "correcta": true,
+        "explicacion": "Por encima de 0,50 mg/l: 1.000 euros y 6 puntos (y por encima de 0,60 ya es delito)."
+      },
+      {
+        "texto": "500 euros y 4 puntos.",
+        "correcta": false,
+        "explicacion": "Eso es entre 0,25 y 0,50 mg/l.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "200 euros sin puntos.",
+        "correcta": false,
+        "explicacion": "El alcohol siempre quita puntos.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0004",
+    "mundo": "sanciones",
+    "subtema": "pago",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si pagas una multa de tráfico en los 20 días siguientes a la notificación…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Tienes un 50 % de descuento.",
+        "correcta": true,
+        "explicacion": "Es el pago con reducción."
+      },
+      {
+        "texto": "No pierdes los puntos.",
+        "correcta": false,
+        "explicacion": "Error típico: los puntos se pierden igual.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Te devuelven el dinero si la recurres.",
+        "correcta": false,
+        "explicacion": "Al pagar con descuento renuncias a recurrir.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 94",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0005",
+    "mundo": "sanciones",
+    "subtema": "delito",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿A partir de qué exceso de velocidad es delito en vía interurbana?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Más de 80 km/h por encima del límite.",
+        "correcta": true,
+        "explicacion": "En vía urbana el delito empieza con más de 60 km/h por encima."
+      },
+      {
+        "texto": "Más de 50 km/h por encima del límite.",
+        "correcta": false,
+        "explicacion": "Es una infracción muy grave, pero no delito.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "Más de 20 km/h por encima del límite.",
+        "correcta": false,
+        "explicacion": "Es una infracción, no un delito.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "Código Penal, art. 379.1",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0006",
+    "mundo": "sanciones",
+    "subtema": "delito",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Conducir después de haber perdido todos los puntos, sin haber recuperado el permiso, es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Un delito.",
+        "correcta": true,
+        "explicacion": "Conducir sin permiso vigente por pérdida de puntos es delito."
+      },
+      {
+        "texto": "Una infracción leve.",
+        "correcta": false,
+        "explicacion": "Es mucho más grave.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "Legal hasta que te llegue la carta.",
+        "correcta": false,
+        "explicacion": "Una vez notificada la pérdida de vigencia, no puedes conducir.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "sanciones"
+    ],
+    "fuente": "Código Penal, art. 384",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0007",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuántos puntos se pueden recuperar como máximo con un curso de sensibilización (recuperación parcial)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "6 puntos.",
+        "correcta": true,
+        "explicacion": "Un curso de recuperación parcial devuelve hasta 6 puntos."
+      },
+      {
+        "texto": "Todos los perdidos.",
+        "correcta": false,
+        "explicacion": "El curso parcial tiene un máximo.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "2 puntos.",
+        "correcta": false,
+        "explicacion": "Te quedas corto.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 63; Orden INT/914/2024",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0008",
+    "mundo": "sanciones",
+    "subtema": "puntos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si cometes varias infracciones a la vez, ¿cuántos puntos puedes perder como máximo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "8 puntos.",
+        "correcta": true,
+        "explicacion": "Aunque las infracciones sumen más, el máximo por infracciones simultáneas es de 8 puntos."
+      },
+      {
+        "texto": "Todos los que tengas.",
+        "correcta": false,
+        "explicacion": "Hay un tope para las infracciones simultáneas.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "6 puntos.",
+        "correcta": false,
+        "explicacion": "El tope es 8.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 63",
+    "revisar": true
+  },
+  {
+    "id": "SAN-0009",
+    "mundo": "sanciones",
+    "subtema": "velocidad",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un radar te detecta a 140 km/h en una autovía limitada a 120 km/h. ¿Pierdes puntos?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No: es multa (100 euros), pero sin pérdida de puntos.",
+        "correcta": true,
+        "explicacion": "En una vía de 120, hasta 150 km/h hay multa sin puntos; desde 151 km/h ya se pierden puntos."
+      },
+      {
+        "texto": "Sí, 2 puntos.",
+        "correcta": false,
+        "explicacion": "Con límite de 120, los puntos empiezan a partir de 151 km/h.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "No, porque en autovía no se multa hasta 150 km/h.",
+        "correcta": false,
+        "explicacion": "Sí hay multa desde que superas el límite; lo que no hay hasta 150 son puntos.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad",
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo IV",
+    "revisar": true
+  },
+  {
+    "id": "SAN-0010",
+    "mundo": "sanciones",
+    "subtema": "alcohol",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Para un conductor novel, ¿desde qué tasa de alcohol en aire se sanciona?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Más de 0,15 mg/l.",
+        "correcta": true,
+        "explicacion": "Los noveles tienen un límite más bajo durante dos años."
+      },
+      {
+        "texto": "Más de 0,25 mg/l.",
+        "correcta": false,
+        "explicacion": "Esa es la tasa general.",
+        "error_tipo": "tasas_alcohol"
+      },
+      {
+        "texto": "Desde 0 mg/l.",
+        "correcta": false,
+        "explicacion": "No es tasa cero: el límite es 0,15.",
+        "error_tipo": "tasas_alcohol"
+      }
+    ],
+    "error_tipo": [
+      "tasas_alcohol"
+    ],
+    "fuente": "RGC art. 20",
+    "revisar": false
+  },
+  {
+    "id": "SAN-0011",
+    "mundo": "sanciones",
+    "subtema": "sri",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Llevar a un niño de 110 cm sin sistema de retención infantil es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Una infracción grave que quita puntos.",
+        "correcta": true,
+        "explicacion": "Los sistemas de retención salvan vidas; no llevarlo se sanciona con puntos."
+      },
+      {
+        "texto": "Solo una recomendación.",
+        "correcta": false,
+        "explicacion": "Es obligatorio por debajo de 135 cm.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Legal si el viaje es corto.",
+        "correcta": false,
+        "explicacion": "La norma no distingue la longitud del viaje.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  }
+]

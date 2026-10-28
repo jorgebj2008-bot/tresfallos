@@ -24,6 +24,9 @@ export const ERRORES: Record<string, InfoError> = {
   prioridad_senales: { nombre: 'Te saltas el STOP o el ceda', consejo: 'Con STOP o ceda el paso, cedes a todos los que circulan por la vía principal.' },
   prioridad_urgencia: { nombre: 'No dejas paso a las urgencias', consejo: 'Ambulancia, bomberos o policía con luces y sirena pasan antes que nadie.' },
   prioridad_peaton: { nombre: 'Te olvidas de los peatones', consejo: 'Peatón en el paso o cruzando la calle a la que giras: pasa él primero.' },
+  maniobra_adelantamiento: { nombre: 'Adelantas sin cumplir las normas', consejo: 'Por la izquierda, con visibilidad y sin superar el límite. Si te adelantan, no aceleres.' },
+  alumbrado: { nombre: 'Te lías con las luces', consejo: 'Largas solo sin deslumbrar; antiniebla trasera solo con niebla espesa o lluvia muy intensa.' },
+  sanciones: { nombre: 'No te sabes las sanciones', consejo: 'Repasa las grandes: móvil 6 puntos, cinturón 4, alcohol 4 o 6.' },
   distancias: { nombre: 'Calculas mal las distancias', consejo: 'Distancia de detención = la de reacción + la de frenado.' },
   tasas_alcohol: { nombre: 'Confundes las tasas de alcohol', consejo: 'General 0,25 mg/l en aire; noveles y profesionales 0,15.' },
 }

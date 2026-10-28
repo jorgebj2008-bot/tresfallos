@@ -1,0 +1,368 @@
+[
+  {
+    "id": "EFI-0001",
+    "mundo": "eficiente",
+    "subtema": "consumo",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Bajar una pendiente en punto muerto…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No ahorra combustible y reduce el control del vehículo.",
+        "correcta": true,
+        "explicacion": "Con una marcha engranada y sin acelerar, el motor no gasta combustible."
+      },
+      {
+        "texto": "Ahorra mucho combustible.",
+        "correcta": false,
+        "explicacion": "Error típico: en punto muerto el motor sí gasta para mantener el ralentí.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Es obligatorio para no forzar el motor.",
+        "correcta": false,
+        "explicacion": "No: lo correcto es bajar con una marcha engranada.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0002",
+    "mundo": "eficiente",
+    "subtema": "consumo",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Para conducir de forma eficiente conviene…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Circular en la marcha más larga posible y a pocas revoluciones.",
+        "correcta": true,
+        "explicacion": "Menos revoluciones, menos consumo."
+      },
+      {
+        "texto": "Apurar cada marcha hasta las máximas revoluciones.",
+        "correcta": false,
+        "explicacion": "Así se gasta mucho más combustible.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Ir siempre en segunda en ciudad.",
+        "correcta": false,
+        "explicacion": "Gasta más de lo necesario.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0003",
+    "mundo": "eficiente",
+    "subtema": "consumo",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una presión de los neumáticos más baja de la recomendada…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Aumenta el consumo y empeora la seguridad.",
+        "correcta": true,
+        "explicacion": "El neumático rueda con más resistencia y se agarra peor."
+      },
+      {
+        "texto": "Reduce el consumo.",
+        "correcta": false,
+        "explicacion": "Al revés: lo aumenta.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No influye en nada.",
+        "correcta": false,
+        "explicacion": "Influye en el consumo y en la seguridad.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0004",
+    "mundo": "eficiente",
+    "subtema": "arranque",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al arrancar un coche moderno con el motor frío, lo más eficiente es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Empezar a circular enseguida, con suavidad.",
+        "correcta": true,
+        "explicacion": "Los motores modernos no necesitan calentarse parados."
+      },
+      {
+        "texto": "Dejarlo al ralentí varios minutos.",
+        "correcta": false,
+        "explicacion": "Se gasta combustible sin avanzar.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Acelerar en vacío para calentarlo antes.",
+        "correcta": false,
+        "explicacion": "Gasta y desgasta el motor.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0005",
+    "mundo": "eficiente",
+    "subtema": "paradas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una parada de más de un minuto aproximadamente, lo eficiente es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Apagar el motor.",
+        "correcta": true,
+        "explicacion": "En paradas largas, apagar ahorra más de lo que gasta volver a arrancar."
+      },
+      {
+        "texto": "Dejarlo encendido siempre.",
+        "correcta": false,
+        "explicacion": "Gastarías combustible sin moverte.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Acelerar de vez en cuando para que no se cale.",
+        "correcta": false,
+        "explicacion": "Un motor al ralentí no se cala.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0006",
+    "mundo": "eficiente",
+    "subtema": "etiquetas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué etiqueta ambiental de la DGT llevan los vehículos eléctricos de batería?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cero emisiones (azul).",
+        "correcta": true,
+        "explicacion": "Es la etiqueta de los vehículos más limpios."
+      },
+      {
+        "texto": "ECO.",
+        "correcta": false,
+        "explicacion": "La ECO es para híbridos no enchufables, gas y algunos híbridos enchufables con poca autonomía.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "C (verde).",
+        "correcta": false,
+        "explicacion": "La C es para gasolina y diésel más recientes.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Clasificación de la DGT por potencial contaminante",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0007",
+    "mundo": "eficiente",
+    "subtema": "testigos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Se enciende en el cuadro un testigo rojo de presión de aceite. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detenerte en cuanto sea seguro y apagar el motor.",
+        "correcta": true,
+        "explicacion": "Los testigos rojos avisan de un fallo grave."
+      },
+      {
+        "texto": "Seguir hasta el próximo taller.",
+        "correcta": false,
+        "explicacion": "Podrías averiar el motor gravemente.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Ignorarlo si el coche va bien.",
+        "correcta": false,
+        "explicacion": "Un testigo rojo nunca se ignora.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: mecánica básica",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0008",
+    "mundo": "eficiente",
+    "subtema": "anticipacion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una clave de la conducción eficiente es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Anticiparse y mantener una velocidad lo más uniforme posible.",
+        "correcta": true,
+        "explicacion": "Evitas frenazos y acelerones, que gastan mucho."
+      },
+      {
+        "texto": "Frenar fuerte y acelerar fuerte para ganar tiempo.",
+        "correcta": false,
+        "explicacion": "Gasta mucho más y es más peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Ir pegado al de delante para aprovechar su rebufo.",
+        "correcta": false,
+        "explicacion": "Además de peligroso, es una infracción.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "distancias"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0009",
+    "mundo": "eficiente",
+    "subtema": "carga",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Llevar un portaequipajes vacío en el techo…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Aumenta el consumo, porque empeora la aerodinámica.",
+        "correcta": true,
+        "explicacion": "Si no lo usas, quítalo."
+      },
+      {
+        "texto": "No influye si está vacío.",
+        "correcta": false,
+        "explicacion": "Aunque vaya vacío, opone resistencia al aire.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Reduce el consumo porque estabiliza el coche.",
+        "correcta": false,
+        "explicacion": "No: lo aumenta.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Conducción eficiente (IDAE / DGT)",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0010",
+    "mundo": "eficiente",
+    "subtema": "embrague",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Es correcto llevar el pie apoyado en el pedal del embrague mientras circulas?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, porque desgasta el embrague.",
+        "correcta": true,
+        "explicacion": "El pie debe ir en el reposapiés cuando no cambias de marcha."
+      },
+      {
+        "texto": "Sí, para cambiar de marcha más rápido.",
+        "correcta": false,
+        "explicacion": "Desgasta el embrague sin necesidad.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, en ciudad es obligatorio.",
+        "correcta": false,
+        "explicacion": "No existe esa obligación.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: mecánica básica",
+    "revisar": false
+  },
+  {
+    "id": "EFI-0011",
+    "mundo": "eficiente",
+    "subtema": "frenos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si el nivel del líquido de frenos baja, puede indicar…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Desgaste de las pastillas o una fuga en el circuito.",
+        "correcta": true,
+        "explicacion": "Hay que revisarlo cuanto antes."
+      },
+      {
+        "texto": "Que el motor está muy caliente.",
+        "correcta": false,
+        "explicacion": "No tiene relación con la temperatura del motor.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Que hace falta cambiar el aceite del motor.",
+        "correcta": false,
+        "explicacion": "Son circuitos distintos.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: mecánica básica",
+    "revisar": false
+  }
+]

@@ -11,6 +11,7 @@ import { Nivel, type ConfigPartida, type ResultadoPartida } from './Nivel'
 import { Resultados } from './Resultados'
 import { EstoyListo } from './EstoyListo'
 import { Cuaderno } from './Cuaderno'
+import { Admin } from './Admin'
 import { Juegos } from './juegos/Juegos'
 import { ReyDelCruce } from './juegos/ReyDelCruce'
 import { SenalRush } from './juegos/SenalRush'
@@ -34,6 +35,14 @@ export function App() {
   const listo = useListo()
   const vencidas = useVencidas()
   const conFallos = useConFallos()
+  const [admin, setAdmin] = useState(() => location.hash === '#admin')
+
+  // Panel de administración: se abre con #admin en la dirección.
+  useEffect(() => {
+    const alCambiar = () => setAdmin(location.hash === '#admin')
+    addEventListener('hashchange', alCambiar)
+    return () => removeEventListener('hashchange', alCambiar)
+  }, [])
 
   useEffect(() => {
     void cargar()
@@ -50,6 +59,7 @@ export function App() {
     if (!(pantalla.tipo === 'tab' && pantalla.tab === 'mapa')) window.scrollTo(0, 0)
   }, [pantalla])
 
+  if (admin) return <div className="app"><Admin /></div>
   if (!cargado) return <div className="app"><div className="cargando">Tres<span style={{ color: 'var(--bad)' }}>Fallos</span></div></div>
 
   const jugar = (config: ConfigPartida) => {

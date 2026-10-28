@@ -17,3 +17,18 @@ Registro de los datos legales usados en el banco y de dónde se han contrastado.
 | Moto A1 con B de más de 3 años, solo en España | RD 818/2009 art. 4 | Conocimiento previo, **confirmar en BOE** | — |
 
 Pendiente para la Fase 4: confirmar las filas marcadas en el BOE consolidado y añadir el resto de mundos.
+
+## Actualización Fase 4 (28‑oct‑2026)
+
+| Dato | Norma | Contrastado en | Estado |
+|---|---|---|---|
+| VMP: casco obligatorio para todos y edad mínima 15 años (desde 1‑oct‑2026) | RD 518/2026 (modifica el RGC) | Prensa y blogs coincidentes; nota de prensa DGT del 30‑sep‑2026 | **revisar** (falta leer el BOE) |
+| VMP: prohibido circular por aceras y zonas peatonales | RGC art. 121.5 (RD 970/2020) | Conocimiento previo | ok |
+| Adelantar a ciclistas: separación lateral mínima 1,5 m | RGC art. 85.4 | Varias fuentes | ok |
+| Adelantar a ciclistas a 20 km/h por debajo del límite | RD 518/2026 | **Fuentes contradictorias** | No se pregunta |
+| Ya no se puede superar el límite en 20 km/h para adelantar | Ley 18/2021 | Conocimiento previo y prensa | ok |
+| Alcohol 0,25–0,50 mg/l: 500 € y 4 puntos; más de 0,50: 1.000 € y 6 puntos | RDL 6/2015, anexo II | DGT (PDF) y prensa 2026 | ok |
+| Exceso de velocidad: con límite 120, multa sin puntos hasta 150 km/h | RDL 6/2015, anexo IV | Prensa (tablas 2026) | **revisar** |
+| Delito por velocidad: +60 km/h urbano, +80 interurbano | Código Penal art. 379.1 | Prensa | ok |
+
+**Limitación del entorno:** desde este entorno no se pueden abrir dgt.es ni boe.es (red restringida); solo buscar. Las 13 preguntas marcadas `revisar` deben confirmarse con el texto oficial antes de quitar la marca (se puede hacer en el panel `#admin`).

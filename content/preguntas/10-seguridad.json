@@ -1,0 +1,403 @@
+[
+  {
+    "id": "SEG-0001",
+    "mundo": "seguridad",
+    "subtema": "cinturon",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿En qué asientos es obligatorio el cinturón de seguridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En todos los asientos que lo tengan, delanteros y traseros.",
+        "correcta": true,
+        "explicacion": "Es obligatorio para todos los ocupantes, en ciudad y en carretera."
+      },
+      {
+        "texto": "Solo en los delanteros.",
+        "correcta": false,
+        "explicacion": "Error típico: detrás también es obligatorio.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Solo en carretera.",
+        "correcta": false,
+        "explicacion": "También en ciudad.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 117",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0002",
+    "mundo": "seguridad",
+    "subtema": "sri",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué niños deben viajar en un sistema de retención infantil?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los menores de 135 cm de estatura.",
+        "correcta": true,
+        "explicacion": "El sistema debe ser adecuado a su talla y peso."
+      },
+      {
+        "texto": "Los menores de 3 años.",
+        "correcta": false,
+        "explicacion": "La referencia es la estatura (135 cm), no la edad.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "Solo los bebés.",
+        "correcta": false,
+        "explicacion": "También los niños mayores que no llegan a 135 cm.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 117",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0003",
+    "mundo": "seguridad",
+    "subtema": "sri",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un niño de 120 cm de estatura, ¿puede viajar en el asiento delantero?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Solo en casos excepcionales (por ejemplo, si los traseros están ocupados por otros menores) y con su sistema de retención.",
+        "correcta": true,
+        "explicacion": "La norma general es que vaya detrás."
+      },
+      {
+        "texto": "Sí, siempre que lleve cinturón.",
+        "correcta": false,
+        "explicacion": "Error típico: con menos de 135 cm la norma general es ir detrás con su sistema.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Nunca, en ningún caso.",
+        "correcta": false,
+        "explicacion": "Hay excepciones previstas.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 117",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0004",
+    "mundo": "seguridad",
+    "subtema": "airbag",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si colocas una silla infantil a contramarcha en el asiento delantero, debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Desactivar el airbag frontal del acompañante.",
+        "correcta": true,
+        "explicacion": "Si el airbag se abre, golpearía la silla y al bebé."
+      },
+      {
+        "texto": "Activar el airbag para más protección.",
+        "correcta": false,
+        "explicacion": "Es justo lo contrario: sería muy peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "No hace falta hacer nada.",
+        "correcta": false,
+        "explicacion": "Hay que desactivarlo.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 117",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0005",
+    "mundo": "seguridad",
+    "subtema": "airbag",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "El airbag…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Es un complemento del cinturón: no lo sustituye.",
+        "correcta": true,
+        "explicacion": "Sin cinturón, el airbag puede incluso causar lesiones."
+      },
+      {
+        "texto": "Hace innecesario el cinturón.",
+        "correcta": false,
+        "explicacion": "Error típico: el airbag está pensado para usarse con cinturón.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo funciona a más de 100 km/h.",
+        "correcta": false,
+        "explicacion": "Se activa en impactos fuertes, no a partir de una velocidad concreta.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "dato_numerico"
+    ],
+    "fuente": "Temario DGT: seguridad pasiva",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0006",
+    "mundo": "seguridad",
+    "subtema": "activa",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál de estos es un elemento de seguridad activa?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los frenos.",
+        "correcta": true,
+        "explicacion": "La seguridad activa ayuda a evitar el accidente: frenos, dirección, neumáticos, ABS, ESP…"
+      },
+      {
+        "texto": "El cinturón de seguridad.",
+        "correcta": false,
+        "explicacion": "El cinturón es de seguridad pasiva: reduce las consecuencias del accidente.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "El reposacabezas.",
+        "correcta": false,
+        "explicacion": "Es de seguridad pasiva.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad activa y pasiva",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0007",
+    "mundo": "seguridad",
+    "subtema": "abs",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Para qué sirve el ABS?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Para evitar que las ruedas se bloqueen al frenar y poder seguir dirigiendo el vehículo.",
+        "correcta": true,
+        "explicacion": "Te permite esquivar mientras frenas fuerte."
+      },
+      {
+        "texto": "Para frenar siempre en menos distancia.",
+        "correcta": false,
+        "explicacion": "Desconfía del «siempre»: en grava o nieve puede incluso alargarla.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Para que el coche no derrape en las curvas al acelerar.",
+        "correcta": false,
+        "explicacion": "Eso se parece más al control de tracción o al ESP.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "Temario DGT: seguridad activa",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0008",
+    "mundo": "seguridad",
+    "subtema": "esp",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué hace el control de estabilidad (ESP)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Ayuda a evitar derrapes frenando ruedas de forma independiente.",
+        "correcta": true,
+        "explicacion": "Corrige la trayectoria cuando el coche empieza a irse de lado."
+      },
+      {
+        "texto": "Mantiene la velocidad constante.",
+        "correcta": false,
+        "explicacion": "Eso es el control de crucero.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Avisa cuando te sales del carril.",
+        "correcta": false,
+        "explicacion": "Eso es el aviso de cambio involuntario de carril.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad activa",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0009",
+    "mundo": "seguridad",
+    "subtema": "neumaticos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la profundidad mínima legal del dibujo de los neumáticos de un turismo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "1,6 mm.",
+        "correcta": true,
+        "explicacion": "Por debajo de 1,6 mm en las ranuras principales, el neumático no es apto."
+      },
+      {
+        "texto": "1 mm.",
+        "correcta": false,
+        "explicacion": "Te quedas corto: son 1,6 mm.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "3 mm.",
+        "correcta": false,
+        "explicacion": "3 mm es una recomendación de seguridad, no el mínimo legal.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RGV, anexo VII",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0010",
+    "mundo": "seguridad",
+    "subtema": "neumaticos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuándo se debe comprobar la presión de los neumáticos?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En frío, antes de circular o tras pocos kilómetros.",
+        "correcta": true,
+        "explicacion": "En caliente la presión sube y la medida engaña."
+      },
+      {
+        "texto": "Después de un viaje largo.",
+        "correcta": false,
+        "explicacion": "En caliente marcaría más presión de la real.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo en la ITV.",
+        "correcta": false,
+        "explicacion": "Hay que revisarla a menudo, no solo en la ITV.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "Temario DGT: neumáticos",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0011",
+    "mundo": "seguridad",
+    "subtema": "aquaplaning",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si notas que el coche flota sobre una capa de agua (aquaplaning), debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sujetar el volante con firmeza y levantar el pie del acelerador, sin frenar bruscamente.",
+        "correcta": true,
+        "explicacion": "Así el neumático recupera el contacto con el suelo poco a poco."
+      },
+      {
+        "texto": "Frenar a fondo.",
+        "correcta": false,
+        "explicacion": "Frenar de golpe puede hacerte perder el control.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Acelerar para salir del charco.",
+        "correcta": false,
+        "explicacion": "Acelerar empeora el aquaplaning.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad activa",
+    "revisar": false
+  },
+  {
+    "id": "SEG-0012",
+    "mundo": "seguridad",
+    "subtema": "reposacabezas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cómo debe estar colocado el reposacabezas?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Con su parte superior a la altura de la parte superior de la cabeza, y lo más cerca posible de ella.",
+        "correcta": true,
+        "explicacion": "Así evita el latigazo cervical en un alcance."
+      },
+      {
+        "texto": "A la altura del cuello.",
+        "correcta": false,
+        "explicacion": "Demasiado bajo: en un alcance la cabeza se iría hacia atrás.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Lo más alejado posible para ir cómodo.",
+        "correcta": false,
+        "explicacion": "Alejado no protege bien.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: seguridad pasiva",
+    "revisar": false
+  }
+]

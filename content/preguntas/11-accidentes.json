@@ -1,0 +1,401 @@
+[
+  {
+    "id": "ACC-0001",
+    "mundo": "accidentes",
+    "subtema": "pas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿En qué orden se aplica la conducta PAS ante un accidente?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Proteger, avisar y socorrer.",
+        "correcta": true,
+        "explicacion": "Primero haces segura la zona, después llamas al 112 y por último ayudas a los heridos."
+      },
+      {
+        "texto": "Socorrer, avisar y proteger.",
+        "correcta": false,
+        "explicacion": "Si socorres sin proteger, puede haber más víctimas.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Avisar, socorrer y proteger.",
+        "correcta": false,
+        "explicacion": "Proteger va primero.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0002",
+    "mundo": "accidentes",
+    "subtema": "avisar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Qué número de emergencias debes llamar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "112.",
+        "correcta": true,
+        "explicacion": "Funciona en toda la Unión Europea, gratis y desde cualquier teléfono."
+      },
+      {
+        "texto": "091.",
+        "correcta": false,
+        "explicacion": "Es el de la Policía Nacional, no el de emergencias general.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "010.",
+        "correcta": false,
+        "explicacion": "Es un teléfono de información municipal.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "Número único europeo de emergencias",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0003",
+    "mundo": "accidentes",
+    "subtema": "v16",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Desde 2026, ¿con qué se señaliza un vehículo inmovilizado en la calzada o el arcén?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Con la baliza V‑16 conectada.",
+        "correcta": true,
+        "explicacion": "Sustituye a los triángulos y se coloca sin salir a la calzada."
+      },
+      {
+        "texto": "Con los triángulos de emergencia.",
+        "correcta": false,
+        "explicacion": "Error típico: desde el 1 de enero de 2026 ya no sirven.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo con las luces de emergencia.",
+        "correcta": false,
+        "explicacion": "Las luces de emergencia ayudan, pero la V‑16 es obligatoria.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RD 159/2021 (anexo XI RGV)",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0004",
+    "mundo": "accidentes",
+    "subtema": "v16",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Dónde se coloca la baliza V‑16?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En la parte más alta del vehículo, a ser posible sin salir de él.",
+        "correcta": true,
+        "explicacion": "Así se ve desde lejos y evitas caminar por la calzada."
+      },
+      {
+        "texto": "A 50 metros por detrás del vehículo.",
+        "correcta": false,
+        "explicacion": "Eso era para los triángulos.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Dentro del coche, en la guantera.",
+        "correcta": false,
+        "explicacion": "Guardada no avisa a nadie.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RD 159/2021 (anexo XI RGV)",
+    "revisar": true
+  },
+  {
+    "id": "ACC-0005",
+    "mundo": "accidentes",
+    "subtema": "socorrer",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Como norma general, ¿se debe mover a un herido de un accidente?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, salvo que haya un peligro inmediato, como fuego o riesgo de atropello.",
+        "correcta": true,
+        "explicacion": "Moverlo puede agravar una lesión de columna."
+      },
+      {
+        "texto": "Sí, para sacarlo del coche cuanto antes.",
+        "correcta": false,
+        "explicacion": "Error típico: sacarlo sin necesidad puede empeorar sus lesiones.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, siempre que esté consciente.",
+        "correcta": false,
+        "explicacion": "Aunque esté consciente, puede tener una lesión grave.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0006",
+    "mundo": "accidentes",
+    "subtema": "motoristas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Se le debe quitar el casco a un motorista herido?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, salvo que no respire y sea imprescindible para reanimarlo.",
+        "correcta": true,
+        "explicacion": "Quitarlo mal puede dañar la columna cervical."
+      },
+      {
+        "texto": "Sí, para que respire mejor.",
+        "correcta": false,
+        "explicacion": "Si respira, el casco no le impide hacerlo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, siempre.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: lo correcto es no quitarlo salvo necesidad vital.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0007",
+    "mundo": "accidentes",
+    "subtema": "socorrer",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un herido está inconsciente pero respira. ¿En qué posición se le coloca si no hay sospecha de lesión de columna?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En posición lateral de seguridad.",
+        "correcta": true,
+        "explicacion": "Evita que se ahogue con la lengua o con vómitos."
+      },
+      {
+        "texto": "Boca arriba con las piernas levantadas.",
+        "correcta": false,
+        "explicacion": "Boca arriba podría ahogarse.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sentado.",
+        "correcta": false,
+        "explicacion": "Inconsciente no puede mantenerse sentado.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0008",
+    "mundo": "accidentes",
+    "subtema": "socorrer",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Ante una hemorragia en un brazo, lo primero es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Hacer presión directa sobre la herida con un apósito o tela limpia.",
+        "correcta": true,
+        "explicacion": "La presión directa detiene la mayoría de las hemorragias."
+      },
+      {
+        "texto": "Hacer un torniquete.",
+        "correcta": false,
+        "explicacion": "El torniquete es el último recurso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Lavar la herida con alcohol.",
+        "correcta": false,
+        "explicacion": "No detiene la hemorragia.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0009",
+    "mundo": "accidentes",
+    "subtema": "socorrer",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Se debe dar de beber a un herido de un accidente?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "Podría necesitar una operación o atragantarse."
+      },
+      {
+        "texto": "Sí, agua para que se recupere.",
+        "correcta": false,
+        "explicacion": "Error típico: no se da ni agua.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, algo con azúcar.",
+        "correcta": false,
+        "explicacion": "Tampoco.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0010",
+    "mundo": "accidentes",
+    "subtema": "deber",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si pasas junto a un accidente con heridos y no hay nadie ayudando, ¿qué ocurre si sigues sin hacer nada pudiendo ayudar sin riesgo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Puede ser un delito de omisión del deber de socorro.",
+        "correcta": true,
+        "explicacion": "Hay obligación de ayudar o, al menos, de avisar."
+      },
+      {
+        "texto": "Nada, no es tu responsabilidad.",
+        "correcta": false,
+        "explicacion": "Sí lo es si puedes ayudar sin riesgo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo una multa de tráfico.",
+        "correcta": false,
+        "explicacion": "Puede ser un delito, no solo una multa.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Código Penal, art. 195",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0011",
+    "mundo": "accidentes",
+    "subtema": "quemaduras",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Ante una quemadura, ¿qué debes hacer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Enfriarla con agua durante varios minutos.",
+        "correcta": true,
+        "explicacion": "El agua limita el daño y alivia el dolor."
+      },
+      {
+        "texto": "Aplicar pomada o aceite enseguida.",
+        "correcta": false,
+        "explicacion": "Pueden empeorar la quemadura.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Reventar las ampollas.",
+        "correcta": false,
+        "explicacion": "Aumenta el riesgo de infección.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  },
+  {
+    "id": "ACC-0012",
+    "mundo": "accidentes",
+    "subtema": "proteger",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Al llegar a un accidente, ¿qué es lo primero que haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Proteger: estacionar en lugar seguro, encender las luces de emergencia y señalizar.",
+        "correcta": true,
+        "explicacion": "Así evitas que haya más accidentes."
+      },
+      {
+        "texto": "Correr hacia los heridos.",
+        "correcta": false,
+        "explicacion": "Primero protege la zona: podrías ser atropellado.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Hacer fotos del accidente.",
+        "correcta": false,
+        "explicacion": "Lo prioritario es la seguridad y ayudar.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: primeros auxilios",
+    "revisar": false
+  }
+]

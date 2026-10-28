@@ -1,0 +1,406 @@
+[
+  {
+    "id": "VIA-0001",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Cómo se llama la parte de la carretera destinada a la circulación de vehículos?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Calzada.",
+        "correcta": true,
+        "explicacion": "La calzada es la parte de la vía destinada a la circulación de vehículos; se divide en carriles."
+      },
+      {
+        "texto": "Arcén.",
+        "correcta": false,
+        "explicacion": "El arcén es la franja lateral de la calzada, no destinada normalmente a los automóviles.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Acera.",
+        "correcta": false,
+        "explicacion": "La acera es para los peatones.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0002",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "El arcén es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La franja longitudinal junto a la calzada que no está destinada a los automóviles, salvo en casos excepcionales.",
+        "correcta": true,
+        "explicacion": "Así lo define la Ley de Tráfico. Lo usan, por ejemplo, ciclistas o vehículos averiados."
+      },
+      {
+        "texto": "Un carril más que se puede usar para adelantar.",
+        "correcta": false,
+        "explicacion": "Error típico: el arcén no es un carril de adelantamiento.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "La zona de la acera reservada a las bicicletas.",
+        "correcta": false,
+        "explicacion": "Eso sería un carril bici o una acera bici, no el arcén.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0003",
+    "mundo": "via",
+    "subtema": "sentido",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Como norma general, en España se circula…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por la derecha.",
+        "correcta": true,
+        "explicacion": "Es la norma general de circulación en España."
+      },
+      {
+        "texto": "Por el centro de la calzada.",
+        "correcta": false,
+        "explicacion": "Por el centro no: hay que circular lo más cerca posible del borde derecho.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Por el carril que prefieras.",
+        "correcta": false,
+        "explicacion": "No es libre: la norma general es circular por la derecha.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 29",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0004",
+    "mundo": "via",
+    "subtema": "carriles",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En poblado, en una calzada con dos carriles por sentido delimitados por marcas, ¿qué carril debes usar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El que mejor convenga a tu destino, sin cambiar de carril sin motivo.",
+        "correcta": true,
+        "explicacion": "En poblado puedes usar el carril que más te convenga para tu destino."
+      },
+      {
+        "texto": "Siempre el de la derecha.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: circular por la derecha y usar el resto para adelantar es la norma fuera de poblado.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "El de la izquierda, porque es el más rápido.",
+        "correcta": false,
+        "explicacion": "No hay carril «rápido» en ciudad: eliges según tu destino.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC, utilización de los carriles en poblado",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0005",
+    "mundo": "via",
+    "subtema": "carriles",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Fuera de poblado, en una autovía con tres carriles por sentido, ¿por qué carril debes circular normalmente?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por el de la derecha, y usar los demás cuando la circulación lo aconseje o para adelantar.",
+        "correcta": true,
+        "explicacion": "Fuera de poblado se circula por la derecha; los otros carriles se usan cuando hace falta."
+      },
+      {
+        "texto": "Por el central, que es el más seguro.",
+        "correcta": false,
+        "explicacion": "El central se usa cuando la densidad del tráfico lo aconseja, no como carril habitual.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Por el que quieras, mientras respetes la velocidad.",
+        "correcta": false,
+        "explicacion": "Fuera de poblado no es libre: la norma es el carril derecho.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC, utilización de los carriles fuera de poblado",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0006",
+    "mundo": "via",
+    "subtema": "ciclistas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Fuera de poblado, en una carretera con arcén transitable, ¿por dónde debe circular un ciclista?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por el arcén de la derecha.",
+        "correcta": true,
+        "explicacion": "Si el arcén es transitable y suficiente, el ciclista debe circular por él."
+      },
+      {
+        "texto": "Siempre por el centro del carril para que lo vean.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: si hay arcén transitable, debe usarlo.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Por el arcén de la izquierda, de frente a los coches.",
+        "correcta": false,
+        "explicacion": "Por la izquierda caminan los peatones, no los ciclistas.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 36",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0007",
+    "mundo": "via",
+    "subtema": "ciclistas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cómo pueden circular los ciclistas en grupo por una carretera?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En columna de a dos como máximo, lo más a la derecha posible.",
+        "correcta": true,
+        "explicacion": "Pueden ir de dos en dos, pegados a la derecha, y en fila si hay poca visibilidad o mucho tráfico."
+      },
+      {
+        "texto": "En columna de a tres si el grupo es grande.",
+        "correcta": false,
+        "explicacion": "Más de dos en paralelo no está permitido.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "Nunca en paralelo: siempre en fila de uno.",
+        "correcta": false,
+        "explicacion": "Desconfía del «nunca»: en columna de a dos sí pueden.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 36",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0008",
+    "mundo": "via",
+    "subtema": "peatones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un peatón camina por una carretera sin acera ni arcén practicable. ¿Por dónde debe hacerlo?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por la izquierda, de frente a los vehículos que se le acercan.",
+        "correcta": true,
+        "explicacion": "Así ve venir a los vehículos y puede apartarse."
+      },
+      {
+        "texto": "Por la derecha, en el mismo sentido que los coches.",
+        "correcta": false,
+        "explicacion": "Por la derecha no ve a los coches que vienen por detrás: es más peligroso.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Por el centro de la calzada, para que le vean mejor.",
+        "correcta": false,
+        "explicacion": "El centro de la calzada es lo más peligroso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 122",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0009",
+    "mundo": "via",
+    "subtema": "vmp",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Puede circular un patinete eléctrico (VMP) por la acera?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, está prohibido circular por aceras y zonas peatonales.",
+        "correcta": true,
+        "explicacion": "Los VMP no pueden circular por aceras ni zonas peatonales."
+      },
+      {
+        "texto": "Sí, si va despacio y no molesta.",
+        "correcta": false,
+        "explicacion": "Aunque vaya despacio, la acera es para peatones.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Sí, cuando no hay carril bici.",
+        "correcta": false,
+        "explicacion": "No: sin carril bici, circulan por la calzada donde lo permita la norma municipal.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 121.5 (reforma RD 970/2020)",
+    "revisar": false
+  },
+  {
+    "id": "VIA-0010",
+    "mundo": "via",
+    "subtema": "vmp",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Desde octubre de 2026, ¿qué edad mínima se exige para conducir un patinete eléctrico (VMP)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "15 años.",
+        "correcta": true,
+        "explicacion": "La reforma de los usuarios vulnerables fija la edad mínima en 15 años."
+      },
+      {
+        "texto": "14 años.",
+        "correcta": false,
+        "explicacion": "Te quedas corto: son 15 años.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "18 años.",
+        "correcta": false,
+        "explicacion": "No hace falta la mayoría de edad: son 15 años.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RD 518/2026 (modifica el RGC)",
+    "revisar": true
+  },
+  {
+    "id": "VIA-0011",
+    "mundo": "via",
+    "subtema": "vmp",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Desde octubre de 2026, el casco para conducir un patinete eléctrico (VMP)…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Es obligatorio para todos sus conductores.",
+        "correcta": true,
+        "explicacion": "La reforma lo hace obligatorio para cualquier conductor de VMP."
+      },
+      {
+        "texto": "Solo es obligatorio para menores de 16 años.",
+        "correcta": false,
+        "explicacion": "Error típico: era la norma en algunos municipios, pero ahora es obligatorio para todos.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Solo se recomienda.",
+        "correcta": false,
+        "explicacion": "Ya no es una recomendación: es obligatorio.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RD 518/2026 (modifica el RGC)",
+    "revisar": true
+  },
+  {
+    "id": "VIA-0012",
+    "mundo": "via",
+    "subtema": "definiciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es un carril?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cada una de las bandas longitudinales en que se divide la calzada, con anchura suficiente para una fila de automóviles.",
+        "correcta": true,
+        "explicacion": "Los carriles pueden estar delimitados o no por marcas viales."
+      },
+      {
+        "texto": "La franja lateral de la carretera reservada a vehículos lentos.",
+        "correcta": false,
+        "explicacion": "Eso se parece más al arcén o a un carril adicional, no a la definición de carril.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo la banda que está pintada con líneas continuas.",
+        "correcta": false,
+        "explicacion": "Un carril existe aunque no tenga marcas: basta con que tenga anchura para una fila de automóviles.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  }
+]

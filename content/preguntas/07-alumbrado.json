@@ -1,0 +1,336 @@
+[
+  {
+    "id": "ALU-0001",
+    "mundo": "alumbrado",
+    "subtema": "cruce",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Circulas de noche con la luz de carretera (largas) y se acerca un vehículo de frente. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cambiar a la luz de cruce para no deslumbrarle.",
+        "correcta": true,
+        "explicacion": "Hay que evitar deslumbrar a los demás."
+      },
+      {
+        "texto": "Mantener las largas para verle mejor.",
+        "correcta": false,
+        "explicacion": "Le deslumbrarías y podría perder el control.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Apagar todas las luces un momento.",
+        "correcta": false,
+        "explicacion": "Nunca apagues las luces de noche: no te verían.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 100",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0002",
+    "mundo": "alumbrado",
+    "subtema": "carretera",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una vía urbana suficientemente iluminada, ¿puedes usar la luz de carretera (largas)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No.",
+        "correcta": true,
+        "explicacion": "En vías urbanas bien iluminadas está prohibido usar las largas."
+      },
+      {
+        "texto": "Sí, si no viene nadie.",
+        "correcta": false,
+        "explicacion": "Aunque no venga nadie, está prohibido en vía urbana iluminada.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Sí, siempre que vayas despacio.",
+        "correcta": false,
+        "explicacion": "La velocidad no cambia la prohibición.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 100",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0003",
+    "mundo": "alumbrado",
+    "subtema": "motos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "De día, ¿qué alumbrado deben llevar encendido las motocicletas?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El de corto alcance o cruce.",
+        "correcta": true,
+        "explicacion": "Las motos deben circular de día con la luz de cruce encendida para ser más visibles."
+      },
+      {
+        "texto": "Ninguno.",
+        "correcta": false,
+        "explicacion": "Error típico: las motos llevan la de cruce también de día.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "La luz de carretera.",
+        "correcta": false,
+        "explicacion": "La de carretera deslumbraría a los demás.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 104",
+    "revisar": true
+  },
+  {
+    "id": "ALU-0004",
+    "mundo": "alumbrado",
+    "subtema": "tuneles",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al entrar en un túnel de día, aunque esté iluminado, debes llevar encendida…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La luz de cruce.",
+        "correcta": true,
+        "explicacion": "En túneles es obligatorio el alumbrado de cruce, aunque estén iluminados."
+      },
+      {
+        "texto": "Solo la luz de posición.",
+        "correcta": false,
+        "explicacion": "La de posición no basta en un túnel.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Ninguna luz si el túnel está iluminado.",
+        "correcta": false,
+        "explicacion": "Aunque esté iluminado, la luz de cruce es obligatoria.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 104",
+    "revisar": true
+  },
+  {
+    "id": "ALU-0005",
+    "mundo": "alumbrado",
+    "subtema": "antiniebla",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuándo se puede usar la luz antiniebla trasera?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Con niebla espesa, lluvia muy intensa, nieve o nubes de polvo o humo que reduzcan mucho la visibilidad.",
+        "correcta": true,
+        "explicacion": "Solo en esas condiciones: si no, deslumbra al de detrás."
+      },
+      {
+        "texto": "Siempre que llueva.",
+        "correcta": false,
+        "explicacion": "No basta con cualquier lluvia: tiene que ser muy intensa.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "De noche en carreteras sin iluminar.",
+        "correcta": false,
+        "explicacion": "La oscuridad no justifica la antiniebla trasera.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 106",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0006",
+    "mundo": "alumbrado",
+    "subtema": "deslumbramiento",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si un vehículo que viene de frente te deslumbra, debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Reducir la velocidad y mirar hacia el borde derecho de la calzada.",
+        "correcta": true,
+        "explicacion": "Así mantienes la referencia del carril sin mirar a los faros."
+      },
+      {
+        "texto": "Responder con las largas para que las quite.",
+        "correcta": false,
+        "explicacion": "Deslumbrarle también aumenta el peligro para los dos.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Cerrar los ojos un momento.",
+        "correcta": false,
+        "explicacion": "Nunca: perderías el control.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "Temario DGT: alumbrado",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0007",
+    "mundo": "alumbrado",
+    "subtema": "claxon",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En poblado, ¿cuándo se puede usar el claxon?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Para evitar un posible accidente.",
+        "correcta": true,
+        "explicacion": "En poblado solo se permite para evitar un accidente."
+      },
+      {
+        "texto": "Para avisar de que vas a adelantar.",
+        "correcta": false,
+        "explicacion": "Fuera de poblado sí se puede para avisar de un adelantamiento, pero en poblado no.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Para saludar o meter prisa.",
+        "correcta": false,
+        "explicacion": "Nunca para eso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 110",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0008",
+    "mundo": "alumbrado",
+    "subtema": "rafagas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Para qué se pueden usar los destellos (ráfagas) de luz?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Para advertir a otro conductor, por ejemplo, de que vas a adelantarle.",
+        "correcta": true,
+        "explicacion": "Sustituyen o complementan al claxon y no molestan con ruido."
+      },
+      {
+        "texto": "Para saludar a otro conductor.",
+        "correcta": false,
+        "explicacion": "No es un uso previsto: las ráfagas son advertencias.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Para avisar de un control policial.",
+        "correcta": false,
+        "explicacion": "No es un uso permitido de las ráfagas.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 109",
+    "revisar": false
+  },
+  {
+    "id": "ALU-0009",
+    "mundo": "alumbrado",
+    "subtema": "posicion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "De noche, en vía interurbana, ¿qué luz debes llevar como mínimo encendida al circular?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La de cruce o la de carretera, según el caso, además de la de posición.",
+        "correcta": true,
+        "explicacion": "La de posición sola no basta para circular de noche."
+      },
+      {
+        "texto": "Solo la luz de posición.",
+        "correcta": false,
+        "explicacion": "La de posición sirve para ser visto parado, no para circular.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "Solo las luces de emergencia.",
+        "correcta": false,
+        "explicacion": "Las de emergencia son para avisar de un peligro o una inmovilización.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC art. 99",
+    "revisar": true
+  },
+  {
+    "id": "ALU-0010",
+    "mundo": "alumbrado",
+    "subtema": "emergencia",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Tu vehículo se queda inmovilizado en la calzada por una avería. ¿Qué luces debes encender?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Las luces de emergencia.",
+        "correcta": true,
+        "explicacion": "Avisan a los demás de que estás parado; además, coloca la baliza V‑16."
+      },
+      {
+        "texto": "Las antiniebla traseras.",
+        "correcta": false,
+        "explicacion": "No son para avisar de una inmovilización.",
+        "error_tipo": "alumbrado"
+      },
+      {
+        "texto": "La luz de carretera.",
+        "correcta": false,
+        "explicacion": "Deslumbrarías y no indica que estás parado.",
+        "error_tipo": "alumbrado"
+      }
+    ],
+    "error_tipo": [
+      "alumbrado"
+    ],
+    "fuente": "RGC (señalización de vehículos inmovilizados)",
+    "revisar": false
+  }
+]

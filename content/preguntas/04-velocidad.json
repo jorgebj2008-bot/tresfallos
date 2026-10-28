@@ -1,0 +1,435 @@
+[
+  {
+    "id": "VEL-0001",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la velocidad máxima genérica de un turismo en autopistas y autovías?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "120 km/h.",
+        "correcta": true,
+        "explicacion": "Es el límite genérico para turismos y motocicletas."
+      },
+      {
+        "texto": "130 km/h.",
+        "correcta": false,
+        "explicacion": "En España no existe el límite genérico de 130 km/h.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "100 km/h.",
+        "correcta": false,
+        "explicacion": "100 km/h es para otros vehículos, no para turismos.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0002",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la velocidad máxima genérica de un turismo en una carretera convencional?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "90 km/h.",
+        "correcta": true,
+        "explicacion": "Desde 2019, el límite genérico en carreteras convencionales es de 90 km/h."
+      },
+      {
+        "texto": "100 km/h.",
+        "correcta": false,
+        "explicacion": "Error típico: era el límite antiguo en algunas carreteras con arcén ancho; se eliminó en 2019.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "80 km/h.",
+        "correcta": false,
+        "explicacion": "80 km/h es para otros vehículos, como camiones o turismos con remolque.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0003",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una vía urbana con un único carril por sentido, ¿cuál es el límite genérico?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "30 km/h.",
+        "correcta": true,
+        "explicacion": "Desde 2021: 30 km/h en vías de un carril por sentido."
+      },
+      {
+        "texto": "50 km/h.",
+        "correcta": false,
+        "explicacion": "50 km/h es para vías con dos o más carriles por sentido.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "20 km/h.",
+        "correcta": false,
+        "explicacion": "20 km/h es para plataforma única de calzada y acera.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 50",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0004",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una calle de plataforma única (calzada y acera al mismo nivel), el límite genérico es de…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "20 km/h.",
+        "correcta": true,
+        "explicacion": "Es el límite más bajo, porque peatones y vehículos comparten espacio."
+      },
+      {
+        "texto": "30 km/h.",
+        "correcta": false,
+        "explicacion": "30 km/h es para un carril por sentido.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "10 km/h.",
+        "correcta": false,
+        "explicacion": "No existe ese límite genérico.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 50",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0005",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una vía urbana con dos o más carriles por sentido, el límite genérico es de…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "50 km/h.",
+        "correcta": true,
+        "explicacion": "Con dos o más carriles por sentido, el límite genérico urbano es 50 km/h."
+      },
+      {
+        "texto": "60 km/h.",
+        "correcta": false,
+        "explicacion": "En vía urbana el máximo genérico es 50.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "30 km/h.",
+        "correcta": false,
+        "explicacion": "30 km/h es para un único carril por sentido.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 50",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0006",
+    "mundo": "velocidad",
+    "subtema": "minimas",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En una autopista o autovía, ¿a qué velocidad no se debe circular por debajo (salvo causa justificada)?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "60 km/h.",
+        "correcta": true,
+        "explicacion": "Circular más despacio es una velocidad anormalmente reducida y peligrosa."
+      },
+      {
+        "texto": "80 km/h.",
+        "correcta": false,
+        "explicacion": "La mínima en autopista no es 80.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "No hay velocidad mínima.",
+        "correcta": false,
+        "explicacion": "Sí la hay: circular demasiado despacio también es peligroso.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 49",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0007",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "La distancia de detención es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La suma de la distancia de reacción y la distancia de frenado.",
+        "correcta": true,
+        "explicacion": "Primero reaccionas (sin frenar todavía) y después frenas."
+      },
+      {
+        "texto": "Solo la distancia que recorres mientras frenas.",
+        "correcta": false,
+        "explicacion": "Eso es solo la distancia de frenado.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "La distancia que debes dejar con el vehículo de delante.",
+        "correcta": false,
+        "explicacion": "Eso es la distancia de seguridad.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "distancias"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0008",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Si duplicas la velocidad, la distancia de frenado…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Se multiplica aproximadamente por cuatro.",
+        "correcta": true,
+        "explicacion": "La distancia de frenado depende del cuadrado de la velocidad."
+      },
+      {
+        "texto": "Se duplica.",
+        "correcta": false,
+        "explicacion": "Error típico: no es proporcional, crece mucho más rápido.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "Se mantiene igual si los frenos son buenos.",
+        "correcta": false,
+        "explicacion": "Con buenos frenos sigue creciendo con el cuadrado de la velocidad.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0009",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una forma práctica de comprobar la distancia de seguridad en condiciones normales es dejar al menos…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "2 segundos con el vehículo de delante.",
+        "correcta": true,
+        "explicacion": "Cuando el de delante pase un punto fijo, cuenta: debes tardar al menos 2 segundos en llegar a él."
+      },
+      {
+        "texto": "Medio segundo.",
+        "correcta": false,
+        "explicacion": "Es muy poco: no te daría tiempo a reaccionar.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "Un coche de distancia, sea cual sea la velocidad.",
+        "correcta": false,
+        "explicacion": "La distancia debe crecer con la velocidad.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "distancias"
+    ],
+    "fuente": "Recomendación DGT (regla de los 2 segundos)",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0010",
+    "mundo": "velocidad",
+    "subtema": "distancias",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Con lluvia, la distancia de seguridad…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Debe aumentar, porque se tarda más en frenar.",
+        "correcta": true,
+        "explicacion": "El firme mojado alarga la distancia de frenado."
+      },
+      {
+        "texto": "Puede ser la misma si llevas ABS.",
+        "correcta": false,
+        "explicacion": "El ABS no acorta la frenada en mojado lo suficiente: hay que dejar más distancia.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Puede reducirse porque se circula más despacio.",
+        "correcta": false,
+        "explicacion": "Aunque vayas más despacio, el agarre es menor.",
+        "error_tipo": "distancias"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "distancias"
+    ],
+    "fuente": "RGC art. 54",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0011",
+    "mundo": "velocidad",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al adelantar en una carretera convencional limitada a 90 km/h, ¿puedes superar ese límite?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No: desde 2022 no se permite superar el límite para adelantar.",
+        "correcta": true,
+        "explicacion": "Antes se permitían 20 km/h más; esa excepción se eliminó."
+      },
+      {
+        "texto": "Sí, hasta 20 km/h más.",
+        "correcta": false,
+        "explicacion": "Error típico: era la norma antigua, ya derogada.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "Sí, lo necesario para adelantar rápido.",
+        "correcta": false,
+        "explicacion": "Nunca se puede superar el límite para adelantar.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "Ley 18/2021 (modifica el RDL 6/2015)",
+    "revisar": false
+  },
+  {
+    "id": "VEL-0012",
+    "mundo": "velocidad",
+    "subtema": "limites",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la velocidad máxima genérica de un turismo con remolque en autopista o autovía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "90 km/h.",
+        "correcta": true,
+        "explicacion": "Los automóviles con remolque tienen límites más bajos: 90 en autopista y 80 en convencional."
+      },
+      {
+        "texto": "120 km/h.",
+        "correcta": false,
+        "explicacion": "120 es para turismos sin remolque.",
+        "error_tipo": "numero_velocidad"
+      },
+      {
+        "texto": "100 km/h.",
+        "correcta": false,
+        "explicacion": "100 km/h es para otros vehículos, como autobuses o derivados de turismo.",
+        "error_tipo": "numero_velocidad"
+      }
+    ],
+    "error_tipo": [
+      "numero_velocidad"
+    ],
+    "fuente": "RGC art. 48",
+    "revisar": true
+  },
+  {
+    "id": "VEL-0013",
+    "mundo": "velocidad",
+    "subtema": "reaccion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "El alcohol y la fatiga afectan a la distancia de detención porque…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Aumentan el tiempo de reacción y, con él, la distancia de reacción.",
+        "correcta": true,
+        "explicacion": "Mientras tardas en reaccionar, el coche sigue avanzando a la misma velocidad."
+      },
+      {
+        "texto": "Solo afectan a la distancia de frenado.",
+        "correcta": false,
+        "explicacion": "La frenada depende del coche y del firme; lo que empeora es tu reacción.",
+        "error_tipo": "distancias"
+      },
+      {
+        "texto": "No la afectan si conduces despacio.",
+        "correcta": false,
+        "explicacion": "Aunque vayas despacio, reaccionas más tarde.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "distancias"
+    ],
+    "fuente": "Temario DGT: velocidad y distancias",
+    "revisar": false
+  }
+]

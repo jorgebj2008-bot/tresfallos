@@ -1,0 +1,371 @@
+[
+  {
+    "id": "MAN-0001",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Como norma general, ¿por qué lado se adelanta?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Por la izquierda.",
+        "correcta": true,
+        "explicacion": "Es la norma general de adelantamiento."
+      },
+      {
+        "texto": "Por el lado que esté libre.",
+        "correcta": false,
+        "explicacion": "No se elige: la norma es por la izquierda, con pocas excepciones.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Por la derecha.",
+        "correcta": false,
+        "explicacion": "Por la derecha solo en casos concretos.",
+        "error_tipo": "maniobra_adelantamiento"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "maniobra_adelantamiento"
+    ],
+    "fuente": "RGC art. 82",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0002",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuándo se puede adelantar por la derecha?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cuando el de delante indica que va a girar a la izquierda y se ha ceñido a ese lado.",
+        "correcta": true,
+        "explicacion": "Es una de las excepciones permitidas."
+      },
+      {
+        "texto": "Siempre que el carril derecho esté libre.",
+        "correcta": false,
+        "explicacion": "Ojo con el «siempre»: es la excepción, no la norma.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Nunca.",
+        "correcta": false,
+        "explicacion": "Desconfía del «nunca»: hay excepciones, como esta.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 82",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0003",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Al adelantar a un ciclista, ¿qué separación lateral mínima debes dejar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "1,5 metros.",
+        "correcta": true,
+        "explicacion": "Es la separación mínima; si no cabe, no adelantes."
+      },
+      {
+        "texto": "50 centímetros.",
+        "correcta": false,
+        "explicacion": "Es demasiado poco: un ciclista puede desviarse por el viento o un bache.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "1 metro.",
+        "correcta": false,
+        "explicacion": "Te quedas corto: son 1,5 metros.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RGC art. 85.4",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0004",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Dónde está prohibido adelantar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En curvas y cambios de rasante de visibilidad reducida.",
+        "correcta": true,
+        "explicacion": "No ves lo que viene de frente: es una de las prohibiciones."
+      },
+      {
+        "texto": "En cualquier recta.",
+        "correcta": false,
+        "explicacion": "En las rectas con visibilidad suficiente sí se puede adelantar si la señalización lo permite.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "En vías de un solo carril por sentido.",
+        "correcta": false,
+        "explicacion": "En carretera convencional se adelanta invadiendo el carril contrario cuando está permitido.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 87",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0005",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Se puede adelantar en un paso para peatones señalizado?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, está prohibido.",
+        "correcta": true,
+        "explicacion": "Un vehículo podría estar tapando a un peatón que cruza."
+      },
+      {
+        "texto": "Sí, si no hay peatones a la vista.",
+        "correcta": false,
+        "explicacion": "Aunque no veas peatones, el de delante puede ocultarte alguno.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Sí, si vas por el carril izquierdo.",
+        "correcta": false,
+        "explicacion": "Está prohibido por ambos lados.",
+        "error_tipo": "maniobra_adelantamiento"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "maniobra_adelantamiento"
+    ],
+    "fuente": "RGC art. 87",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0006",
+    "mundo": "maniobras",
+    "subtema": "adelantar",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Te están adelantando. ¿Qué debes hacer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Ceñirte a la derecha y no aumentar la velocidad.",
+        "correcta": true,
+        "explicacion": "Así facilitas que el adelantamiento termine pronto y seguro."
+      },
+      {
+        "texto": "Acelerar para que el adelantamiento sea más corto.",
+        "correcta": false,
+        "explicacion": "Acelerar alarga el adelantamiento y lo hace más peligroso.",
+        "error_tipo": "maniobra_adelantamiento"
+      },
+      {
+        "texto": "Frenar bruscamente.",
+        "correcta": false,
+        "explicacion": "Frenar de golpe puede provocar un alcance.",
+        "error_tipo": "maniobra_adelantamiento"
+      }
+    ],
+    "error_tipo": [
+      "maniobra_adelantamiento"
+    ],
+    "fuente": "RGC art. 86",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0007",
+    "mundo": "maniobras",
+    "subtema": "marcha-atras",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Como norma general, ¿qué recorrido máximo se permite en marcha atrás?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "15 metros, sin invadir un cruce.",
+        "correcta": true,
+        "explicacion": "La marcha atrás es una maniobra excepcional y corta."
+      },
+      {
+        "texto": "50 metros.",
+        "correcta": false,
+        "explicacion": "Es demasiado: el límite es 15 metros.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "No hay límite si vas despacio.",
+        "correcta": false,
+        "explicacion": "Sí hay límite: 15 metros.",
+        "error_tipo": "dato_numerico"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico"
+    ],
+    "fuente": "RGC art. 80",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0008",
+    "mundo": "maniobras",
+    "subtema": "marcha-atras",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Se puede circular marcha atrás en una autovía?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No, está prohibido.",
+        "correcta": true,
+        "explicacion": "En autopistas y autovías la marcha atrás está prohibida."
+      },
+      {
+        "texto": "Sí, por el arcén si te has pasado la salida.",
+        "correcta": false,
+        "explicacion": "Error típico: si te pasas la salida, sigue hasta la siguiente.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Sí, si no viene nadie.",
+        "correcta": false,
+        "explicacion": "Aunque no venga nadie, está prohibido.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 80",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0009",
+    "mundo": "maniobras",
+    "subtema": "cambio-sentido",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Dónde está prohibido hacer un cambio de sentido?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "En los túneles.",
+        "correcta": true,
+        "explicacion": "También en pasos a nivel, curvas y cambios de rasante de visibilidad reducida, y donde lo prohíba la señalización."
+      },
+      {
+        "texto": "En cualquier vía urbana.",
+        "correcta": false,
+        "explicacion": "En vía urbana se puede, salvo prohibición o peligro.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Solo en autopistas.",
+        "correcta": false,
+        "explicacion": "No solo en autopistas: hay más lugares prohibidos.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 79",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0010",
+    "mundo": "maniobras",
+    "subtema": "parada",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué es una parada?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La inmovilización de un vehículo durante menos de dos minutos, sin que el conductor lo abandone.",
+        "correcta": true,
+        "explicacion": "Si dura más o el conductor se va, es estacionamiento."
+      },
+      {
+        "texto": "Cualquier inmovilización de menos de diez minutos.",
+        "correcta": false,
+        "explicacion": "El tiempo máximo de la parada es de dos minutos.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "La inmovilización por un atasco o un semáforo.",
+        "correcta": false,
+        "explicacion": "Eso es una detención, no una parada.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "dato_numerico"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo I",
+    "revisar": false
+  },
+  {
+    "id": "MAN-0011",
+    "mundo": "maniobras",
+    "subtema": "senalizar",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Antes de cambiar de carril debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Comprobar que puedes hacerlo con seguridad y señalizarlo con antelación.",
+        "correcta": true,
+        "explicacion": "Primero miras (espejos y ángulo muerto) y avisas con el intermitente."
+      },
+      {
+        "texto": "Poner el intermitente justo mientras te cambias.",
+        "correcta": false,
+        "explicacion": "El aviso debe llegar con antelación, no a la vez.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Cambiarte rápido para no molestar.",
+        "correcta": false,
+        "explicacion": "La rapidez no sustituye a comprobar y señalizar.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 109",
+    "revisar": false
+  }
+]

@@ -1,0 +1,437 @@
+[
+  {
+    "id": "SEN-0001",
+    "mundo": "senales",
+    "subtema": "jerarquia",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un agente te indica que pases, pero el semáforo está en rojo. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Pasar, obedeciendo al agente.",
+        "correcta": true,
+        "explicacion": "Las órdenes de los agentes están por encima de semáforos y señales."
+      },
+      {
+        "texto": "Esperar a que el semáforo se ponga en verde.",
+        "correcta": false,
+        "explicacion": "Error típico: el semáforo está por debajo del agente en la jerarquía.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "Detenerte y pasar solo si no viene nadie.",
+        "correcta": false,
+        "explicacion": "No hace falta: el agente te da paso.",
+        "error_tipo": "jerarquia_senales"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales"
+    ],
+    "fuente": "RGC art. 133",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0002",
+    "mundo": "senales",
+    "subtema": "jerarquia",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En un cruce hay un semáforo funcionando en verde para ti y una señal de STOP. ¿Qué prevalece?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El semáforo: puedes pasar con precaución.",
+        "correcta": true,
+        "explicacion": "Los semáforos prevalecen sobre las señales verticales."
+      },
+      {
+        "texto": "El STOP: debes detenerte siempre.",
+        "correcta": false,
+        "explicacion": "El STOP solo manda cuando el semáforo está apagado o en ámbar intermitente.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "Lo que diga la marca vial del suelo.",
+        "correcta": false,
+        "explicacion": "Las marcas viales están en lo más bajo de la jerarquía.",
+        "error_tipo": "jerarquia_senales"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales"
+    ],
+    "fuente": "RGC art. 133",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0003",
+    "mundo": "senales",
+    "subtema": "jerarquia",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Si una señal vertical contradice a una marca vial, ¿cuál debes obedecer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "La señal vertical.",
+        "correcta": true,
+        "explicacion": "La señal vertical prevalece sobre la marca vial."
+      },
+      {
+        "texto": "La marca vial, porque está más cerca.",
+        "correcta": false,
+        "explicacion": "Estar más cerca no la hace más importante.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "La que sea más restrictiva siempre.",
+        "correcta": false,
+        "explicacion": "Desconfía del «siempre»: el orden lo marca la jerarquía, no lo restrictivo.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 133",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0004",
+    "mundo": "senales",
+    "subtema": "agentes",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un agente tiene el brazo levantado verticalmente. ¿Qué significa?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que deben detenerse todos los que se acerquen, salvo los que ya no puedan hacerlo con seguridad.",
+        "correcta": true,
+        "explicacion": "Es la señal de «alto» general."
+      },
+      {
+        "texto": "Que puedes pasar con precaución.",
+        "correcta": false,
+        "explicacion": "Al revés: es una orden de detenerse.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "Que solo deben parar los que vienen por su derecha.",
+        "correcta": false,
+        "explicacion": "La señal afecta a todos los que se acercan.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 143",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0005",
+    "mundo": "senales",
+    "subtema": "agentes",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un agente tiene los brazos extendidos horizontalmente y tú te acercas de frente a él. ¿Qué debes hacer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detenerte.",
+        "correcta": true,
+        "explicacion": "Los brazos en horizontal obligan a parar a quienes se acercan en dirección que corta la de sus brazos, es decir, de frente o por detrás."
+      },
+      {
+        "texto": "Pasar, porque te está abriendo paso.",
+        "correcta": false,
+        "explicacion": "Error típico: pueden pasar los que circulan en la dirección de sus brazos, no los que vienen de frente.",
+        "error_tipo": "jerarquia_senales"
+      },
+      {
+        "texto": "Girar a la derecha.",
+        "correcta": false,
+        "explicacion": "La señal no indica un giro.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "jerarquia_senales",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 143",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0006",
+    "mundo": "senales",
+    "subtema": "semaforos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Ante un semáforo en ámbar fijo, debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detenerte, salvo que estés tan cerca que no puedas hacerlo con seguridad.",
+        "correcta": true,
+        "explicacion": "El ámbar fijo obliga a parar en las mismas condiciones que el rojo, salvo que ya no puedas frenar con seguridad."
+      },
+      {
+        "texto": "Acelerar para pasar antes de que se ponga rojo.",
+        "correcta": false,
+        "explicacion": "Acelerar en ámbar es un error típico y peligroso.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Pasar siempre con precaución.",
+        "correcta": false,
+        "explicacion": "El ámbar fijo no es como el intermitente: obliga a parar.",
+        "error_tipo": "trampa_siempre_nunca"
+      }
+    ],
+    "error_tipo": [
+      "lectura_matiz",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 146",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0007",
+    "mundo": "senales",
+    "subtema": "semaforos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un semáforo en ámbar intermitente significa que…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Debes extremar la precaución y, si es necesario, ceder el paso.",
+        "correcta": true,
+        "explicacion": "El ámbar intermitente no obliga a parar, pero sí a ir con mucho cuidado y respetar las prioridades."
+      },
+      {
+        "texto": "Debes detenerte siempre.",
+        "correcta": false,
+        "explicacion": "Eso es el rojo o el ámbar fijo.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Tienes prioridad sobre todos.",
+        "correcta": false,
+        "explicacion": "No te da prioridad: manda la señalización o la norma general.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 146",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0008",
+    "mundo": "senales",
+    "subtema": "prioridad",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Ante una señal de STOP debes…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detenerte siempre en la línea de detención y ceder el paso.",
+        "correcta": true,
+        "explicacion": "El STOP obliga a parar aunque no venga nadie."
+      },
+      {
+        "texto": "Detenerte solo si viene alguien.",
+        "correcta": false,
+        "explicacion": "Error típico: con STOP hay que parar siempre, aunque la vía esté libre.",
+        "error_tipo": "trampa_siempre_nunca"
+      },
+      {
+        "texto": "Reducir la velocidad sin necesidad de parar.",
+        "correcta": false,
+        "explicacion": "Eso se parece al ceda el paso, no al STOP.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales",
+      "trampa_siempre_nunca"
+    ],
+    "fuente": "RGC art. 151",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0009",
+    "mundo": "senales",
+    "subtema": "marcas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Una línea longitudinal continua en el centro de la calzada significa que, como norma general…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Ningún vehículo debe atravesarla ni circular sobre ella.",
+        "correcta": true,
+        "explicacion": "Es una marca de prohibición: no se cruza ni se pisa."
+      },
+      {
+        "texto": "Se puede cruzar si no viene nadie de frente.",
+        "correcta": false,
+        "explicacion": "Aunque no venga nadie, la línea continua prohíbe cruzarla.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Solo prohíbe cruzarla de noche.",
+        "correcta": false,
+        "explicacion": "La prohibición vale a cualquier hora.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 167",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0010",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Las señales de advertencia de peligro tienen forma de…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Triángulo con borde rojo.",
+        "correcta": true,
+        "explicacion": "El triángulo avisa de un peligro."
+      },
+      {
+        "texto": "Círculo con borde rojo.",
+        "correcta": false,
+        "explicacion": "El círculo con borde rojo es de prohibición.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Cuadrado azul.",
+        "correcta": false,
+        "explicacion": "El cuadrado o rectángulo azul es de indicación.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "RGC art. 149",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0011",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:entrada-prohibida",
+    "opciones": [
+      {
+        "texto": "Entrada prohibida a todo vehículo.",
+        "correcta": true,
+        "explicacion": "Fondo rojo con barra blanca: no se puede entrar (por ejemplo, una calle en sentido contrario)."
+      },
+      {
+        "texto": "Circulación prohibida en ambos sentidos.",
+        "correcta": false,
+        "explicacion": "Error típico: esa es el círculo blanco con borde rojo, sin barra.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Fin de todas las prohibiciones.",
+        "correcta": false,
+        "explicacion": "Esa es blanca con franjas grises.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0012",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:velocidad-aconsejada-50",
+    "opciones": [
+      {
+        "texto": "Velocidad máxima aconsejada de 50 km/h.",
+        "correcta": true,
+        "explicacion": "Al ser cuadrada y azul es de indicación: recomienda, no obliga."
+      },
+      {
+        "texto": "Velocidad máxima obligatoria de 50 km/h.",
+        "correcta": false,
+        "explicacion": "La obligatoria es la circular con borde rojo.",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Velocidad mínima obligatoria de 50 km/h.",
+        "correcta": false,
+        "explicacion": "La velocidad mínima es circular y azul.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  },
+  {
+    "id": "SEN-0013",
+    "mundo": "senales",
+    "subtema": "formas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Qué indica esta señal?",
+    "imagen": "senal:estacionamiento-prohibido",
+    "opciones": [
+      {
+        "texto": "Estacionamiento prohibido, aunque sí se puede parar.",
+        "correcta": true,
+        "explicacion": "Una sola franja roja: prohibido estacionar. Con aspa sería prohibida también la parada."
+      },
+      {
+        "texto": "Parada y estacionamiento prohibidos.",
+        "correcta": false,
+        "explicacion": "Error típico: esa lleva un aspa (dos franjas cruzadas).",
+        "error_tipo": "confunde_senales"
+      },
+      {
+        "texto": "Zona de estacionamiento limitado.",
+        "correcta": false,
+        "explicacion": "No: es una señal de prohibición.",
+        "error_tipo": "confunde_senales"
+      }
+    ],
+    "error_tipo": [
+      "confunde_senales"
+    ],
+    "fuente": "Catálogo oficial de señales (RGC)",
+    "revisar": false
+  }
+]

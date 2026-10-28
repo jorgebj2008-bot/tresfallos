@@ -1,0 +1,436 @@
+[
+  {
+    "id": "ALC-0001",
+    "mundo": "alcohol",
+    "subtema": "tasas",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la tasa máxima de alcohol en aire espirado para un conductor general?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "0,25 mg/l.",
+        "correcta": true,
+        "explicacion": "Equivale a 0,5 g/l en sangre."
+      },
+      {
+        "texto": "0,5 mg/l.",
+        "correcta": false,
+        "explicacion": "Error típico: 0,5 es la tasa en sangre (g/l), no en aire.",
+        "error_tipo": "tasas_alcohol"
+      },
+      {
+        "texto": "0,15 mg/l.",
+        "correcta": false,
+        "explicacion": "0,15 es para noveles y profesionales.",
+        "error_tipo": "tasas_alcohol"
+      }
+    ],
+    "error_tipo": [
+      "tasas_alcohol"
+    ],
+    "fuente": "RGC art. 20",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0002",
+    "mundo": "alcohol",
+    "subtema": "tasas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la tasa máxima de alcohol en sangre para un conductor general?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "0,5 g/l.",
+        "correcta": true,
+        "explicacion": "Equivale a 0,25 mg/l en aire espirado."
+      },
+      {
+        "texto": "0,25 g/l.",
+        "correcta": false,
+        "explicacion": "0,25 es la tasa en aire (mg/l), no en sangre.",
+        "error_tipo": "tasas_alcohol"
+      },
+      {
+        "texto": "0,8 g/l.",
+        "correcta": false,
+        "explicacion": "Era el límite antiguo; hoy es 0,5 g/l.",
+        "error_tipo": "tasas_alcohol"
+      }
+    ],
+    "error_tipo": [
+      "tasas_alcohol"
+    ],
+    "fuente": "RGC art. 20",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0003",
+    "mundo": "alcohol",
+    "subtema": "tasas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Cuál es la tasa máxima de alcohol en aire espirado para un conductor novel?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "0,15 mg/l.",
+        "correcta": true,
+        "explicacion": "Durante los dos primeros años de permiso, la tasa es más baja."
+      },
+      {
+        "texto": "0,25 mg/l.",
+        "correcta": false,
+        "explicacion": "Esa es la general.",
+        "error_tipo": "tasas_alcohol"
+      },
+      {
+        "texto": "0,00 mg/l.",
+        "correcta": false,
+        "explicacion": "Hoy no es tasa cero para noveles, sino 0,15 mg/l.",
+        "error_tipo": "tasas_alcohol"
+      }
+    ],
+    "error_tipo": [
+      "tasas_alcohol"
+    ],
+    "fuente": "RGC art. 20",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0004",
+    "mundo": "alcohol",
+    "subtema": "tasas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Durante cuánto tiempo se aplica la tasa de alcohol reducida para conductores noveles?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Durante los dos primeros años desde que se obtiene el permiso.",
+        "correcta": true,
+        "explicacion": "No confundir con la L, que se lleva solo un año."
+      },
+      {
+        "texto": "Solo el primer año.",
+        "correcta": false,
+        "explicacion": "Error típico: el primer año es el de la L.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Hasta los 21 años de edad.",
+        "correcta": false,
+        "explicacion": "Depende de la antigüedad del permiso, no de la edad.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 20",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0005",
+    "mundo": "alcohol",
+    "subtema": "delito",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿A partir de qué tasa de alcohol en aire espirado conducir es delito?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Más de 0,60 mg/l.",
+        "correcta": true,
+        "explicacion": "Por encima de 0,60 mg/l en aire (1,2 g/l en sangre) es delito."
+      },
+      {
+        "texto": "Más de 0,25 mg/l.",
+        "correcta": false,
+        "explicacion": "Eso ya es infracción administrativa, pero no delito.",
+        "error_tipo": "tasas_alcohol"
+      },
+      {
+        "texto": "Más de 1 mg/l.",
+        "correcta": false,
+        "explicacion": "Te pasas: el delito empieza en 0,60 mg/l.",
+        "error_tipo": "tasas_alcohol"
+      }
+    ],
+    "error_tipo": [
+      "tasas_alcohol"
+    ],
+    "fuente": "Código Penal, art. 379.2",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0006",
+    "mundo": "alcohol",
+    "subtema": "delito",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Un agente te pide hacer la prueba de alcoholemia y te niegas. ¿Qué ocurre?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Es un delito.",
+        "correcta": true,
+        "explicacion": "Negarse a las pruebas de alcohol o drogas es delito."
+      },
+      {
+        "texto": "Solo una multa leve.",
+        "correcta": false,
+        "explicacion": "Es mucho más grave: es delito.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Nada, si no has bebido.",
+        "correcta": false,
+        "explicacion": "Aunque no hayas bebido, negarte es delito.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "Código Penal, art. 383",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0007",
+    "mundo": "alcohol",
+    "subtema": "efectos",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "¿Qué hace bajar la tasa de alcohol en sangre?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Solo el tiempo.",
+        "correcta": true,
+        "explicacion": "El hígado elimina el alcohol a su ritmo; nada lo acelera."
+      },
+      {
+        "texto": "Tomar un café cargado.",
+        "correcta": false,
+        "explicacion": "El café no elimina el alcohol, solo te despeja un poco.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Una ducha fría.",
+        "correcta": false,
+        "explicacion": "La ducha no cambia la tasa.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: alcohol",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0008",
+    "mundo": "alcohol",
+    "subtema": "efectos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Uno de los efectos del alcohol sobre el conductor es…",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Una falsa sensación de seguridad y un aumento del tiempo de reacción.",
+        "correcta": true,
+        "explicacion": "Crees que conduces mejor justo cuando reaccionas peor."
+      },
+      {
+        "texto": "Mejorar los reflejos con dosis pequeñas.",
+        "correcta": false,
+        "explicacion": "No: incluso dosis pequeñas empeoran los reflejos.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "Mejorar la visión nocturna.",
+        "correcta": false,
+        "explicacion": "Al contrario: empeora la visión y aumenta el deslumbramiento.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "Temario DGT: alcohol",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0009",
+    "mundo": "alcohol",
+    "subtema": "sanciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un conductor general da 0,35 mg/l en aire espirado. ¿Qué sanción le corresponde?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "500 euros y 4 puntos.",
+        "correcta": true,
+        "explicacion": "Entre 0,25 y 0,50 mg/l: 500 euros y 4 puntos."
+      },
+      {
+        "texto": "1.000 euros y 6 puntos.",
+        "correcta": false,
+        "explicacion": "Eso es a partir de 0,50 mg/l.",
+        "error_tipo": "sanciones"
+      },
+      {
+        "texto": "Solo una advertencia.",
+        "correcta": false,
+        "explicacion": "Superar 0,25 mg/l siempre es infracción.",
+        "error_tipo": "sanciones"
+      }
+    ],
+    "error_tipo": [
+      "sanciones"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), anexo II",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0010",
+    "mundo": "alcohol",
+    "subtema": "drogas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "¿Se sanciona conducir con presencia de drogas en el organismo aunque no se note su efecto?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Sí.",
+        "correcta": true,
+        "explicacion": "Basta con la presencia de drogas en el organismo."
+      },
+      {
+        "texto": "No, solo si el conductor va visiblemente afectado.",
+        "correcta": false,
+        "explicacion": "Error típico: no hace falta que se note el efecto.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Solo si además ha bebido alcohol.",
+        "correcta": false,
+        "explicacion": "Las drogas se sancionan por sí solas.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RDL 6/2015 (Ley de Tráfico), art. 14",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0011",
+    "mundo": "alcohol",
+    "subtema": "medicamentos",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Un medicamento lleva en la caja un pictograma de un coche dentro de un triángulo. ¿Qué indica?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Que puede afectar a la capacidad para conducir.",
+        "correcta": true,
+        "explicacion": "Consulta el prospecto o al médico antes de conducir."
+      },
+      {
+        "texto": "Que se puede conducir sin problema.",
+        "correcta": false,
+        "explicacion": "Es justo lo contrario: es un aviso.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Que solo afecta a conductores profesionales.",
+        "correcta": false,
+        "explicacion": "Afecta a cualquier conductor.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "Pictograma de conducción de la AEMPS",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0012",
+    "mundo": "alcohol",
+    "subtema": "fatiga",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "En viajes largos, ¿cada cuánto se recomienda descansar?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Cada 2 horas o 200 km, aproximadamente.",
+        "correcta": true,
+        "explicacion": "Es la recomendación habitual de la DGT para prevenir la fatiga."
+      },
+      {
+        "texto": "Cada 5 horas.",
+        "correcta": false,
+        "explicacion": "Es demasiado tiempo: la fatiga aparece antes.",
+        "error_tipo": "dato_numerico"
+      },
+      {
+        "texto": "Solo cuando tengas sueño.",
+        "correcta": false,
+        "explicacion": "Cuando notas el sueño ya es tarde: descansa antes.",
+        "error_tipo": "lectura_matiz"
+      }
+    ],
+    "error_tipo": [
+      "dato_numerico",
+      "lectura_matiz"
+    ],
+    "fuente": "Recomendación DGT: fatiga",
+    "revisar": false
+  },
+  {
+    "id": "ALC-0013",
+    "mundo": "alcohol",
+    "subtema": "distracciones",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Mientras conduces, ¿puedes usar el móvil?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Solo con un sistema de manos libres que no requiera sujetarlo ni usar auriculares.",
+        "correcta": true,
+        "explicacion": "Está prohibido sujetarlo con la mano y usar auriculares conectados a aparatos."
+      },
+      {
+        "texto": "Sí, si estás parado en un semáforo.",
+        "correcta": false,
+        "explicacion": "En un semáforo sigues conduciendo: está prohibido sujetarlo.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Sí, con auriculares en las dos orejas.",
+        "correcta": false,
+        "explicacion": "Los auriculares conectados a aparatos receptores están prohibidos.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 18.2",
+    "revisar": false
+  }
+]

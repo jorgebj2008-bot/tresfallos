@@ -404,3 +404,26 @@ canvas.particulas { position: fixed; inset: 0; width: 100%; height: 100%; pointe
 .tarjeta-juego h2 { font-size: 22px; }
 .tarjeta-juego p { margin: 4px 0 0; font-size: 14px; }
 .tarjeta-juego .boton { grid-column: 1 / -1; background: var(--color); }
+.imagen-pregunta { display: grid; place-items: center; margin-bottom: 10px; }
+
+/* ---------- Panel de administración ---------- */
+.admin { padding-block: 16px 60px; display: flex; flex-direction: column; gap: 12px; }
+.admin-filtros { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.admin select, .admin-filtros input[type=search], .admin textarea, .admin input[type=text] {
+  font: inherit; font-weight: 600; padding: 8px 10px; border: 2px solid var(--line); border-radius: 10px; background: var(--panel); color: var(--ink); min-width: 0;
+}
+.admin-filtros input[type=search] { flex: 1 1 160px; }
+.admin-lista { display: flex; flex-direction: column; gap: 6px; }
+.admin-fila { display: flex; gap: 8px; align-items: flex-start; text-align: left; padding: 10px 12px; background: var(--panel); border: 2px solid var(--line); border-radius: 12px; font-size: 14px; }
+.admin-fila .id { font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); flex: none; }
+.admin-fila .txt { flex: 1; min-width: 0; }
+.chip-revisar { flex: none; font-size: 11px; font-weight: 800; padding: 2px 6px; border-radius: 99px; background: var(--gold); color: var(--gold-ink); border: 2px solid var(--line); }
+.chip-error { flex: none; font-size: 11px; font-weight: 800; padding: 2px 6px; border-radius: 99px; background: var(--bad); color: var(--bad-ink); border: 2px solid var(--line); }
+.admin-editor { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.admin-editor label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.admin-editor textarea { min-height: 60px; resize: vertical; }
+.admin-opcion { border: 2px dashed var(--line); border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 6px; }
+.admin-opcion .fila { display: flex; gap: 8px; align-items: center; font-size: 14px; color: var(--ink); }
+.admin-acciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.admin-acciones .boton { width: auto; flex: 1 1 140px; font-size: 16px; padding: 10px 12px; }
+.admin pre { max-height: 300px; overflow: auto; font-size: 12px; background: var(--bg2); padding: 10px; border-radius: 10px; border: 2px solid var(--line); }

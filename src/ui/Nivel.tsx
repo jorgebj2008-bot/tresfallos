@@ -12,6 +12,7 @@ import { claveNivel, useJuego } from '../store/useJuego'
 import { sfx, vibrar } from '../audio/sfx'
 import { explosion } from './particulas'
 import { Check, Cruz, Llama } from './iconos'
+import { SenalSVG } from './SenalSVG'
 
 /** Qué se juega: un nivel del mapa o un repaso (fallos, vencidas, punto débil). */
 export type ConfigPartida =
@@ -182,6 +183,9 @@ export function Nivel({ config, onSalir, onTerminar }: Props) {
                   : `Repaso · ${mundoPorId(actual.pregunta.mundo).nombre}`
                 : `${config.tipo === 'repaso' ? config.titulo : 'Repaso'} · ${mundoPorId(actual.pregunta.mundo).nombre}`}
             </div>
+            {actual.pregunta.imagen?.startsWith('senal:') && (
+              <div className="imagen-pregunta"><SenalSVG id={actual.pregunta.imagen.slice(6)} size={110} titulo="Señal de la pregunta" /></div>
+            )}
             <h2>{actual.pregunta.enunciado}</h2>
           </div>
 

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "PRI-0001",
+    "mundo": "prioridad",
+    "subtema": "sin-senales",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "En un cruce sin señales ni agentes, ¿quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El vehículo que se acerca por la derecha.",
+        "correcta": true,
+        "explicacion": "Es la norma general de prioridad en intersecciones sin señalizar."
+      },
+      {
+        "texto": "El que llega primero al cruce.",
+        "correcta": false,
+        "explicacion": "Llegar antes no da prioridad: manda la derecha.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "El que circula por la vía más ancha.",
+        "correcta": false,
+        "explicacion": "La anchura no da prioridad.",
+        "error_tipo": "prioridad_derecha"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC art. 57.1",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0002",
+    "mundo": "prioridad",
+    "subtema": "glorietas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "En una glorieta, ¿quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Quien ya circula dentro de la glorieta.",
+        "correcta": true,
+        "explicacion": "Los que están dentro tienen prioridad sobre los que quieren entrar."
+      },
+      {
+        "texto": "Quien quiere entrar, porque viene por la derecha.",
+        "correcta": false,
+        "explicacion": "Error típico: en las glorietas no se aplica la prioridad de la derecha a los que entran.",
+        "error_tipo": "prioridad_glorieta"
+      },
+      {
+        "texto": "El vehículo más grande.",
+        "correcta": false,
+        "explicacion": "El tamaño no da prioridad.",
+        "error_tipo": "prioridad_glorieta"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_glorieta"
+    ],
+    "fuente": "RGC art. 57.1",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0003",
+    "mundo": "prioridad",
+    "subtema": "sin-senales",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En un cruce sin señalizar se encuentran una vía pavimentada y un camino de tierra. ¿Quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Quien circula por la vía pavimentada.",
+        "correcta": true,
+        "explicacion": "Es una de las excepciones a la prioridad de la derecha."
+      },
+      {
+        "texto": "Quien viene por la derecha, sea cual sea la vía.",
+        "correcta": false,
+        "explicacion": "Error típico: la vía pavimentada tiene prioridad sobre la no pavimentada.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "Quien circula por el camino de tierra, porque va más despacio.",
+        "correcta": false,
+        "explicacion": "Ir despacio no da prioridad.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC art. 57.1",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0004",
+    "mundo": "prioridad",
+    "subtema": "sin-senales",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En un cruce sin señales, un tranvía se acerca por tu izquierda. ¿Quién pasa primero?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El tranvía.",
+        "correcta": true,
+        "explicacion": "Los vehículos que circulan sobre raíles tienen prioridad sobre los demás."
+      },
+      {
+        "texto": "Tú, porque el tranvía viene por la izquierda.",
+        "correcta": false,
+        "explicacion": "Error típico: los vehículos sobre raíles son una excepción a la prioridad de la derecha.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "El que llegue antes al cruce.",
+        "correcta": false,
+        "explicacion": "Llegar antes no da prioridad.",
+        "error_tipo": "prioridad_derecha"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC art. 57.1",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0005",
+    "mundo": "prioridad",
+    "subtema": "incorporacion",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Te incorporas a una autovía desde un carril de aceleración. ¿Quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los que ya circulan por la autovía.",
+        "correcta": true,
+        "explicacion": "Quien se incorpora debe ceder el paso; usa el carril de aceleración para ajustar la velocidad."
+      },
+      {
+        "texto": "Tú, porque vienes por la derecha.",
+        "correcta": false,
+        "explicacion": "En las incorporaciones no se aplica la prioridad de la derecha.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "El que vaya más rápido.",
+        "correcta": false,
+        "explicacion": "La velocidad no da prioridad.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC art. 72",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0006",
+    "mundo": "prioridad",
+    "subtema": "peatones",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "En un paso para peatones sin semáforo, un peatón empieza a cruzar. ¿Qué debes hacer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Detenerte y dejarle pasar.",
+        "correcta": true,
+        "explicacion": "En los pasos para peatones, los peatones tienen prioridad."
+      },
+      {
+        "texto": "Pasar si tú llegaste antes.",
+        "correcta": false,
+        "explicacion": "No importa quién llegue antes: el peatón en el paso tiene prioridad.",
+        "error_tipo": "prioridad_peaton"
+      },
+      {
+        "texto": "Pitar para que espere.",
+        "correcta": false,
+        "explicacion": "Pitar no te da prioridad.",
+        "error_tipo": "prioridad_peaton"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_peaton"
+    ],
+    "fuente": "RGC art. 65",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0007",
+    "mundo": "prioridad",
+    "subtema": "peatones",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "Giras a la derecha para entrar en otra calle y hay peatones cruzándola, aunque no hay paso para peatones. ¿Quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Los peatones.",
+        "correcta": true,
+        "explicacion": "Al girar para entrar en otra vía, los peatones que la cruzan tienen prioridad aunque no haya paso."
+      },
+      {
+        "texto": "Tú, porque no hay paso para peatones.",
+        "correcta": false,
+        "explicacion": "Error típico: aquí los peatones tienen prioridad aunque no exista paso.",
+        "error_tipo": "prioridad_peaton"
+      },
+      {
+        "texto": "Quien llegue antes.",
+        "correcta": false,
+        "explicacion": "No se decide por quién llega antes.",
+        "error_tipo": "prioridad_peaton"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_peaton"
+    ],
+    "fuente": "RGC art. 65",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0008",
+    "mundo": "prioridad",
+    "subtema": "ciclistas",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Giras a la derecha y cruzas un carril bici por el que circula un ciclista. ¿Quién tiene prioridad?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El ciclista.",
+        "correcta": true,
+        "explicacion": "Los ciclistas tienen prioridad cuando circulan por un carril bici que cruzas al girar."
+      },
+      {
+        "texto": "Tú, porque eres un vehículo de motor.",
+        "correcta": false,
+        "explicacion": "Ser un vehículo de motor no da prioridad.",
+        "error_tipo": "confunde_conceptos"
+      },
+      {
+        "texto": "El que vaya más rápido.",
+        "correcta": false,
+        "explicacion": "La velocidad no da prioridad.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos"
+    ],
+    "fuente": "RGC art. 64",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0009",
+    "mundo": "prioridad",
+    "subtema": "urgencias",
+    "dificultad": 1,
+    "tipo": "test",
+    "enunciado": "Oyes la sirena de una ambulancia que se acerca por detrás. ¿Qué debes hacer?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "Facilitarle el paso apartándote con seguridad y, si es necesario, detenerte.",
+        "correcta": true,
+        "explicacion": "Los vehículos prioritarios en servicio de urgencia tienen preferencia."
+      },
+      {
+        "texto": "Acelerar para que no tenga que adelantarte.",
+        "correcta": false,
+        "explicacion": "Acelerar no le ayuda y es peligroso.",
+        "error_tipo": "prioridad_urgencia"
+      },
+      {
+        "texto": "Seguir igual: solo tiene prioridad en los cruces.",
+        "correcta": false,
+        "explicacion": "Tiene preferencia en toda la vía mientras va en urgencia.",
+        "error_tipo": "prioridad_urgencia"
+      }
+    ],
+    "error_tipo": [
+      "prioridad_urgencia"
+    ],
+    "fuente": "RGC arts. 67 y 69",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0010",
+    "mundo": "prioridad",
+    "subtema": "cruces",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "El semáforo está en verde, pero el cruce está atascado y te quedarías parado dentro. ¿Qué haces?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "No entrar en el cruce hasta que puedas atravesarlo.",
+        "correcta": true,
+        "explicacion": "Aunque tengas prioridad, no debes entrar si vas a bloquear el cruce."
+      },
+      {
+        "texto": "Entrar, porque tienes el semáforo en verde.",
+        "correcta": false,
+        "explicacion": "Tener verde no permite bloquear el cruce.",
+        "error_tipo": "lectura_matiz"
+      },
+      {
+        "texto": "Entrar y tocar el claxon para que se muevan.",
+        "correcta": false,
+        "explicacion": "Además de bloquear, el claxon no está justificado.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "lectura_matiz"
+    ],
+    "fuente": "RGC art. 59",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0011",
+    "mundo": "prioridad",
+    "subtema": "giros",
+    "dificultad": 2,
+    "tipo": "test",
+    "enunciado": "Vas a girar a la izquierda en un cruce y viene un coche de frente que sigue recto. ¿Quién pasa primero?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El que viene de frente.",
+        "correcta": true,
+        "explicacion": "Al girar a la izquierda cruzas su trayectoria: tienes que cederle el paso."
+      },
+      {
+        "texto": "Tú, porque has puesto el intermitente.",
+        "correcta": false,
+        "explicacion": "Señalizar no te da prioridad.",
+        "error_tipo": "giro_izquierda"
+      },
+      {
+        "texto": "Tú, porque él viene por tu izquierda.",
+        "correcta": false,
+        "explicacion": "Quien viene de frente no está ni a tu derecha ni a tu izquierda: cedes por girar a la izquierda.",
+        "error_tipo": "giro_izquierda"
+      }
+    ],
+    "error_tipo": [
+      "giro_izquierda"
+    ],
+    "fuente": "RGC, normas de intersección",
+    "revisar": false
+  },
+  {
+    "id": "PRI-0012",
+    "mundo": "prioridad",
+    "subtema": "estrechamientos",
+    "dificultad": 3,
+    "tipo": "test",
+    "enunciado": "En un estrechamiento sin señalizar donde no caben dos vehículos, ¿quién tiene preferencia?",
+    "imagen": null,
+    "opciones": [
+      {
+        "texto": "El que haya entrado primero en el estrechamiento.",
+        "correcta": true,
+        "explicacion": "Si no hay señales, pasa primero quien ya ha entrado."
+      },
+      {
+        "texto": "El que venga por la derecha.",
+        "correcta": false,
+        "explicacion": "En los estrechamientos no se aplica la prioridad de la derecha.",
+        "error_tipo": "prioridad_derecha"
+      },
+      {
+        "texto": "El vehículo más pequeño.",
+        "correcta": false,
+        "explicacion": "El tamaño solo cuenta en algunos casos especiales; la norma general es quien entró primero.",
+        "error_tipo": "confunde_conceptos"
+      }
+    ],
+    "error_tipo": [
+      "confunde_conceptos",
+      "prioridad_derecha"
+    ],
+    "fuente": "RGC, estrechamientos",
+    "revisar": true
+  }
+]

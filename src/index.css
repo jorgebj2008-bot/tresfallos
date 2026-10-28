@@ -262,3 +262,67 @@ h1, h2, h3 { font-family: var(--font-d); font-weight: 800; line-height: 1.05; ma
 .cargando { flex: 1; display: grid; place-items: center; font-family: var(--font-d); font-size: 32px; }
 
 canvas.particulas { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; }
+
+/* ---------- Pestañas inferiores ---------- */
+.pestanas {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 25;
+  max-width: 480px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
+  padding: 8px max(10px, env(safe-area-inset-left, 0px)) calc(8px + env(safe-area-inset-bottom, 0px));
+  background: var(--panel); border-top: var(--bw) solid var(--line); border-radius: 20px 20px 0 0;
+}
+.pestanas button {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 6px 4px; border: 2px solid transparent; border-radius: 12px; background: none;
+  font-size: 12px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.pestanas button svg { width: 24px; height: 24px; }
+.pestanas button.activa { background: var(--bg2); border-color: var(--line); color: var(--ink); }
+.pestanas .globo {
+  position: absolute; top: 0; right: 18%; min-width: 20px; height: 20px; padding: 0 5px;
+  display: grid; place-items: center; border-radius: 99px;
+  background: var(--bad); color: #fff; font-size: 11px; border: 2px solid var(--line);
+}
+.mapa, .pantalla { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+
+/* ---------- Pantallas de Estoy listo y Cuaderno ---------- */
+.pantalla { display: flex; flex-direction: column; gap: 18px; padding-top: calc(16px + env(safe-area-inset-top, 0px)); }
+.titulo-pantalla { font-size: 34px; }
+.bloque { display: flex; flex-direction: column; gap: 10px; }
+.bloque h2 { font-size: 22px; }
+.nota { margin: 0; font-size: 13px; color: var(--muted); }
+.vacio { margin: 0; color: var(--muted); }
+.rotulo { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); display: block; }
+.medidor { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 14px; }
+.medidor .anillo { width: 170px; height: 170px; flex: none; margin: 0 auto; }
+.medidor .pista { fill: none; stroke: var(--bg2); stroke-width: 16; }
+.medidor .valor { fill: none; stroke: var(--good); stroke-width: 16; stroke-linecap: round; }
+.medidor .cifra-grande { font-family: var(--font-d); font-weight: 800; font-size: 40px; fill: var(--ink); }
+.medidor .cifra-sub { font-size: 13px; fill: var(--muted); }
+.medidor-texto { flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.medidor-texto p { margin: 0; }
+.recomendacion { padding: 14px; display: flex; flex-direction: column; gap: 10px; background: color-mix(in srgb, var(--gold) 30%, var(--panel)); }
+.recomendacion p { margin: 0; font-size: 17px; }
+.debil { display: flex; align-items: center; gap: 12px; padding: 12px; }
+.debil > div { flex: 1; min-width: 0; }
+.debil p { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+.debil .puesto { width: 34px; height: 34px; flex: none; display: grid; place-items: center; border-radius: 50%; background: var(--bad); color: #fff; font-family: var(--font-d); font-size: 20px; border: 2px solid var(--line); }
+.boton.mini { width: auto; padding: 8px 12px; font-size: 15px; flex: none; }
+.tabla-mundos { padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; }
+.fila-mundo { display: grid; grid-template-columns: minmax(0, 1.3fr) 1fr 52px; align-items: center; gap: 10px; font-size: 13px; }
+.fila-mundo .nombre { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fila-mundo .dato { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.barra.fina { height: 10px; border-width: 2px; }
+.barra.fina > i { display: block; height: 100%; }
+.chip-ok, .chip-mal { justify-self: start; font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 99px; border: 2px solid var(--line); }
+.chip-ok { background: var(--good); color: var(--good-ink); }
+.chip-mal { background: var(--bad); color: var(--bad-ink); }
+.grupo-cabecera { display: flex; align-items: flex-start; gap: 10px; }
+.grupo-cabecera > div { flex: 1; min-width: 0; }
+.fallo { padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.fallo p { margin: 0; }
+.fallo .enunciado { font-weight: 800; }
+.listo-bloque .barra > i { background: var(--good); }
+.temario { display: flex; flex-direction: column; gap: 4px; }
+.temario .fila { display: flex; justify-content: space-between; font-size: 14px; }
+.temario .barra { display: block; }

@@ -48,3 +48,13 @@ export const Llama = () => (
     <path d="M12 2.5c1 3.5 5.5 5.5 5.5 10.5a5.5 5.5 0 0 1-11 0c0-2.5 1.5-4 2.5-5 .3 2 1.3 3 2.3 3.2C10.6 8 11 5 12 2.5z" fill="var(--bad)" stroke="var(--line)" strokeWidth="1.6" strokeLinejoin="round" />
   </svg>
 )
+
+export const IconoMapa = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5l5.5-2 6 2 5.5-2v13l-5.5 2-6-2-5.5 2z M9 4.5v13 M15 6.5v13" {...trazo} /></svg>
+)
+export const IconoMedidor = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0" {...trazo} /><path d="M12 17l4-6" {...trazo} /><circle cx="12" cy="17" r="1.6" fill="currentColor" /></svg>
+)
+export const IconoCuaderno = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2" {...trazo} /><path d="M9 8h6M9 12h6M9 16h3" {...trazo} /></svg>
+)

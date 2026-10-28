@@ -2,6 +2,8 @@
 import { create } from 'zustand'
 import { seguro, type Perfil, type ResultadoNivel } from './db'
 import { setSonido } from '../audio/sfx'
+import { actualizar, nuevoEstado, type EstadoPregunta } from '../learning/sm2'
+import type { Simulacro } from '../learning/estoyListo'
 
 const PERFIL_INICIAL: Perfil = { id: 'yo', xp: 0, sonido: true, tema: 'auto' }
 
@@ -9,10 +11,14 @@ interface EstadoJuego {
   cargado: boolean
   perfil: Perfil
   niveles: Record<string, ResultadoNivel>
+  /** Estado de repetición espaciada de cada pregunta vista. */
+  estados: Record<string, EstadoPregunta>
+  simulacros: Simulacro[]
   cargar: () => Promise<void>
   sumarXp: (xp: number) => void
   registrarRespuesta: (preguntaId: string, correcta: boolean, errorTipo: string | null, ms: number) => void
   guardarNivel: (clave: string, estrellas: number, aciertos: number) => void
+  guardarSimulacro: (s: Simulacro) => void
   alternarSonido: () => void
   cambiarTema: () => void
 }
@@ -23,12 +29,22 @@ export const useJuego = create<EstadoJuego>((set, get) => ({
   cargado: false,
   perfil: PERFIL_INICIAL,
   niveles: {},
+  estados: {},
+  simulacros: [],
 
   async cargar() {
-    const perfil = (await seguro((db) => db.perfil.get('yo'))) ?? PERFIL_INICIAL
-    const lista = (await seguro((db) => db.niveles.toArray())) ?? []
+    const perfil = { ...PERFIL_INICIAL, ...((await seguro((db) => db.perfil.get('yo'))) ?? {}) }
+    const niveles = (await seguro((db) => db.niveles.toArray())) ?? []
+    const estados = (await seguro((db) => db.estados.toArray())) ?? []
+    const simulacros = (await seguro((db) => db.simulacros.toArray())) ?? []
     setSonido(perfil.sonido)
-    set({ cargado: true, perfil, niveles: Object.fromEntries(lista.map((n) => [n.clave, n])) })
+    set({
+      cargado: true,
+      perfil,
+      niveles: Object.fromEntries(niveles.map((n) => [n.clave, n])),
+      estados: Object.fromEntries(estados.map((e) => [e.id, e])),
+      simulacros,
+    })
   },
 
   sumarXp(xp) {
@@ -38,7 +54,12 @@ export const useJuego = create<EstadoJuego>((set, get) => ({
   },
 
   registrarRespuesta(preguntaId, correcta, errorTipo, ms) {
-    void seguro((db) => db.respuestas.add({ preguntaId, correcta, errorTipo, ms, fecha: Date.now() }))
+    const ahora = Date.now()
+    const previo = get().estados[preguntaId] ?? nuevoEstado(preguntaId)
+    const estado = actualizar(previo, correcta, ms, ahora, errorTipo)
+    set({ estados: { ...get().estados, [preguntaId]: estado } })
+    void seguro((db) => db.estados.put(estado))
+    void seguro((db) => db.respuestas.add({ preguntaId, correcta, errorTipo, ms, fecha: ahora }))
   },
 
   guardarNivel(clave, estrellas, aciertos) {
@@ -51,6 +72,11 @@ export const useJuego = create<EstadoJuego>((set, get) => ({
     }
     set({ niveles: { ...get().niveles, [clave]: nuevo } })
     void seguro((db) => db.niveles.put(nuevo))
+  },
+
+  guardarSimulacro(s) {
+    set({ simulacros: [...get().simulacros, s] })
+    void seguro((db) => db.simulacros.add(s))
   },
 
   alternarSonido() {

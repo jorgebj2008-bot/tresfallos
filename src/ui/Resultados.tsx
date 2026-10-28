@@ -5,6 +5,7 @@ import { rangoDe } from '../game/progreso'
 import { sfx, vibrar } from '../audio/sfx'
 import { confeti } from './particulas'
 import { Estrella } from './iconos'
+import { pct, useListo } from '../store/selectores'
 
 const TITULOS = ['¡A repasar!', '¡Superado!', '¡Muy bien!', '¡Nivel examen!']
 
@@ -36,6 +37,11 @@ export function Resultados({ r, onRepetir, onMapa }: Props) {
   const despues = rangoDe(r.xpAntes + r.xpGanada)
   const subeRango = despues.indice > antes.indice
   const xp = useContador(r.xpGanada, 900, 300)
+  const listo = useListo()
+  // Mientras la probabilidad de aprobar sea casi 0, se enseña el temario dominado, que sí se mueve.
+  const usarTemario = listo.prob < 0.05 && r.listoAntes < 0.05
+  const antesPct = pct(usarTemario ? r.temarioAntes : r.listoAntes), despuesPct = pct(usarTemario ? listo.temario : listo.prob)
+  const listoAnim = antesPct + useContador(despuesPct - antesPct, 1200, 900)
 
   // Sonido de cada estrella al aparecer, y celebración si sube de rango o saca 3.
   useEffect(() => {
@@ -101,6 +107,25 @@ export function Resultados({ r, onRepetir, onMapa }: Props) {
           {casi}
         </motion.div>
       )}
+
+      <div className="bloque-rango pegatina listo-bloque">
+        <div className="fila">
+          <span>{usarTemario ? 'Temario dominado' : 'Probabilidad de aprobar'}</span>
+          <strong>{listoAnim} %</strong>
+        </div>
+        <div className="barra">
+          <motion.i
+            initial={{ width: `${Math.max(2, antesPct)}%` }}
+            animate={{ width: `${Math.max(2, despuesPct)}%` }}
+            transition={{ delay: 0.9, duration: 1.2, ease: 'easeOut' }}
+          />
+        </div>
+        <div className="fila">
+          <span>
+            {despuesPct > antesPct ? `¡+${despuesPct - antesPct} puntos en esta partida!` : despuesPct < antesPct ? 'Los fallos de hoy vuelven pronto para que los fijes.' : 'Cada pregunta dominada lo hace subir.'}
+          </span>
+        </div>
+      </div>
 
       <div className="bloque-rango pegatina">
         <div className="fila">

@@ -1,18 +1,27 @@
 import { useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion, useAnimate } from 'motion/react'
 import type { MundoId, Pregunta } from '../content/tipos'
-import { preguntasDe } from '../content/banco'
+import { preguntaPorId, preguntasDe, todasLasPreguntas } from '../content/banco'
 import { mundoPorId } from '../content/mundos'
-import { calcularEstrellas, crearNivel, hitoCombo } from '../game/nivel'
+import { PREGUNTAS_POR_NIVEL, barajar, calcularEstrellas, hitoCombo } from '../game/nivel'
+import { elegirPreguntas } from '../learning/seleccion'
+import { calcularListo } from '../learning/estoyListo'
 import { xpFinNivel, xpRespuesta } from '../game/progreso'
 import { claveNivel, useJuego } from '../store/useJuego'
 import { sfx, vibrar } from '../audio/sfx'
 import { explosion } from './particulas'
 import { Check, Cruz, Llama } from './iconos'
 
+/** Qué se juega: un nivel del mapa o un repaso (fallos, vencidas, punto débil). */
+export type ConfigPartida =
+  | { tipo: 'nivel'; mundo: MundoId; nivel: number }
+  | { tipo: 'repaso'; titulo: string; ids: string[] }
+
 export interface ResultadoPartida {
-  mundo: MundoId
-  nivel: number
+  config: ConfigPartida
+  /** Probabilidad de aprobar y temario dominado al empezar la partida (para animar la subida). */
+  listoAntes: number
+  temarioAntes: number
   aciertos: number
   total: number
   segundos: number
@@ -28,16 +37,28 @@ const FRASES_MAL = ['Esta tenía truco', 'Casi. Vamos a verlo', 'Tranqui, se apr
 const elegir = (lista: string[]) => lista[(Math.random() * lista.length) | 0]
 
 interface Props {
-  mundo: MundoId
-  nivel: number
+  config: ConfigPartida
   onSalir: () => void
   onTerminar: (r: ResultadoPartida) => void
 }
 
-export function Nivel({ mundo, nivel, onSalir, onTerminar }: Props) {
+export function Nivel({ config, onSalir, onTerminar }: Props) {
   const { perfil, sumarXp, registrarRespuesta, guardarNivel } = useJuego()
-  const preguntas = useMemo(() => crearNivel(preguntasDe(mundo)), [mundo])
+  // Preguntas elegidas por el motor de aprendizaje al empezar (no cambian durante la partida).
+  const preguntas = useMemo(() => {
+    const { estados } = useJuego.getState()
+    const lista: Pregunta[] =
+      config.tipo === 'nivel'
+        ? elegirPreguntas(preguntasDe(config.mundo), estados, PREGUNTAS_POR_NIVEL, Date.now(), Math.random, todasLasPreguntas().filter((p) => p.mundo !== config.mundo))
+        : barajar(config.ids.map(preguntaPorId).filter((p): p is Pregunta => !!p)).slice(0, PREGUNTAS_POR_NIVEL)
+    return lista.map((pregunta) => ({ pregunta, opciones: barajar(pregunta.opciones) }))
+  }, [config])
   const xpAntes = useRef(perfil.xp)
+  const antes = useRef<{ prob: number; temario: number } | null>(null)
+  if (!antes.current) {
+    const { estados, simulacros } = useJuego.getState()
+    antes.current = calcularListo(todasLasPreguntas(), estados, simulacros, Date.now())
+  }
   const inicioNivel = useRef(Date.now())
   const inicioPregunta = useRef(Date.now())
 
@@ -111,9 +132,9 @@ export function Nivel({ mundo, nivel, onSalir, onTerminar }: Props) {
     const estrellas = calcularEstrellas(aciertos, preguntas.length, segundos)
     const bonus = xpFinNivel(estrellas)
     sumarXp(bonus)
-    guardarNivel(claveNivel(mundo, nivel), estrellas, aciertos)
+    if (config.tipo === 'nivel') guardarNivel(claveNivel(config.mundo, config.nivel), estrellas, aciertos)
     onTerminar({
-      mundo, nivel, aciertos, total: preguntas.length, segundos, estrellas,
+      config, listoAntes: antes.current!.prob, temarioAntes: antes.current!.temario, aciertos, total: preguntas.length, segundos, estrellas,
       xpGanada: xpGanada + bonus, xpAntes: xpAntes.current, mejorCombo, fallos,
     })
   }
@@ -151,7 +172,11 @@ export function Nivel({ mundo, nivel, onSalir, onTerminar }: Props) {
         >
           <div ref={tarjeta} className="tarjeta pegatina">
             <div className="meta">
-              {mundoPorId(mundo).nombre} · Nivel {nivel}
+              {config.tipo === 'nivel'
+                ? actual.pregunta.mundo === config.mundo
+                  ? `${mundoPorId(config.mundo).nombre} · Nivel ${config.nivel}`
+                  : `Repaso · ${mundoPorId(actual.pregunta.mundo).nombre}`
+                : `${config.titulo} · ${mundoPorId(actual.pregunta.mundo).nombre}`}
             </div>
             <h2>{actual.pregunta.enunciado}</h2>
           </div>

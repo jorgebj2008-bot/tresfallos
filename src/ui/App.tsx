@@ -24,6 +24,8 @@ import { registrarPartida, type Novedades } from '../store/progresoDiario'
 import { ReyDelCruce } from './juegos/ReyDelCruce'
 import { SenalRush } from './juegos/SenalRush'
 import { VerdadTrampa } from './juegos/VerdadTrampa'
+import { Velocimetro } from './juegos/Velocimetro'
+import { DetectivePuntos } from './juegos/DetectivePuntos'
 import { IconoCuaderno, IconoMando, IconoMapa, IconoMedidor } from './iconos'
 import { sfx } from '../audio/sfx'
 
@@ -35,7 +37,11 @@ type Pantalla =
 
 /** Minijuego que entrena cada tipo de error (para puntos débiles sin preguntas de test). */
 const JUEGO_PARA_ERROR = (tipo: string): JuegoId =>
-  tipo.startsWith('prioridad') || tipo === 'giro_izquierda' || tipo === 'jerarquia_senales' ? 'cruce' : tipo === 'confunde_senales' ? 'senales' : 'verdad'
+  tipo.startsWith('prioridad') || tipo === 'giro_izquierda' || tipo === 'jerarquia_senales' ? 'cruce'
+  : tipo === 'confunde_senales' ? 'senales'
+  : tipo === 'numero_velocidad' ? 'velocimetro'
+  : tipo === 'sanciones' ? 'puntos'
+  : 'verdad'
 
 export function App() {
   const { cargado, cargar, perfil } = useJuego()
@@ -133,6 +139,8 @@ export function App() {
     else if (c.tipo !== 'juego') partida = <Nivel {...props} />
     else if (c.juego === 'cruce') partida = <ReyDelCruce {...props} />
     else if (c.juego === 'senales') partida = <SenalRush {...props} />
+    else if (c.juego === 'velocimetro') partida = <Velocimetro {...props} />
+    else if (c.juego === 'puntos') partida = <DetectivePuntos {...props} />
     else partida = <VerdadTrampa {...props} />
   }
 

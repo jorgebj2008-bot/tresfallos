@@ -1,6 +1,7 @@
 import { JUEGOS, type JuegoId } from '../../game/juegos'
 import { useJuego } from '../../store/useJuego'
 import { SenalSVG } from '../SenalSVG'
+import { SenalVelocidad } from './Velocimetro'
 
 const MINIATURA: Record<JuegoId, React.ReactNode> = {
   cruce: (
@@ -18,6 +19,16 @@ const MINIATURA: Record<JuegoId, React.ReactNode> = {
       <rect x={14} y={10} width={44} height={58} rx={8} fill="#fff" stroke="#1E1B2E" strokeWidth={3} transform="rotate(-10 36 39)" />
       <rect x={24} y={12} width={44} height={58} rx={8} fill="#7C5CFF" stroke="#1E1B2E" strokeWidth={3} transform="rotate(8 46 41)" />
       <text x={47} y={50} textAnchor="middle" fontSize={26} fontWeight={900} fill="#fff" fontFamily="Arial">?</text>
+    </svg>
+  ),
+  velocimetro: <SenalVelocidad tipo="maxima" valor={120} size={64} />,
+  puntos: (
+    <svg viewBox="0 0 80 80" aria-hidden="true">
+      <rect x={10} y={8} width={48} height={60} rx={6} fill="#fff" stroke="#1E1B2E" strokeWidth={3} transform="rotate(-6 34 38)" />
+      <path d="M20 24 h26 M20 34 h20 M20 44 h24" stroke="#5C557A" strokeWidth={4} strokeLinecap="round" transform="rotate(-6 34 38)" />
+      <circle cx={48} cy={46} r={14} fill="#CFEAFF" stroke="#1E1B2E" strokeWidth={4} />
+      <path d="M58 56 L70 68" stroke="#1E1B2E" strokeWidth={8} strokeLinecap="round" />
+      <path d="M58 56 L70 68" stroke="#FFB627" strokeWidth={3.5} strokeLinecap="round" />
     </svg>
   ),
 }

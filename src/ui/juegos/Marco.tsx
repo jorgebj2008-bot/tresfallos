@@ -5,7 +5,8 @@ import { AnimatePresence, motion } from 'motion/react'
 import { useJuego, claveNivel } from '../../store/useJuego'
 import { calcularListo } from '../../learning/estoyListo'
 import { todasLasPreguntas } from '../../content/banco'
-import { calcularEstrellas, hitoCombo } from '../../game/nivel'
+import { barajar, calcularEstrellas, hitoCombo } from '../../game/nivel'
+import { estaVencida } from '../../learning/sm2'
 import { xpFinNivel } from '../../game/progreso'
 import { sfx, vibrar } from '../../audio/sfx'
 import type { ConfigPartida, ResultadoPartida } from '../Nivel'
@@ -90,4 +91,19 @@ export function usePartida(config: ConfigPartida, onTerminar: (r: ResultadoParti
       xpGanada: xpGanada + bonus, xpAntes: ini.xp, mejorCombo, fallos,
     })
   }
+}
+
+/** Elige n elementos: primero los que toca repasar, luego los nuevos y después los más antiguos. */
+export function elegirParaRepaso<T extends { id: string }>(lista: T[], n: number): T[] {
+  const { estados } = useJuego.getState()
+  const ahora = Date.now()
+  const vencidos = lista.filter((x) => estados[x.id] && estaVencida(estados[x.id], ahora))
+  const nuevos = barajar(lista.filter((x) => !estados[x.id]))
+  const resto = [...lista].sort((a, b) => (estados[a.id]?.proxima ?? 0) - (estados[b.id]?.proxima ?? 0))
+  const out: T[] = []
+  for (const x of [...vencidos, ...nuevos, ...resto]) {
+    if (out.length >= n) break
+    if (!out.includes(x)) out.push(x)
+  }
+  return barajar(out)
 }

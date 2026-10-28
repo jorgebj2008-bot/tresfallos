@@ -95,7 +95,7 @@ export interface Mision {
 }
 
 const MISIONES_DIA: Omit<Mision, 'id'>[] = [
-  { texto: 'Acierta 20 preguntas', objetivo: 20, monedas: 30, avance: (e) => (e.tipo === 'juego' && e.juego !== 'verdad' ? 0 : e.aciertos) },
+  { texto: 'Acierta 20 preguntas', objetivo: 20, monedas: 30, avance: (e) => (e.tipo === 'juego' && (e.juego === 'cruce' || e.juego === 'senales') ? 0 : e.aciertos) },
   { texto: 'Juega 3 partidas', objetivo: 3, monedas: 25, avance: () => 1 },
   { texto: 'Gana 2 partidas de Rey del Cruce', objetivo: 2, monedas: 35, avance: (e) => (e.juego === 'cruce' && e.estrellas >= 1 ? 1 : 0) },
   { texto: 'Acierta 15 señales en Señal Rush', objetivo: 15, monedas: 30, avance: (e) => (e.juego === 'senales' ? e.aciertos : 0) },
@@ -103,6 +103,8 @@ const MISIONES_DIA: Omit<Mision, 'id'>[] = [
   { texto: 'Saca 3 estrellas en un nivel', objetivo: 1, monedas: 40, avance: (e) => (e.tipo === 'nivel' && e.estrellas === 3 ? 1 : 0) },
   { texto: 'Consigue un combo de 5', objetivo: 1, monedas: 30, avance: (e) => (e.mejorCombo >= 5 ? 1 : 0) },
   { texto: 'Termina un repaso de tus fallos', objetivo: 1, monedas: 30, avance: (e) => (e.tipo === 'repaso' ? 1 : 0) },
+  { texto: 'Clava 6 límites en el Velocímetro', objetivo: 6, monedas: 30, avance: (e) => (e.juego === 'velocimetro' ? e.aciertos : 0) },
+  { texto: 'Resuelve 6 casos en Detective de Puntos', objetivo: 6, monedas: 30, avance: (e) => (e.juego === 'puntos' ? e.aciertos : 0) },
 ]
 const MISIONES_SEMANA: Omit<Mision, 'id'>[] = [
   { texto: 'Acierta 150 preguntas esta semana', objetivo: 150, monedas: 150, avance: (e) => e.aciertos },

@@ -1,7 +1,7 @@
 // Minijuegos: catálogo, en qué niveles del mapa aparecen y dificultad adaptativa.
 import type { MundoId, Pregunta } from '../content/tipos'
 
-export type JuegoId = 'cruce' | 'senales' | 'verdad'
+export type JuegoId = 'cruce' | 'senales' | 'verdad' | 'velocimetro' | 'puntos'
 
 export interface InfoJuego {
   id: JuegoId
@@ -16,6 +16,8 @@ export const JUEGOS: InfoJuego[] = [
   { id: 'cruce', nombre: 'Rey del Cruce', entrena: 'Prioridad de paso', descripcion: 'Toca los vehículos en el orden en que deben pasar.', color: '#2EC4B6', rondas: 8 },
   { id: 'senales', nombre: 'Señal Rush', entrena: 'Reconocer señales', descripcion: 'Desliza cada señal hacia su tipo o su significado antes de que pase.', color: '#FF5A5F', rondas: 20 },
   { id: 'verdad', nombre: '¿Verdad o Trampa?', entrena: 'Leer con atención', descripcion: 'Desliza: verdad a la derecha, trampa a la izquierda. Cuidado con «siempre» y «nunca».', color: '#7C5CFF', rondas: 12 },
+  { id: 'velocimetro', nombre: 'Velocímetro', entrena: 'Límites de velocidad', descripcion: 'Mira la vía, el vehículo y las señales, y gira la aguja hasta el límite exacto.', color: '#FFB627', rondas: 10 },
+  { id: 'puntos', nombre: 'Detective de Puntos', entrena: 'Puntos, multas y delitos', descripcion: 'Investiga cada infracción: ¿cuántos puntos quita, qué multa tiene o ya es delito?', color: '#3DA5FF', rondas: 10 },
 ]
 
 export const juegoPorId = (id: JuegoId) => JUEGOS.find((j) => j.id === id)!
@@ -24,6 +26,8 @@ export const juegoPorId = (id: JuegoId) => JUEGOS.find((j) => j.id === id)!
 export function juegoDeNivel(mundo: MundoId, n: number): JuegoId | null {
   if (mundo === 'prioridad' && n % 3 === 0) return 'cruce'
   if (mundo === 'senales' && n % 3 === 0) return 'senales'
+  if (mundo === 'velocidad' && n % 3 === 0) return 'velocimetro'
+  if (mundo === 'sanciones' && n % 3 === 0) return 'puntos'
   if (n === 5) return 'verdad'
   return null
 }

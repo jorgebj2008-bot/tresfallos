@@ -1,23 +1,14 @@
 // Intro animada al abrir la app.
-// Primera vez: completa (carretera, coche, logo, confeti) y termina con «Toca para empezar».
-// Las siguientes: versión corta que se cierra sola. Con «reducir movimiento», solo un fundido.
+// Dura siempre 3 segundos: carretera, coche, logo y confeti, y se cierra sola.
+// Con «reducir movimiento», se muestra quieta durante ese tiempo.
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { useJuego } from '../store/useJuego'
 import { cochePorId } from '../game/retencion'
-import { sfx, vibrar } from '../audio/sfx'
 import { confeti } from './particulas'
 
-const CLAVE = 'tresfallos-intro-vista'
+const DURACION_MS = 3000
 const L = '#1E1B2E'
-
-function primeraVez() {
-  try {
-    return !localStorage.getItem(CLAVE)
-  } catch {
-    return true
-  }
-}
 
 function CocheIntro({ color, franja }: { color: string; franja: string }) {
   return (
@@ -34,7 +25,6 @@ function CocheIntro({ color, franja }: { color: string; franja: string }) {
 }
 
 export function Intro({ onTerminar }: { onTerminar: () => void }) {
-  const [larga] = useState(primeraVez)
   const [fase, setFase] = useState<'entrada' | 'logo' | 'listo' | 'salida'>('entrada')
   const reducido = matchMedia('(prefers-reduced-motion: reduce)').matches
   const coche = cochePorId(useJuego((s) => s.perfil.coche))
@@ -42,64 +32,43 @@ export function Intro({ onTerminar }: { onTerminar: () => void }) {
   const terminar = useRef(onTerminar)
   terminar.current = onTerminar
 
+  // Siempre dura 3 segundos: carretera y coche, logo, confeti y salida.
   useEffect(() => {
-    if (reducido) {
-      const t = setTimeout(() => setFase('salida'), larga ? 900 : 400)
-      return () => clearTimeout(t)
-    }
-    const tiempos = larga ? [1300, 2600] : [450, 1000]
-    const t1 = setTimeout(() => setFase('logo'), tiempos[0])
-    const t2 = setTimeout(() => {
-      if (larga) setFase('listo')
-      else setFase('salida')
-    }, tiempos[1])
-    return () => [t1, t2].forEach(clearTimeout)
-  }, [larga, reducido])
+    const t = [
+      setTimeout(() => setFase('logo'), reducido ? 0 : 1100),
+      setTimeout(() => setFase('listo'), 1900),
+      setTimeout(() => setFase('salida'), 2450),
+      setTimeout(() => terminar.current(), DURACION_MS),
+    ]
+    return () => t.forEach(clearTimeout)
+  }, [reducido])
 
   useEffect(() => {
-    if (fase === 'listo') confeti(110)
-    if (fase === 'salida') {
-      const t = setTimeout(() => terminar.current(), reducido ? 250 : 650)
-      return () => clearTimeout(t)
-    }
+    if (fase === 'listo' && !reducido) confeti(110)
   }, [fase, reducido])
-
-  function empezar() {
-    if (fase === 'salida') return
-    try {
-      localStorage.setItem(CLAVE, '1')
-    } catch {
-      /* se verá entera otra vez */
-    }
-    // El primer toque permite al navegador reproducir sonido.
-    sfx.subida()
-    vibrar([30, 40, 60])
-    setFase('salida')
-  }
 
   const logoVisible = fase !== 'entrada'
 
   return (
     <motion.div
       className="intro"
-      onClick={empezar}
       role="dialog"
       aria-label="TresFallos"
       initial={{ opacity: 1 }}
       animate={fase === 'salida' ? { opacity: 0, scale: 1.04 } : { opacity: 1, scale: 1 }}
-      transition={{ duration: fase === 'salida' ? 0.55 : 0.3, ease: 'easeIn' }}
+      transition={{ duration: fase === 'salida' ? 0.5 : 0.3, ease: 'easeIn' }}
     >
       {/* Carretera que se dibuja de abajo arriba, con las rayas en movimiento */}
-      <motion.div className="intro-carretera" initial={{ scaleY: 0 }} animate={{ scaleY: 1 }} transition={{ duration: reducido ? 0 : larga ? 0.7 : 0.3, ease: 'easeOut' }}>
+      <motion.div className="intro-carretera" initial={{ scaleY: reducido ? 1 : 0 }} animate={{ scaleY: 1 }} transition={{ duration: 0.7, ease: 'easeOut' }}>
         <div className="intro-rayas" />
       </motion.div>
 
       {/* El coche sube, frena con un pequeño rebote y al final sale disparado */}
       <motion.div
         className="intro-coche"
-        initial={{ y: '60vh' }}
-        animate={fase === 'salida' ? { y: '-80vh' } : { y: 0 }}
-        transition={fase === 'salida' ? { duration: 0.55, ease: [0.6, 0, 0.9, 0.4] } : { type: 'spring', stiffness: 90, damping: 13, delay: reducido ? 0 : larga ? 0.35 : 0.05 }}
+        initial={{ y: reducido ? 0 : '60vh' }}
+        animate={fase === 'salida' && !reducido ? { y: '-80vh' } : { y: 0 }}
+        transition={fase === 'salida' ? { duration: 0.5, ease: [0.6, 0, 0.9, 0.4] } : { type: 'spring', stiffness: 90, damping: 13, delay: 0.35 }}
       >
         <CocheIntro color={coche.color} franja={coche.franja} />
       </motion.div>
@@ -107,34 +76,19 @@ export function Intro({ onTerminar }: { onTerminar: () => void }) {
       <div className="intro-logo">
         <AnimatePresence>
           {logoVisible && (
-            <motion.div key="tres" className="intro-tres" initial={{ scale: 0, rotate: -25 }} animate={{ scale: 1, rotate: -6 }} transition={{ type: 'spring', bounce: 0.55, duration: 0.7 }}>
+            <motion.div key="tres" className="intro-tres" initial={{ scale: reducido ? 1 : 0, rotate: -25 }} animate={{ scale: 1, rotate: -6 }} transition={{ type: 'spring', bounce: 0.55, duration: 0.7 }}>
               3
             </motion.div>
           )}
         </AnimatePresence>
         <div className="intro-palabras">
-          <motion.span initial={{ x: '-120vw' }} animate={logoVisible ? { x: 0 } : {}} transition={{ type: 'spring', bounce: 0.35, duration: 0.7, delay: 0.15 }}>Tres</motion.span>
-          <motion.b initial={{ x: '120vw' }} animate={logoVisible ? { x: 0 } : {}} transition={{ type: 'spring', bounce: 0.35, duration: 0.7, delay: 0.25 }}>Fallos</motion.b>
+          <motion.span initial={{ x: reducido ? 0 : '-120vw' }} animate={logoVisible ? { x: 0 } : {}} transition={{ type: 'spring', bounce: 0.35, duration: 0.7, delay: 0.15 }}>Tres</motion.span>
+          <motion.b initial={{ x: reducido ? 0 : '120vw' }} animate={logoVisible ? { x: 0 } : {}} transition={{ type: 'spring', bounce: 0.35, duration: 0.7, delay: 0.25 }}>Fallos</motion.b>
         </div>
         <motion.p className="intro-lema" initial={{ opacity: 0, y: 10 }} animate={logoVisible ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.55 }}>
           Aprueba el teórico jugando
         </motion.p>
       </div>
-
-      <AnimatePresence>
-        {fase === 'listo' && (
-          <motion.button
-            key="empezar"
-            className="intro-empezar"
-            onClick={empezar}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, scale: [1, 1.05, 1] }}
-            transition={{ opacity: { duration: 0.3 }, y: { duration: 0.3 }, scale: { repeat: Infinity, duration: 1.4 } }}
-          >
-            Toca para empezar
-          </motion.button>
-        )}
-      </AnimatePresence>
     </motion.div>
   )
 }
